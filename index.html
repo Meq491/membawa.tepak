@@ -7,15 +7,13 @@
 <title>MEQ MEMBAWA TEPAK</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
   margin:0;
   font-family:Arial,sans-serif;
   background:#07111f;
-  color:#fff;
+  color:white;
 }
 
 .header{
@@ -26,20 +24,19 @@ body{
 
 .header h1{
   margin:0;
-  font-size:32px;
-  font-weight:800;
+  font-size:34px;
+  font-weight:900;
 }
 
 .header p{
-  margin:10px 0 0;
   color:#cbd5e1;
-  font-size:16px;
+  margin:10px 0 0;
 }
 
 .container{
-  max-width:700px;
+  max-width:720px;
   margin:auto;
-  padding:20px;
+  padding:18px;
 }
 
 .card{
@@ -48,90 +45,224 @@ body{
   border-radius:18px;
   padding:20px;
   margin-bottom:15px;
+  box-shadow:0 8px 25px #0005;
 }
 
 .card h2{
-  margin:0 0 9px;
+  margin:0 0 10px;
   font-size:22px;
 }
 
 .card p{
-  margin:0 0 16px;
-  color:#c5d0df;
+  color:#cbd5e1;
   line-height:1.6;
 }
 
 .btn{
   width:100%;
-  border:0;
-  border-radius:12px;
   padding:16px;
+  border:0;
+  border-radius:13px;
   background:#2563eb;
   color:white;
   font-size:17px;
   font-weight:bold;
-  cursor:pointer;
 }
 
-.page{
-  display:none;
-}
+.page{display:none}
 
 .materi{
   background:#101c2d;
   border:1px solid #26384f;
   border-radius:18px;
-  padding:22px;
-}
-
-.materi h2{
-  font-size:28px;
-  margin:0 0 20px;
-}
-
-.materi h3{
-  font-size:20px;
-  margin-top:22px;
-  margin-bottom:8px;
-}
-
-.materi p{
-  color:#d1dae7;
-  font-size:16px;
-  line-height:1.75;
-}
-
-.materi ul{
-  color:#d1dae7;
-  line-height:1.8;
+  padding:20px;
 }
 
 .back{
   width:100%;
+  padding:14px;
   border:0;
   border-radius:12px;
-  padding:14px;
-  margin-bottom:20px;
   background:#374151;
   color:white;
+  font-weight:bold;
   font-size:16px;
+  margin-bottom:20px;
+}
+
+.materi h2{
+  font-size:28px;
+  margin-top:0;
+}
+
+.materi h3{
+  color:#facc15;
+  font-size:21px;
+  margin-top:28px;
+}
+
+.materi p,
+.materi li{
+  color:#d6deea;
+  line-height:1.75;
+}
+
+.example{
+  margin:20px 0;
+  padding:15px;
+  background:#07111f;
+  border:1px solid #334155;
+  border-radius:15px;
+}
+
+.example-title{
+  font-weight:bold;
+  color:#60a5fa;
+  margin-bottom:10px;
+}
+
+/* CHART */
+
+.chart{
+  height:230px;
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  background:
+    linear-gradient(#ffffff08 1px,transparent 1px),
+    linear-gradient(90deg,#ffffff08 1px,transparent 1px);
+  background-size:25px 25px;
+  border:1px solid #334155;
+}
+
+.candles{
+  position:absolute;
+  bottom:25px;
+  left:15px;
+  right:15px;
+  height:170px;
+  display:flex;
+  align-items:flex-end;
+  gap:7px;
+}
+
+.candle{
+  width:10px;
+  position:relative;
+  background:#22c55e;
+  border-radius:2px;
+}
+
+.candle:before{
+  content:"";
+  position:absolute;
+  width:2px;
+  background:currentColor;
+  left:4px;
+  top:-15px;
+  height:calc(100% + 30px);
+}
+
+.red{
+  background:#ef4444;
+  color:#ef4444;
+}
+
+.green{
+  background:#22c55e;
+  color:#22c55e;
+}
+
+.line{
+  position:absolute;
+  left:0;
+  right:0;
+  height:3px;
+}
+
+.support{
+  bottom:42px;
+  background:#22c55e;
+}
+
+.resistance{
+  top:45px;
+  background:#ef4444;
+}
+
+.label{
+  position:absolute;
+  right:10px;
+  padding:5px 8px;
+  border-radius:6px;
+  font-size:12px;
   font-weight:bold;
 }
 
-/* TOMBOL PALING BAWAH */
+.label.green{
+  bottom:48px;
+  background:#166534;
+}
+
+.label.red{
+  top:28px;
+  background:#991b1b;
+}
+
+/* FLOW */
+
+.flow{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:7px;
+  margin:20px 0;
+}
+
+.flow div{
+  background:#17263a;
+  border:1px solid #334155;
+  padding:13px 5px;
+  text-align:center;
+  border-radius:10px;
+}
+
+.flow b{
+  display:block;
+  color:#facc15;
+  font-size:18px;
+  margin-bottom:5px;
+}
+
+.box-buy{
+  border-left:5px solid #22c55e;
+  background:#0b2a1b;
+  padding:15px;
+  border-radius:10px;
+}
+
+.box-sell{
+  border-left:5px solid #ef4444;
+  background:#301313;
+  padding:15px;
+  border-radius:10px;
+}
+
+.warning{
+  border-left:5px solid #facc15;
+  background:#30270b;
+  padding:15px;
+  border-radius:10px;
+}
 
 .bottom{
-  margin-top:30px;
+  margin-top:25px;
 }
 
 .bottom a{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-  width:100%;
+  display:block;
+  text-align:center;
   padding:17px;
-  margin-bottom:14px;
+  margin-bottom:12px;
   border-radius:14px;
   text-decoration:none;
   font-size:18px;
@@ -148,170 +279,177 @@ body{
   color:#111;
 }
 
-.logo{
-  font-size:24px;
+.footer{
+  text-align:center;
+  color:#64748b;
+  padding:25px 10px;
+  font-size:13px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <div class="header">
-  <h1>MEQ MEMBAWA TEPAK</h1>
-  <p>Edukasi Trading Dari Dasar Sampai Paham</p>
+<h1>MEQ MEMBAWA TEPAK</h1>
+<p>Edukasi Trading Dari Dasar Sampai Paham</p>
 </div>
 
 <div class="container">
 
-<!-- ================= MENU UTAMA ================= -->
+<!-- ================= HOME ================= -->
 
 <div id="home">
 
-  <div class="card">
-    <h2>📘 Dasar-Dasar Trading</h2>
-    <p>
-      Pelajari pengertian trading, forex,
-      candle dan manajemen risiko.
-    </p>
-    <button class="btn" onclick="openPage('dasar')">
-      BUKA MATERI
-    </button>
-  </div>
+<div class="card">
+<h2>📘 Dasar-Dasar Trading</h2>
+<p>Pelajari trading, forex, candle, BUY, SELL dan risiko.</p>
+<button class="btn" onclick="openPage('dasar')">BUKA MATERI</button>
+</div>
 
+<div class="card">
+<h2>📊 Support & Resistance</h2>
+<p>Pelajari area support, resistance dan contoh reaksinya.</p>
+<button class="btn" onclick="openPage('snr')">BUKA MATERI</button>
+</div>
 
-  <div class="card">
-    <h2>📊 Support & Resistance</h2>
-    <p>
-      Pelajari support, resistance,
-      body candle dan reaksi harga.
-    </p>
-    <button class="btn" onclick="openPage('snr')">
-      BUKA MATERI
-    </button>
-  </div>
+<div class="card">
+<h2>🔥 Supply & Demand</h2>
+<p>Pelajari Demand, Supply dan cara mencari area entry.</p>
+<button class="btn" onclick="openPage('snd')">BUKA MATERI</button>
+</div>
 
+<div class="card">
+<h2>📈 Garis Sakti</h2>
+<p>Pelajari swing mayor, body candle, breakout dan close.</p>
+<button class="btn" onclick="openPage('garis')">BUKA MATERI</button>
+</div>
 
-  <div class="card">
-    <h2>🔥 Supply & Demand</h2>
-    <p>
-      Pelajari cara menemukan area
-      Supply dan Demand.
-    </p>
-    <button class="btn" onclick="openPage('snd')">
-      BUKA MATERI
-    </button>
-  </div>
+<div class="card">
+<h2>📐 Parallel Channel</h2>
+<p>Pelajari cara membaca arah harga menggunakan channel.</p>
+<button class="btn" onclick="openPage('channel')">BUKA MATERI</button>
+</div>
 
+<div class="card">
+<h2>🎯 Entry M5 & Konfirmasi M1</h2>
+<p>Pelajari alur H4 → M30 → M5 → M1.</p>
+<button class="btn" onclick="openPage('entry')">BUKA MATERI</button>
+</div>
 
-  <div class="card">
-    <h2>📈 Garis Sakti</h2>
-    <p>
-      Pelajari swing mayor, body candle,
-      breakout dan konfirmasi.
-    </p>
-    <button class="btn" onclick="openPage('garis')">
-      BUKA MATERI
-    </button>
-  </div>
+<div class="card">
+<h2>📏 Fibonacci</h2>
+<p>Pelajari Fibonacci sebagai alat bantu retracement dan target.</p>
+<button class="btn" onclick="openPage('fibo')">BUKA MATERI</button>
+</div>
 
+<div class="card">
+<h2>🛡️ Risk Management</h2>
+<p>Pelajari Stop Loss, Take Profit dan pengaturan risiko.</p>
+<button class="btn" onclick="openPage('risk')">BUKA MATERI</button>
+</div>
 
-  <div class="card">
-    <h2>🎯 Entry M5 & Konfirmasi M1</h2>
-    <p>
-      Pelajari alur analisis H4, M30,
-      M5 dan konfirmasi M1.
-    </p>
-    <button class="btn" onclick="openPage('entry')">
-      BUKA MATERI
-    </button>
-  </div>
+<div class="bottom">
 
+<a class="telegram"
+href="https://t.me/meq491"
+target="_blank">
+✈️ TELEGRAM
+</a>
 
-  <div class="card">
-    <h2>📐 Fibonacci</h2>
-    <p>
-      Pelajari Fibonacci untuk membantu
-      mencari retracement dan target.
-    </p>
-    <button class="btn" onclick="openPage('fibo')">
-      BUKA MATERI
-    </button>
-  </div>
+<a class="exness"
+href="https://one.exnessonelink.com/a/qy4b0v4ek5?source=app"
+target="_blank">
+⬡ APK EXNESS
+</a>
 
-
-  <!-- ================= TELEGRAM & EXNESS ================= -->
-
-  <div class="bottom">
-
-    <!-- TELEGRAM -->
-
-    <a
-      class="telegram"
-      href="https://t.me/meq491"
-      target="_blank"
-      rel="noopener noreferrer">
-
-      <span class="logo">✈️</span>
-      TELEGRAM
-
-    </a>
-
-
-    <!-- APK EXNESS -->
-
-    <a
-      class="exness"
-      href="https://one.exnessonelink.com/a/qy4b0v4ek5?source=app"
-      target="_blank"
-      rel="noopener noreferrer">
-
-      <span class="logo">⬡</span>
-      APK EXNESS
-
-    </a>
-
-  </div>
+</div>
 
 </div>
 
 
-<!-- ================= MATERI DASAR ================= -->
+<!-- ================= DASAR ================= -->
 
 <div id="dasar" class="page">
-
 <div class="materi">
 
 <button class="back" onclick="goHome()">← KEMBALI</button>
 
-<h2>📘 Dasar-Dasar Trading</h2>
+<h2>📘 DASAR-DASAR TRADING</h2>
 
 <h3>Apa Itu Trading?</h3>
 <p>
-Trading adalah aktivitas membeli dan menjual aset
-dengan tujuan memperoleh keuntungan dari perubahan harga.
+Trading adalah aktivitas membeli dan menjual aset dengan tujuan
+mencari keuntungan dari perubahan harga.
 </p>
 
-<h3>Apa Itu Forex?</h3>
+<h3>Contoh BUY</h3>
+
+<div class="example">
+<div class="example-title">CONTOH</div>
 <p>
-Forex adalah pasar pertukaran mata uang.
-Contohnya EUR/USD, GBP/USD dan USD/JPY.
+Harga EUR/USD = 1.1000
 </p>
+<p>
+Kita melakukan BUY di 1.1000.
+Kemudian harga naik menjadi 1.1050.
+</p>
+<p>
+Pergerakan = 50 pip.
+</p>
+</div>
 
 <h3>Apa Itu Candle?</h3>
+
 <p>
 Candle menunjukkan pergerakan harga dalam periode tertentu.
-Candle mempunyai body dan wick.
+Setiap candle mempunyai Open, High, Low dan Close.
 </p>
 
-<h3>Hal Yang Harus Diperhatikan</h3>
+<div class="example">
+
+<div class="chart">
+
+<div class="candles">
+<span class="candle green" style="height:70px"></span>
+<span class="candle red" style="height:50px"></span>
+<span class="candle green" style="height:90px"></span>
+<span class="candle green" style="height:110px"></span>
+<span class="candle red" style="height:60px"></span>
+<span class="candle green" style="height:130px"></span>
+<span class="candle green" style="height:150px"></span>
+</div>
+
+</div>
+
+</div>
+
+<h3>BUY dan SELL</h3>
+
+<div class="box-buy">
+<b>BUY</b>
+<p>
+Digunakan ketika analisis menunjukkan peluang harga bergerak naik.
+</p>
+</div>
+
+<br>
+
+<div class="box-sell">
+<b>SELL</b>
+<p>
+Digunakan ketika analisis menunjukkan peluang harga bergerak turun.
+</p>
+</div>
+
+<h3>Kesalahan Pemula</h3>
 
 <ul>
-<li>Jangan asal entry.</li>
-<li>Tunggu konfirmasi.</li>
-<li>Gunakan Stop Loss.</li>
-<li>Gunakan manajemen risiko.</li>
+<li>Entry tanpa alasan.</li>
+<li>Lot terlalu besar.</li>
+<li>Tidak menggunakan Stop Loss.</li>
+<li>Mengejar harga karena FOMO.</li>
+<li>Balas dendam setelah loss.</li>
 </ul>
 
 </div>
@@ -321,30 +459,80 @@ Candle mempunyai body dan wick.
 <!-- ================= SNR ================= -->
 
 <div id="snr" class="page">
-
 <div class="materi">
 
 <button class="back" onclick="goHome()">← KEMBALI</button>
 
-<h2>📊 Support & Resistance</h2>
+<h2>📊 SUPPORT & RESISTANCE</h2>
 
 <h3>Support</h3>
+
 <p>
-Support adalah area harga yang sebelumnya
-mendapatkan tekanan beli.
+Support adalah area tempat harga sebelumnya mendapatkan tekanan beli.
+Harga dapat bereaksi ketika kembali ke area tersebut.
 </p>
+
+<div class="example">
+
+<div class="example-title">CONTOH SUPPORT</div>
+
+<div class="chart">
+
+<div class="line support"></div>
+<div class="label green">SUPPORT</div>
+
+<div class="candles">
+<span class="candle red" style="height:100px"></span>
+<span class="candle red" style="height:75px"></span>
+<span class="candle green" style="height:50px"></span>
+<span class="candle red" style="height:40px"></span>
+<span class="candle green" style="height:45px"></span>
+<span class="candle red" style="height:35px"></span>
+<span class="candle green" style="height:70px"></span>
+<span class="candle green" style="height:100px"></span>
+<span class="candle green" style="height:130px"></span>
+</div>
+
+</div>
+</div>
 
 <h3>Resistance</h3>
+
 <p>
-Resistance adalah area harga yang sebelumnya
-mendapatkan tekanan jual.
+Resistance adalah area tempat harga sebelumnya mendapatkan tekanan jual.
 </p>
 
-<h3>Konfirmasi</h3>
+<div class="example">
+
+<div class="example-title">CONTOH RESISTANCE</div>
+
+<div class="chart">
+
+<div class="line resistance"></div>
+<div class="label red">RESISTANCE</div>
+
+<div class="candles">
+<span class="candle green" style="height:80px"></span>
+<span class="candle green" style="height:120px"></span>
+<span class="candle red" style="height:90px"></span>
+<span class="candle green" style="height:110px"></span>
+<span class="candle red" style="height:100px"></span>
+<span class="candle green" style="height:115px"></span>
+<span class="candle red" style="height:90px"></span>
+<span class="candle red" style="height:70px"></span>
+<span class="candle red" style="height:50px"></span>
+</div>
+
+</div>
+</div>
+
+<div class="warning">
+<b>INGAT:</b>
 <p>
-Perhatikan body candle, struktur dan reaksi harga.
-Jangan hanya melihat wick.
+Support dan resistance bukan jaminan harga pasti berbalik.
+Tunggu reaksi dan konfirmasi.
 </p>
+</div>
 
 </div>
 </div>
@@ -353,30 +541,54 @@ Jangan hanya melihat wick.
 <!-- ================= SND ================= -->
 
 <div id="snd" class="page">
-
 <div class="materi">
 
 <button class="back" onclick="goHome()">← KEMBALI</button>
 
-<h2>🔥 Supply & Demand</h2>
+<h2>🔥 SUPPLY & DEMAND</h2>
 
 <h3>Demand</h3>
+
 <p>
-Demand adalah area yang menunjukkan adanya
-tekanan beli yang kuat.
+Demand adalah area yang menunjukkan adanya tekanan beli.
+Area ini dapat menjadi tempat untuk mencari peluang BUY.
 </p>
+
+<div class="example">
+<div class="box-buy">
+<b>CONTOH BUY</b>
+<p>
+Harga turun → masuk Demand → muncul reaksi bullish →
+tunggu konfirmasi → cari BUY.
+</p>
+</div>
+</div>
 
 <h3>Supply</h3>
+
 <p>
-Supply adalah area yang menunjukkan adanya
-tekanan jual yang kuat.
+Supply adalah area yang menunjukkan adanya tekanan jual.
+Area ini dapat menjadi tempat mencari peluang SELL.
 </p>
 
-<h3>Konfirmasi</h3>
+<div class="example">
+<div class="box-sell">
+<b>CONTOH SELL</b>
 <p>
-Ketika harga masuk ke area Supply atau Demand,
-tunggu reaksi dan konfirmasi sebelum entry.
+Harga naik → masuk Supply → muncul reaksi bearish →
+tunggu konfirmasi → cari SELL.
 </p>
+</div>
+</div>
+
+<h3>Yang Harus Diingat</h3>
+
+<ul>
+<li>Jangan BUY hanya karena harga menyentuh Demand.</li>
+<li>Jangan SELL hanya karena harga menyentuh Supply.</li>
+<li>Tunggu reaksi harga.</li>
+<li>Tunggu konfirmasi.</li>
+</ul>
 
 </div>
 </div>
@@ -385,37 +597,141 @@ tunggu reaksi dan konfirmasi sebelum entry.
 <!-- ================= GARIS SAKTI ================= -->
 
 <div id="garis" class="page">
-
 <div class="materi">
 
 <button class="back" onclick="goHome()">← KEMBALI</button>
 
-<h2>📈 Garis Sakti</h2>
+<h2>📈 GARIS SAKTI</h2>
 
 <h3>1. Tentukan Swing Mayor</h3>
+
 <p>
-Gunakan timeframe besar untuk melihat struktur harga
-dan menentukan swing mayor yang jelas.
+Mulai dari timeframe besar seperti H4.
+Cari swing high dan swing low yang jelas.
 </p>
 
-<h3>2. Gunakan Body Candle</h3>
+<div class="example">
+
+<div class="chart">
+
+<div class="candles">
+<span class="candle green" style="height:45px"></span>
+<span class="candle green" style="height:75px"></span>
+<span class="candle green" style="height:110px"></span>
+<span class="candle green" style="height:150px"></span>
+<span class="candle red" style="height:90px"></span>
+<span class="candle red" style="height:70px"></span>
+<span class="candle green" style="height:65px"></span>
+<span class="candle green" style="height:100px"></span>
+</div>
+
+</div>
+
 <p>
-Body candle dapat digunakan sebagai batas struktur
-yang sedang dianalisis.
+Cari titik swing yang jelas, bukan candle acak.
+</p>
+
+</div>
+
+<h3>2. Perhatikan Body Candle</h3>
+
+<p>
+Dalam metode ini, body candle menjadi perhatian utama.
+Jangan hanya menggunakan ujung wick sebagai patokan.
 </p>
 
 <h3>3. Tunggu Break & Close</h3>
+
 <p>
-Jangan menganggap breakout hanya karena wick
-melewati garis. Perhatikan candle yang close
-melewati area tersebut.
+Jika harga hanya menembus garis menggunakan wick,
+itu belum cukup sebagai konfirmasi.
+Perhatikan apakah candle benar-benar close melewati level.
 </p>
 
-<h3>4. Turunkan Timeframe</h3>
+<div class="box-buy">
+<b>CONTOH BUY</b>
 <p>
-Setelah arah besar terlihat, turun ke timeframe
-yang lebih kecil untuk mencari area dan konfirmasi entry.
+Harga break garis sakti → candle close di atas →
+turun timeframe → cari area entry → tunggu konfirmasi.
 </p>
+</div>
+
+<br>
+
+<div class="box-sell">
+<b>CONTOH SELL</b>
+<p>
+Harga break garis sakti ke bawah → candle close di bawah →
+turun timeframe → cari area entry → tunggu konfirmasi.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= CHANNEL ================= -->
+
+<div id="channel" class="page">
+<div class="materi">
+
+<button class="back" onclick="goHome()">← KEMBALI</button>
+
+<h2>📐 PARALLEL CHANNEL</h2>
+
+<h3>Apa Itu Parallel Channel?</h3>
+
+<p>
+Parallel channel digunakan untuk membantu melihat arah
+pergerakan harga dalam sebuah channel.
+</p>
+
+<div class="example">
+
+<div class="chart">
+
+<div style="
+position:absolute;
+width:130%;
+height:3px;
+background:#ef4444;
+transform:rotate(-15deg);
+top:65px;
+left:-20px">
+</div>
+
+<div style="
+position:absolute;
+width:130%;
+height:3px;
+background:#22c55e;
+transform:rotate(-15deg);
+top:170px;
+left:-20px">
+</div>
+
+<div class="candles">
+<span class="candle green" style="height:45px"></span>
+<span class="candle green" style="height:75px"></span>
+<span class="candle red" style="height:50px"></span>
+<span class="candle green" style="height:100px"></span>
+<span class="candle red" style="height:65px"></span>
+<span class="candle green" style="height:120px"></span>
+<span class="candle green" style="height:145px"></span>
+</div>
+
+</div>
+
+</div>
+
+<h3>Cara Membaca</h3>
+
+<ul>
+<li>Garis atas = resistance channel.</li>
+<li>Garis bawah = support channel.</li>
+<li>Perhatikan reaksi harga.</li>
+<li>Jangan menganggap channel selalu bertahan.</li>
+</ul>
 
 </div>
 </div>
@@ -424,28 +740,95 @@ yang lebih kecil untuk mencari area dan konfirmasi entry.
 <!-- ================= ENTRY ================= -->
 
 <div id="entry" class="page">
-
 <div class="materi">
 
 <button class="back" onclick="goHome()">← KEMBALI</button>
 
-<h2>🎯 Entry M5 & Konfirmasi M1</h2>
+<h2>🎯 ENTRY M5 & KONFIRMASI M1</h2>
 
 <h3>Alur Analisis</h3>
 
-<p><b>H4</b> → melihat arah dan struktur besar.</p>
+<div class="flow">
 
-<p><b>M30</b> → melihat struktur yang lebih dekat.</p>
+<div>
+<b>H4</b>
+Arah besar
+</div>
 
-<p><b>M5</b> → mencari area Supply dan Demand.</p>
+<div>
+<b>M30</b>
+Struktur
+</div>
 
-<p><b>M1</b> → mencari konfirmasi entry.</p>
+<div>
+<b>M5</b>
+SND/SNR
+</div>
 
-<h3>Jangan Terburu-buru</h3>
+<div>
+<b>M1</b>
+Konfirmasi
+</div>
+
+</div>
+
+<h3>Contoh Setup BUY</h3>
+
+<div class="box-buy">
 
 <p>
-Area yang bagus tetap membutuhkan konfirmasi.
-Tentukan risiko sebelum membuka posisi.
+<b>H4:</b> struktur bullish.
+</p>
+
+<p>
+<b>M30:</b> arah masih mendukung BUY.
+</p>
+
+<p>
+<b>M5:</b> harga masuk Demand.
+</p>
+
+<p>
+<b>M1:</b> muncul konfirmasi bullish.
+</p>
+
+<p>
+<b>→ Cari entry BUY.</b>
+</p>
+
+</div>
+
+<h3>Contoh Setup SELL</h3>
+
+<div class="box-sell">
+
+<p>
+<b>H4:</b> struktur bearish.
+</p>
+
+<p>
+<b>M30:</b> arah masih mendukung SELL.
+</p>
+
+<p>
+<b>M5:</b> harga masuk Supply.
+</p>
+
+<p>
+<b>M1:</b> muncul konfirmasi bearish.
+</p>
+
+<p>
+<b>→ Cari entry SELL.</b>
+</p>
+
+</div>
+
+<h3>Jangan Entry Terburu-buru</h3>
+
+<p>
+Harga menyentuh area bukan berarti harus langsung entry.
+Tunggu reaksi dan konfirmasi.
 </p>
 
 </div>
@@ -455,65 +838,179 @@ Tentukan risiko sebelum membuka posisi.
 <!-- ================= FIBONACCI ================= -->
 
 <div id="fibo" class="page">
-
 <div class="materi">
 
 <button class="back" onclick="goHome()">← KEMBALI</button>
 
-<h2>📐 Fibonacci</h2>
+<h2>📏 FIBONACCI</h2>
 
 <h3>Fungsi Fibonacci</h3>
 
 <p>
-Fibonacci dapat digunakan sebagai alat bantu
-untuk melihat area retracement dan memperkirakan target.
+Fibonacci dapat digunakan sebagai alat bantu untuk melihat
+area retracement dan memperkirakan target harga.
 </p>
 
-<h3>Gabungkan Dengan Struktur</h3>
+<h3>Contoh</h3>
+
+<div class="example">
 
 <p>
-Jangan menggunakan Fibonacci sendirian.
-Gabungkan dengan struktur harga, SNR,
-Supply/Demand dan konfirmasi candle.
+Harga bergerak naik dari Swing Low menuju Swing High.
+Kemudian harga melakukan retracement.
+</p>
+
+<p>
+Fibonacci dapat digunakan untuk melihat area retracement
+sebagai salah satu bahan analisis.
 </p>
 
 </div>
+
+<h3>Jangan Gunakan Sendirian</h3>
+
+<ul>
+<li>Gabungkan dengan market structure.</li>
+<li>Gabungkan dengan SNR.</li>
+<li>Gabungkan dengan SND.</li>
+<li>Tunggu konfirmasi.</li>
+</ul>
+
+</div>
+</div>
+
+
+<!-- ================= RISK ================= -->
+
+<div id="risk" class="page">
+<div class="materi">
+
+<button class="back" onclick="goHome()">← KEMBALI</button>
+
+<h2>🛡️ RISK MANAGEMENT</h2>
+
+<h3>Stop Loss</h3>
+
+<p>
+Stop Loss digunakan untuk membatasi kerugian jika analisis
+tidak berjalan sesuai rencana.
+</p>
+
+<div class="example">
+
+<p>
+BUY = 1.1000
+</p>
+
+<p>
+SL = 1.0990
+</p>
+
+<p>
+Risiko = 10 pip.
+</p>
+
+</div>
+
+<h3>Take Profit</h3>
+
+<p>
+Take Profit digunakan untuk mengambil keuntungan ketika harga
+mencapai target.
+</p>
+
+<div class="example">
+
+<p>
+BUY = 1.1000
+</p>
+
+<p>
+SL = 1.0990
+</p>
+
+<p>
+TP = 1.1020
+</p>
+
+<p>
+Risk : Reward = 1 : 2
+</p>
+
+</div>
+
+<h3>Contoh Risiko</h3>
+
+<p>
+Misalnya modal Rp1.000.000 dan risiko yang dipilih 1%.
+</p>
+
+<div class="warning">
+
+<b>1% dari Rp1.000.000 = Rp10.000</b>
+
+<p>
+Artinya risiko yang direncanakan sekitar Rp10.000
+untuk satu transaksi. Ukuran lot tetap harus disesuaikan
+dengan instrumen dan jarak Stop Loss.
+</p>
+
+</div>
+
+<h3>Ingat</h3>
+
+<ul>
+<li>Jangan mempertaruhkan seluruh modal.</li>
+<li>Gunakan Stop Loss.</li>
+<li>Hindari overtrading.</li>
+<li>Jangan balas dendam setelah loss.</li>
+<li>Disiplin lebih penting daripada mengejar profit besar.</li>
+</ul>
+
+</div>
+</div>
+
+
+<div class="footer">
+MEQ MEMBAWA TEPAK<br>
+Belajar trading dengan disiplin dan manajemen risiko.
 </div>
 
 </div>
 
-
-<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
 function openPage(pageName){
 
-  document.getElementById("home").style.display="none";
+document.getElementById("home").style.display="none";
 
-  var pages=document.querySelectorAll(".page");
+document.querySelectorAll(".page").forEach(function(page){
+page.style.display="none";
+});
 
-  pages.forEach(function(page){
-    page.style.display="none";
-  });
+document.getElementById(pageName).style.display="block";
 
-  document.getElementById(pageName).style.display="block";
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
-  window.scrollTo(0,0);
 }
-
 
 function goHome(){
 
-  var pages=document.querySelectorAll(".page");
+document.querySelectorAll(".page").forEach(function(page){
+page.style.display="none";
+});
 
-  pages.forEach(function(page){
-    page.style.display="none";
-  });
+document.getElementById("home").style.display="block";
 
-  document.getElementById("home").style.display="block";
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
-  window.scrollTo(0,0);
 }
 
 </script>
