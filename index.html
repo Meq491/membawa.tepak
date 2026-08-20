@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MEQ491 | Trading Education</title>
+<title>MEQ Membawa Tepak</title>
 
 <style>
 *{
@@ -18,17 +18,14 @@ html{
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#06101f;
-  color:#fff;
+  background:#071a35;
+  color:white;
   overflow-x:hidden;
 }
 
-.app{
-  width:100%;
-  max-width:900px;
-  margin:auto;
-  min-height:100vh;
-}
+/* =========================
+   HALAMAN
+========================= */
 
 .page{
   display:none;
@@ -39,99 +36,115 @@ body{
   display:block;
 }
 
-/* ================= HEADER ================= */
+/* =========================
+   HEADER
+========================= */
 
 .header{
-  position:relative;
-  padding:28px 16px 24px;
+  background:linear-gradient(180deg,#0876d1,#063b79);
   text-align:center;
-  background:
-    radial-gradient(circle at top,#0c66c8 0,#073b79 30%,#061326 75%);
-  border-bottom:1px solid #12559c;
+  padding:30px 15px 25px;
+  border-bottom:2px solid #1595ff;
 }
 
 .logo{
-  width:76px;
-  height:76px;
-  margin:0 auto 10px;
-  border-radius:20px;
+  width:78px;
+  height:78px;
+  margin:auto;
+  margin-bottom:12px;
+  border-radius:22px;
+
   display:flex;
   align-items:center;
   justify-content:center;
-  background:linear-gradient(145deg,#ffffff,#cfe6ff);
-  color:#0860bb;
-  font-size:25px;
+
+  background:white;
+  color:#0768bc;
+
+  font-size:23px;
   font-weight:900;
-  box-shadow:0 8px 30px rgba(0,110,255,.25);
+
+  box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
 .title{
-  font-size:32px;
+  font-size:30px;
   font-weight:900;
-  letter-spacing:3px;
+  letter-spacing:2px;
 }
 
 .subtitle{
-  color:#9dc9f8;
+  margin-top:7px;
+  color:#c8e7ff;
   font-size:12px;
   letter-spacing:2px;
-  margin-top:6px;
 }
 
-/* ================= CONTENT ================= */
+/* =========================
+   CONTAINER
+========================= */
 
 .container{
+  max-width:900px;
+  margin:auto;
   padding:16px;
 }
 
-.hero{
-  padding:22px;
-  border:1px solid #145293;
+/* =========================
+   WELCOME
+========================= */
+
+.welcome{
+  background:linear-gradient(145deg,#0b315b,#09213c);
+  border:1px solid #176db0;
   border-radius:20px;
-  background:linear-gradient(145deg,#0a2340,#071526);
-  margin-bottom:16px;
-  box-shadow:0 10px 35px rgba(0,0,0,.18);
+  padding:22px;
+  margin-bottom:15px;
 }
 
-.hero h1{
+.welcome h1{
   font-size:25px;
-  margin-bottom:9px;
+  margin-bottom:10px;
 }
 
-.hero p{
-  color:#b9d2ec;
-  line-height:1.7;
+.welcome p{
+  color:#c0d9ee;
   font-size:14px;
+  line-height:1.7;
 }
 
-/* ================= BUTTON EXNESS TELEGRAM ================= */
+/* =========================
+   LINK
+========================= */
 
-.social{
+.links{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
-  margin-bottom:17px;
+  margin-bottom:16px;
 }
 
-.social a{
+.links a{
   text-decoration:none;
-  color:#fff;
-  padding:14px 10px;
-  border-radius:13px;
+  color:white;
+  padding:15px 10px;
   text-align:center;
-  font-weight:800;
-  border:1px solid #1e6bb8;
+  border-radius:13px;
+  font-weight:bold;
+  border:1px solid #3187c8;
 }
 
 .exness{
-  background:#123e68;
+  background:#143e63;
 }
 
 .telegram{
-  background:#0d5d91;
+  background:#09639b;
 }
 
-/* ================= MENU ================= */
+/* =========================
+   MENU
+========================= */
 
 .menu{
   display:grid;
@@ -139,122 +152,137 @@ body{
   gap:11px;
 }
 
-.card{
-  appearance:none;
-  border:1px solid #164b82;
-  background:linear-gradient(145deg,#0b2340,#071524);
-  color:#fff;
-  min-height:118px;
-  padding:16px;
+.menu button{
+  border:1px solid #18588e;
   border-radius:17px;
+
+  background:linear-gradient(145deg,#0b2a4c,#07192e);
+
+  color:white;
   text-align:left;
+
+  padding:17px;
+  min-height:120px;
+
   cursor:pointer;
 }
 
-.card:active{
+.menu button:active{
   transform:scale(.98);
 }
 
-.number{
-  color:#48a9ff;
+.num{
+  color:#35a6ff;
   font-size:11px;
   font-weight:bold;
   margin-bottom:8px;
 }
 
-.card h3{
+.menu h3{
   font-size:17px;
   margin-bottom:6px;
 }
 
-.card p{
-  color:#89a9c9;
+.menu p{
+  color:#8fb3d2;
   font-size:12px;
   line-height:1.5;
 }
 
-/* ================= LESSON ================= */
+/* =========================
+   MATERI
+========================= */
 
 .back{
   width:100%;
-  border:1px solid #2165a1;
-  background:#0b2745;
-  color:#fff;
-  border-radius:13px;
   padding:14px;
-  font-size:14px;
+
+  border:1px solid #2678b9;
+  border-radius:13px;
+
+  background:#0b2d4f;
+  color:white;
+
   font-weight:bold;
-  margin-bottom:14px;
+  font-size:14px;
+
+  cursor:pointer;
+  margin-bottom:15px;
 }
 
 .lesson{
-  background:linear-gradient(145deg,#091c31,#06121f);
-  border:1px solid #154a7e;
+  background:linear-gradient(145deg,#092441,#061629);
+  border:1px solid #155487;
   border-radius:17px;
   padding:19px;
-  margin-bottom:14px;
+  margin-bottom:15px;
 }
 
 .lesson h2{
-  color:#4aaaff;
+  color:#45adff;
   font-size:22px;
-  margin-bottom:11px;
+  margin-bottom:12px;
 }
 
 .lesson h3{
-  color:#d9ebff;
-  margin:19px 0 8px;
-  font-size:17px;
+  color:#d8edff;
+  margin-top:18px;
+  margin-bottom:8px;
 }
 
 .lesson p{
-  color:#b5cbe0;
+  color:#bad0e3;
   font-size:14px;
   line-height:1.75;
 }
 
 .lesson ul{
-  margin:10px 0 0 19px;
-  color:#b5cbe0;
-  line-height:1.85;
+  margin:10px 0 0 20px;
+  color:#bad0e3;
   font-size:14px;
+  line-height:1.85;
 }
 
 .example{
-  margin-top:14px;
-  padding:14px;
-  background:#06101c;
-  border-left:4px solid #2997f4;
+  margin-top:15px;
+  padding:15px;
+
+  background:#04111f;
+  border-left:4px solid #25a0f5;
   border-radius:9px;
-  color:#c3dbf1;
+
+  color:#c4dcef;
   line-height:1.7;
 }
 
 .note{
-  margin-top:14px;
-  padding:14px;
+  margin-top:15px;
+  padding:15px;
+
   border-radius:10px;
-  background:#10253c;
-  color:#a9c8e5;
-  line-height:1.65;
+  background:#102f4d;
+
+  color:#b8d5ee;
+  line-height:1.7;
 }
 
-/* ================= CHART ================= */
+/* =========================
+   CHART
+========================= */
 
 .chart{
   margin-top:17px;
-  background:#03080e;
-  border:1px solid #1b4d79;
+  background:#02070c;
+  border:1px solid #194b74;
   border-radius:13px;
   overflow:hidden;
 }
 
 .chart-title{
-  padding:10px 12px;
-  background:#081a2d;
-  color:#83b7e5;
+  padding:10px;
+  background:#071a2b;
+  color:#86bce7;
   font-size:12px;
-  border-bottom:1px solid #163b5e;
 }
 
 .chart svg{
@@ -263,265 +291,287 @@ body{
   display:block;
 }
 
-.labels{
+.tags{
+  padding:10px;
   display:flex;
   flex-wrap:wrap;
-  gap:7px;
-  padding:10px;
-  background:#06111e;
+  gap:6px;
 }
 
-.labels span{
-  font-size:10px;
-  color:#9ec5e8;
+.tags span{
+  background:#0b2137;
+  color:#9dc7e8;
   padding:5px 7px;
-  background:#0c2239;
-  border-radius:6px;
+  border-radius:5px;
+  font-size:10px;
 }
 
-/* ================= FOOTER ================= */
+/* =========================
+   FOOTER
+========================= */
 
 .footer{
   text-align:center;
-  color:#54728f;
-  font-size:10px;
   padding:25px 10px;
+  color:#55738f;
+  font-size:10px;
 }
 
-/* ================= MOBILE ================= */
+/* =========================
+   HP
+========================= */
 
 @media(max-width:600px){
-
-  .title{
-    font-size:28px;
-  }
 
   .menu{
     grid-template-columns:1fr;
   }
 
-  .social{
-    grid-template-columns:1fr 1fr;
+  .title{
+    font-size:27px;
   }
 
   .container{
     padding:13px;
   }
 
-  .hero h1{
-    font-size:22px;
-  }
 }
 </style>
 </head>
 
+
 <body>
 
-<div class="app">
-
-<!-- =====================================================
-HOME
-===================================================== -->
+<!-- ==================================================
+     MENU UTAMA
+================================================== -->
 
 <section id="home" class="page active">
 
 <header class="header">
 
-<div class="logo">MEQ</div>
+  <div class="logo">
+    MEQ
+  </div>
 
-<div class="title">MEQ491</div>
+  <div class="title">
+    MEQ MEMBAWA TEPAK
+  </div>
 
-<div class="subtitle">
-TRADING EDUCATION
-</div>
+  <div class="subtitle">
+    EDUKASI TRADING
+  </div>
 
 </header>
 
+
 <div class="container">
 
-<div class="hero">
+  <div class="welcome">
 
-<h1>Belajar Trading Dari Dasar</h1>
+    <h1>
+      Selamat Datang
+    </h1>
 
-<p>
-Materi edukasi trading untuk memahami Forex, Broker, MT5,
-Pair, XAUUSD, Candlestick, Market Structure, SNR,
-Parallel Channel, Supply & Demand, Fibonacci, Entry,
-SL, TP, BE dan Risk Management.
-</p>
+    <p>
+      Belajar trading dari dasar sampai memahami
+      analisis market. Materi dibuat dengan bahasa
+      sederhana agar mudah dipahami pemula.
+    </p>
+
+  </div>
+
+
+  <!-- EXNESS + TELEGRAM -->
+
+  <div class="links">
+
+    <a
+      class="exness"
+      id="exnessLink"
+      href="#"
+      target="_blank"
+      rel="noopener">
+      🟡 EXNESS
+    </a>
+
+    <a
+      class="telegram"
+      href="https://t.me/meq491"
+      target="_blank"
+      rel="noopener">
+      ✈️ TELEGRAM
+    </a>
+
+  </div>
+
+
+  <!-- MENU MATERI -->
+
+  <div class="menu">
+
+    <button onclick="openLesson('forex')">
+      <div class="num">01</div>
+      <h3>Apa Itu Forex</h3>
+      <p>Memahami forex dan keuntungan dari selisih harga.</p>
+    </button>
+
+
+    <button onclick="openLesson('broker')">
+      <div class="num">02</div>
+      <h3>Broker</h3>
+      <p>Memahami broker sebagai perantara transaksi.</p>
+    </button>
+
+
+    <button onclick="openLesson('mt5')">
+      <div class="num">03</div>
+      <h3>MT5</h3>
+      <p>Mengenal platform untuk melihat chart dan transaksi.</p>
+    </button>
+
+
+    <button onclick="openLesson('pair')">
+      <div class="num">04</div>
+      <h3>Pair & XAUUSD</h3>
+      <p>Mengenal pasangan mata uang dan emas.</p>
+    </button>
+
+
+    <button onclick="openLesson('candle')">
+      <div class="num">05</div>
+      <h3>Candlestick</h3>
+      <p>Mengenal body, wick, open, close, high dan low.</p>
+    </button>
+
+
+    <button onclick="openLesson('structure')">
+      <div class="num">06</div>
+      <h3>Market Structure</h3>
+      <p>HH, HL, LH, LL dan swing market.</p>
+    </button>
+
+
+    <button onclick="openLesson('snr')">
+      <div class="num">07</div>
+      <h3>SNR</h3>
+      <p>Support dan Resistance pada chart.</p>
+    </button>
+
+
+    <button onclick="openLesson('channel')">
+      <div class="num">08</div>
+      <h3>Parallel Channel</h3>
+      <p>Membaca channel dengan garis yang sejajar.</p>
+    </button>
+
+
+    <button onclick="openLesson('snd')">
+      <div class="num">09</div>
+      <h3>Supply & Demand</h3>
+      <p>Mengenal area Supply dan Demand.</p>
+    </button>
+
+
+    <button onclick="openLesson('fib')">
+      <div class="num">10</div>
+      <h3>Fibonacci</h3>
+      <p>Menarik Fibonacci dari Swing High dan Swing Low.</p>
+    </button>
+
+
+    <button onclick="openLesson('entry')">
+      <div class="num">11</div>
+      <h3>Entry</h3>
+      <p>Menentukan area dan konfirmasi entry.</p>
+    </button>
+
+
+    <button onclick="openLesson('sltp')">
+      <div class="num">12</div>
+      <h3>SL • TP • BE</h3>
+      <p>Mengatur Stop Loss, Take Profit dan Break Even.</p>
+    </button>
+
+
+    <button onclick="openLesson('risk')">
+      <div class="num">13</div>
+      <h3>Risk Management</h3>
+      <p>Mengatur lot dan risiko transaksi.</p>
+    </button>
+
+
+    <button onclick="openLesson('workflow')">
+      <div class="num">14</div>
+      <h3>Alur Analisis</h3>
+      <p>H4 → M30 → M5 → M1.</p>
+    </button>
+
+  </div>
+
+
+  <div class="footer">
+    MEQ MEMBAWA TEPAK
+  </div>
 
 </div>
 
-<div class="social">
-
-<a class="exness"
-id="exnessButton"
-href="#"
-target="_blank">
-🟡 EXNESS
-</a>
-
-<a class="telegram"
-href="https://t.me/meq491"
-target="_blank">
-✈️ TELEGRAM
-</a>
-
-</div>
-
-<div class="menu">
-
-<button class="card" onclick="openPage('forex')">
-<div class="number">01</div>
-<h3>Apa Itu Forex</h3>
-<p>Memahami pasar forex dan selisih harga.</p>
-</button>
-
-<button class="card" onclick="openPage('broker')">
-<div class="number">02</div>
-<h3>Broker</h3>
-<p>Broker sebagai perantara trading.</p>
-</button>
-
-<button class="card" onclick="openPage('mt5')">
-<div class="number">03</div>
-<h3>MT5</h3>
-<p>Platform untuk chart dan transaksi.</p>
-</button>
-
-<button class="card" onclick="openPage('pair')">
-<div class="number">04</div>
-<h3>Pair & XAUUSD</h3>
-<p>Mengenal pair dan emas.</p>
-</button>
-
-<button class="card" onclick="openPage('candle')">
-<div class="number">05</div>
-<h3>Candlestick</h3>
-<p>Body, wick, bullish dan bearish.</p>
-</button>
-
-<button class="card" onclick="openPage('structure')">
-<div class="number">06</div>
-<h3>Market Structure</h3>
-<p>HH, HL, LH, LL dan swing.</p>
-</button>
-
-<button class="card" onclick="openPage('snr')">
-<div class="number">07</div>
-<h3>SNR</h3>
-<p>Support dan Resistance.</p>
-</button>
-
-<button class="card" onclick="openPage('channel')">
-<div class="number">08</div>
-<h3>Parallel Channel</h3>
-<p>Channel dengan garis sejajar.</p>
-</button>
-
-<button class="card" onclick="openPage('snd')">
-<div class="number">09</div>
-<h3>Supply & Demand</h3>
-<p>Area Supply dan Demand.</p>
-</button>
-
-<button class="card" onclick="openPage('fib')">
-<div class="number">10</div>
-<h3>Fibonacci</h3>
-<p>High → Low dan Low → High.</p>
-</button>
-
-<button class="card" onclick="openPage('entry')">
-<div class="number">11</div>
-<h3>Entry</h3>
-<p>Area dan konfirmasi entry.</p>
-</button>
-
-<button class="card" onclick="openPage('risk')">
-<div class="number">12</div>
-<h3>SL • TP • BE</h3>
-<p>Mengelola posisi trading.</p>
-</button>
-
-<button class="card" onclick="openPage('money')">
-<div class="number">13</div>
-<h3>Risk Management</h3>
-<p>Mengatur risiko dan lot.</p>
-</button>
-
-<button class="card" onclick="openPage('workflow')">
-<div class="number">14</div>
-<h3>Alur Analisis</h3>
-<p>H4 → M30 → M5 → M1.</p>
-</button>
-
-</div>
-
-<div class="footer">
-MEQ491 • TRADING EDUCATION
-</div>
-
-</div>
 </section>
 
 
-<!-- =====================================================
-FOREX
-===================================================== -->
+<!-- ==================================================
+     FOREX
+================================================== -->
 
 <section id="forex" class="page">
 
 <header class="header">
-<div class="title">APA ITU FOREX</div>
-<div class="subtitle">DASAR FOREX</div>
+  <div class="title">APA ITU FOREX</div>
+  <div class="subtitle">DASAR TRADING</div>
 </header>
 
 <div class="container">
 
-<button class="back" onclick="goHome()">← Kembali ke Menu Utama</button>
+<button class="back" onclick="backToHome()">
+← Kembali ke Menu Utama
+</button>
 
 <div class="lesson">
 
 <h2>Apa Itu Forex?</h2>
 
 <p>
-Forex adalah singkatan dari Foreign Exchange, yaitu perdagangan
-mata uang. Harga suatu pair berubah mengikuti kondisi pasar.
+Forex adalah perdagangan mata uang. Harga suatu mata uang
+dibandingkan dengan mata uang lainnya dan nilainya dapat
+berubah mengikuti kondisi pasar.
 </p>
 
-<h3>Bagaimana keuntungan bisa terjadi?</h3>
+<h3>Bagaimana trader mendapatkan keuntungan?</h3>
 
 <p>
-Trader dapat memperoleh keuntungan dari selisih harga ketika
-posisi ditutup. Untuk Buy, trader berharap harga naik. Untuk
-Sell, trader berharap harga turun.
+Secara sederhana, keuntungan atau kerugian berasal dari
+perubahan harga setelah posisi dibuka.
 </p>
 
 <div class="example">
-<b>Contoh Buy:</b><br><br>
-EUR/USD = 1.1000<br>
-BUY pada 1.1000<br>
-Harga naik → 1.1050<br>
-Posisi ditutup pada 1.1050.<br><br>
 
-Selisih harga tersebut menjadi dasar perhitungan hasil transaksi,
-sebelum spread, komisi dan biaya lainnya.
+<b>Contoh BUY</b><br><br>
+
+Harga EUR/USD = 1.1000<br>
+Trader melakukan BUY.<br>
+Harga naik menjadi 1.1050.<br><br>
+
+Jika posisi ditutup pada harga yang lebih tinggi,
+perubahan harga tersebut dapat menghasilkan keuntungan
+sebelum memperhitungkan biaya transaksi.
+
 </div>
 
-</div>
-
-<div class="lesson">
-
-<h2>Contoh Pair</h2>
+<h3>BUY dan SELL</h3>
 
 <ul>
-<li>EUR/USD</li>
-<li>GBP/USD</li>
-<li>USD/JPY</li>
-<li>AUD/USD</li>
-<li>USD/CAD</li>
-<li>USD/CHF</li>
-<li>NZD/USD</li>
+<li>BUY → mengharapkan harga naik.</li>
+<li>SELL → mengharapkan harga turun.</li>
 </ul>
 
 </div>
@@ -530,46 +580,57 @@ sebelum spread, komisi dan biaya lainnya.
 </section>
 
 
-<!-- =====================================================
-BROKER
-===================================================== -->
+<!-- ==================================================
+     BROKER
+================================================== -->
 
 <section id="broker" class="page">
 
 <header class="header">
-<div class="title">BROKER</div>
-<div class="subtitle">PERANTARA TRADING</div>
+  <div class="title">BROKER</div>
+  <div class="subtitle">PERANTARA TRADING</div>
 </header>
 
 <div class="container">
 
-<button class="back" onclick="goHome()">← Kembali ke Menu Utama</button>
+<button class="back" onclick="backToHome()">
+← Kembali ke Menu Utama
+</button>
 
 <div class="lesson">
 
 <h2>Apa Itu Broker?</h2>
 
 <p>
-Broker adalah perusahaan yang menyediakan akses kepada trader
-untuk melakukan transaksi pada instrumen yang tersedia melalui
-platform trading.
+Broker adalah perusahaan yang menyediakan akses bagi trader
+untuk melakukan transaksi melalui platform trading yang
+disediakan atau didukung oleh broker tersebut.
 </p>
 
 <h3>Fungsi Broker</h3>
 
 <ul>
 <li>Menyediakan akun trading.</li>
-<li>Menyediakan akses platform.</li>
+<li>Menyediakan platform.</li>
 <li>Menyediakan harga Bid dan Ask.</li>
-<li>Menerima dan meneruskan order sesuai mekanisme broker.</li>
+<li>Menyediakan fasilitas order.</li>
 <li>Menyediakan informasi margin.</li>
 <li>Menyediakan fasilitas Stop Loss dan Take Profit.</li>
 </ul>
 
-<div class="note">
-Broker bukan jaminan bahwa trader pasti mendapatkan keuntungan.
-Trading tetap memiliki risiko.
-</div>
+<h3>Spread</h3>
+
+<p>
+Spread adalah selisih antara harga Bid dan Ask.
+</p>
+
+<h3>Leverage</h3>
+
+<p>
+Leverage memungkinkan trader mengendalikan nilai posisi yang
+lebih besar dibandingkan dana yang tersedia, tetapi leverage
+juga dapat memperbesar risiko.
+</p>
 
 </div>
 
@@ -577,45 +638,46 @@ Trading tetap memiliki risiko.
 </section>
 
 
-<!-- =====================================================
-MT5
-===================================================== -->
+<!-- ==================================================
+     MT5
+================================================== -->
 
 <section id="mt5" class="page">
 
 <header class="header">
-<div class="title">MT5</div>
-<div class="subtitle">METATRADER 5</div>
+  <div class="title">MT5</div>
+  <div class="subtitle">METATRADER 5</div>
 </header>
 
 <div class="container">
 
-<button class="back" onclick="goHome()">← Kembali ke Menu Utama</button>
+<button class="back" onclick="backToHome()">
+← Kembali ke Menu Utama
+</button>
 
 <div class="lesson">
 
 <h2>Apa Itu MT5?</h2>
 
 <p>
-MetaTrader 5 adalah platform trading yang digunakan untuk
-melihat chart, melakukan analisis dan mengelola transaksi
-melalui broker yang mendukung MT5.
+MT5 atau MetaTrader 5 adalah platform yang dapat digunakan
+untuk melihat chart, melakukan analisis dan mengelola posisi
+trading melalui broker yang mendukungnya.
 </p>
 
-<h3>Yang dapat dilakukan:</h3>
+<h3>Fitur dasar</h3>
 
 <ul>
-<li>Melihat chart.</li>
-<li>Mengubah timeframe.</li>
+<li>Chart.</li>
+<li>Timeframe.</li>
 <li>Buy dan Sell.</li>
-<li>Menentukan lot.</li>
-<li>Memasang Stop Loss.</li>
-<li>Memasang Take Profit.</li>
-<li>Menggunakan indikator.</li>
-<li>Menggambar SNR.</li>
-<li>Menggambar Fibonacci.</li>
-<li>Melihat posisi aktif.</li>
-<li>Melihat riwayat transaksi.</li>
+<li>Lot.</li>
+<li>Stop Loss.</li>
+<li>Take Profit.</li>
+<li>Pending Order.</li>
+<li>Indikator.</li>
+<li>Drawing Tools.</li>
+<li>Riwayat transaksi.</li>
 </ul>
 
 </div>
@@ -624,50 +686,55 @@ melalui broker yang mendukung MT5.
 </section>
 
 
-<!-- =====================================================
-PAIR
-===================================================== -->
+<!-- ==================================================
+     PAIR
+================================================== -->
 
 <section id="pair" class="page">
 
 <header class="header">
-<div class="title">PAIR & XAUUSD</div>
-<div class="subtitle">INSTRUMEN</div>
+  <div class="title">PAIR & XAUUSD</div>
+  <div class="subtitle">INSTRUMEN</div>
 </header>
 
 <div class="container">
 
-<button class="back" onclick="goHome()">← Kembali ke Menu Utama</button>
+<button class="back" onclick="backToHome()">
+← Kembali ke Menu Utama
+</button>
 
 <div class="lesson">
 
-<h2>Apa Itu Pair?</h2>
+<h2>Pair</h2>
 
 <p>
-Pair adalah pasangan mata uang yang dibandingkan satu dengan
-yang lainnya.
+Pair adalah pasangan dua mata uang.
 </p>
 
 <div class="example">
-EUR/USD = Euro terhadap Dollar Amerika<br>
-GBP/USD = Poundsterling terhadap Dollar Amerika<br>
-USD/JPY = Dollar Amerika terhadap Yen Jepang
-</div>
+
+EUR/USD<br>
+GBP/USD<br>
+USD/JPY<br>
+AUD/USD<br>
+USD/CAD
 
 </div>
 
-<div class="lesson">
-
-<h2>XAUUSD</h2>
+<h2 style="margin-top:22px">
+XAUUSD
+</h2>
 
 <p>
-XAUUSD adalah simbol yang umum digunakan untuk menunjukkan emas
-terhadap Dollar Amerika.
+XAUUSD adalah simbol yang umum digunakan untuk emas terhadap
+Dollar Amerika.
 </p>
 
 <div class="example">
+
 XAU = Gold / Emas<br>
 USD = Dollar Amerika
+
 </div>
 
 </div>
@@ -676,99 +743,114 @@ USD = Dollar Amerika
 </section>
 
 
-<!-- =====================================================
-CANDLE
-===================================================== -->
+<!-- ==================================================
+     CANDLE
+================================================== -->
 
 <section id="candle" class="page">
 
 <header class="header">
-<div class="title">CANDLESTICK</div>
-<div class="subtitle">MEMBACA CANDLE</div>
+  <div class="title">CANDLESTICK</div>
+  <div class="subtitle">MEMBACA CANDLE</div>
 </header>
 
 <div class="container">
 
-<button class="back" onclick="goHome()">← Kembali ke Menu Utama</button>
+<button class="back" onclick="backToHome()">
+← Kembali ke Menu Utama
+</button>
 
 <div class="lesson">
 
-<h2>Bagian Candlestick</h2>
+<h2>Bagian Candle</h2>
 
 <ul>
 <li>Open = harga pembukaan.</li>
 <li>Close = harga penutupan.</li>
 <li>High = harga tertinggi.</li>
 <li>Low = harga terendah.</li>
-<li>Body = jarak Open dan Close.</li>
+<li>Body = bagian utama candle.</li>
 <li>Wick = ekor candle.</li>
 </ul>
 
 <div class="chart">
 
 <div class="chart-title">
-Contoh Candle Bullish & Bearish
+CONTOH CANDLE
 </div>
 
-<svg viewBox="0 0 760 330">
+<svg viewBox="0 0 760 320">
 
-<defs>
-<pattern id="gc" width="50" height="40"
-patternUnits="userSpaceOnUse">
-<path d="M50 0H0V40"
-fill="none"
-stroke="#132231"/>
-</pattern>
-</defs>
+<rect width="760"
+height="320"
+fill="#02070c"/>
 
-<rect width="760" height="330" fill="#03080d"/>
-<rect width="760" height="330" fill="url(#gc)"/>
+<!-- GRID -->
 
-<!-- bullish -->
+<g stroke="#102333"
+stroke-width="1">
 
-<line x1="240" y1="45"
-x2="240" y2="260"
-stroke="#a5b7c7"
+<line x1="0" y1="50" x2="760" y2="50"/>
+<line x1="0" y1="100" x2="760" y2="100"/>
+<line x1="0" y1="150" x2="760" y2="150"/>
+<line x1="0" y1="200" x2="760" y2="200"/>
+<line x1="0" y1="250" x2="760" y2="250"/>
+
+</g>
+
+<!-- BULL -->
+
+<line x1="230"
+y1="45"
+x2="230"
+y2="270"
+stroke="#aab8c5"
 stroke-width="3"/>
 
-<rect x="215" y="105"
+<rect x="205"
+y="105"
 width="50"
-height="105"
-fill="#2ca9ff"/>
+height="100"
+fill="#19a5ff"/>
 
-<text x="190" y="295"
-fill="#48adff"
+<text x="185"
+y="295"
+fill="#35aaff"
 font-size="16">
 BULLISH
 </text>
 
-<!-- bearish -->
+<!-- BEAR -->
 
-<line x1="515" y1="55"
-x2="515" y2="260"
-stroke="#a5b7c7"
+<line x1="520"
+y1="55"
+x2="520"
+y2="275"
+stroke="#aab8c5"
 stroke-width="3"/>
 
-<rect x="490" y="115"
+<rect x="495"
+y="105"
 width="50"
 height="100"
-fill="#ff5367"/>
+fill="#ff4f62"/>
 
-<text x="470" y="295"
-fill="#ff5367"
+<text x="480"
+y="295"
+fill="#ff5265"
 font-size="16">
 BEARISH
 </text>
 
 </svg>
 
-<div class="labels">
-<span>BODY</span>
-<span>WICK</span>
-<span>OPEN</span>
-<span>CLOSE</span>
+<div class="tags">
 <span>HIGH</span>
 <span>LOW</span>
+<span>OPEN</span>
+<span>CLOSE</span>
+<span>BODY</span>
+<span>WICK</span>
 </div>
 
 </div>
@@ -779,131 +861,183 @@ BEARISH
 </section>
 
 
-<!-- =====================================================
-MARKET STRUCTURE
-===================================================== -->
+<!-- ==================================================
+     MARKET STRUCTURE
+================================================== -->
 
 <section id="structure" class="page">
 
 <header class="header">
-<div class="title">MARKET STRUCTURE</div>
-<div class="subtitle">HH • HL • LH • LL</div>
+  <div class="title">MARKET STRUCTURE</div>
+  <div class="subtitle">HH • HL • LH • LL</div>
 </header>
 
 <div class="container">
 
-<button class="back" onclick="goHome()">← Kembali ke Menu Utama</button>
+<button class="back" onclick="backToHome()">
+← Kembali ke Menu Utama
+</button>
 
 <div class="lesson">
 
 <h2>Market Structure</h2>
 
 <p>
-Market Structure digunakan untuk melihat bagaimana harga
-membentuk swing dan menentukan kecenderungan arah pasar.
+Market Structure digunakan untuk membaca bagaimana harga
+membentuk swing dan kecenderungan arah pasar.
 </p>
 
-<h3>Struktur Bullish</h3>
+<h3>Bullish</h3>
 
 <p>
-Harga membentuk Higher High (HH) dan Higher Low (HL).
+Struktur bullish biasanya membentuk Higher High (HH) dan
+Higher Low (HL).
+</p>
+
+<h3>Bearish</h3>
+
+<p>
+Struktur bearish biasanya membentuk Lower High (LH) dan
+Lower Low (LL).
 </p>
 
 <div class="chart">
 
 <div class="chart-title">
-Contoh Market Structure dengan Candle
+CONTOH MARKET STRUCTURE
 </div>
 
-<svg viewBox="0 0 760 380">
+<svg viewBox="0 0 760 400">
 
-<defs>
-<pattern id="gm" width="50" height="45"
-patternUnits="userSpaceOnUse">
-<path d="M50 0H0V45"
-fill="none"
-stroke="#132231"/>
-</pattern>
-</defs>
+<rect width="760"
+height="400"
+fill="#02070c"/>
 
-<rect width="760" height="380" fill="#03080d"/>
-<rect width="760" height="380" fill="url(#gm)"/>
+<!-- GRID -->
 
-<!-- candles -->
+<g stroke="#102333">
 
-<g stroke="#9fb0bf" stroke-width="2">
-
-<line x1="80" y1="270" x2="80" y2="340"/>
-<rect x="71" y="285" width="18" height="35" fill="#ff5367"/>
-
-<line x1="120" y1="215" x2="120" y2="310"/>
-<rect x="111" y="230" width="18" height="55" fill="#2ca9ff"/>
-
-<line x1="160" y1="145" x2="160" y2="240"/>
-<rect x="151" y="160" width="18" height="55" fill="#2ca9ff"/>
-
-<line x1="200" y1="190" x2="200" y2="260"/>
-<rect x="191" y="205" width="18" height="35" fill="#ff5367"/>
-
-<line x1="240" y1="105" x2="240" y2="220"/>
-<rect x="231" y="125" width="18" height="65" fill="#2ca9ff"/>
-
-<line x1="280" y1="145" x2="280" y2="225"/>
-<rect x="271" y="160" width="18" height="45" fill="#ff5367"/>
-
-<line x1="320" y1="60" x2="320" y2="175"/>
-<rect x="311" y="80" width="18" height="65" fill="#2ca9ff"/>
+<line x1="0" y1="80" x2="760" y2="80"/>
+<line x1="0" y1="160" x2="760" y2="160"/>
+<line x1="0" y1="240" x2="760" y2="240"/>
+<line x1="0" y1="320" x2="760" y2="320"/>
 
 </g>
 
-<!-- structure line -->
+<!-- PRICE -->
 
 <polyline
-points="80,330 160,215 200,240 240,190 280,205 320,145"
+points="
+60,330
+130,250
+190,290
+260,185
+320,235
+395,125
+455,185
+535,90
+610,145
+700,55"
 fill="none"
-stroke="#48adff"
-stroke-width="2"
-stroke-dasharray="6 5"/>
+stroke="#35aaff"
+stroke-width="3"/>
 
-<text x="140" y="200"
-fill="#48adff"
-font-size="14">HH</text>
+<!-- SWING -->
 
-<text x="190" y="275"
-fill="#48adff"
-font-size="14">HL</text>
+<circle cx="130"
+cy="250"
+r="5"
+fill="#35aaff"/>
 
-<text x="230" y="105"
-fill="#48adff"
-font-size="14">HH</text>
+<circle cx="190"
+cy="290"
+r="5"
+fill="#35aaff"/>
 
-<text x="270" y="220"
-fill="#48adff"
-font-size="14">HL</text>
+<circle cx="260"
+cy="185"
+r="5"
+fill="#35aaff"/>
 
-<text x="310" y="55"
-fill="#48adff"
-font-size="14">HH</text>
+<circle cx="320"
+cy="235"
+r="5"
+fill="#35aaff"/>
+
+<circle cx="395"
+cy="125"
+r="5"
+fill="#35aaff"/>
+
+<circle cx="455"
+cy="185"
+r="5"
+fill="#35aaff"/>
+
+<circle cx="535"
+cy="90"
+r="5"
+fill="#35aaff"/>
+
+<text x="115"
+y="230"
+fill="#35aaff"
+font-size="16">
+HH
+</text>
+
+<text x="180"
+y="315"
+fill="#35aaff"
+font-size="16">
+HL
+</text>
+
+<text x="245"
+y="165"
+fill="#35aaff"
+font-size="16">
+HH
+</text>
+
+<text x="310"
+y="260"
+fill="#35aaff"
+font-size="16">
+HL
+</text>
+
+<text x="380"
+y="105"
+fill="#35aaff"
+font-size="16">
+HH
+</text>
+
+<text x="445"
+y="210"
+fill="#35aaff"
+font-size="16">
+HL
+</text>
+
+<text x="520"
+y="70"
+fill="#35aaff"
+font-size="16">
+HH
+</text>
 
 </svg>
 
-<div class="labels">
-<span>HH = Higher High</span>
-<span>HL = Higher Low</span>
+<div class="tags">
+<span>HH</span>
+<span>HL</span>
+<span>SWING HIGH</span>
+<span>SWING LOW</span>
 </div>
 
 </div>
-
-<h3>Struktur Bearish</h3>
-
-<div class="example">
-LH → LL → LH → LL
-</div>
-
-<p style="margin-top:12px">
-Dalam downtrend, harga cenderung membentuk Lower High dan
-Lower Low.
-</p>
 
 </div>
 
@@ -911,318 +1045,319 @@ Lower Low.
 </section>
 
 
-<!-- =====================================================
-SNR
-===================================================== -->
+<!-- ==================================================
+     SNR
+================================================== -->
 
 <section id="snr" class="page">
 
 <header class="header">
-<div class="title">SNR</div>
-<div class="subtitle">SUPPORT & RESISTANCE</div>
+  <div class="title">SNR</div>
+  <div class="subtitle">SUPPORT & RESISTANCE</div>
 </header>
 
 <div class="container">
 
-<button class="back" onclick="goHome()">← Kembali ke Menu Utama</button>
+<button class="back" onclick="backToHome()">
+← Kembali ke Menu Utama
+</button>
 
 <div class="lesson">
 
 <h2>Support</h2>
 
 <p>
-Support adalah area yang dapat menjadi tempat harga mendapatkan
-reaksi beli ketika harga turun menuju area tersebut.
+Support adalah area harga yang dapat menjadi tempat harga
+mendapatkan reaksi ketika bergerak turun.
 </p>
 
-<h2 style="margin-top:22px">Resistance</h2>
+<h2 style="margin-top:22px">
+Resistance
+</h2>
 
 <p>
-Resistance adalah area yang dapat menjadi tempat harga
-mendapatkan reaksi jual ketika harga naik menuju area tersebut.
+Resistance adalah area harga yang dapat menjadi tempat harga
+mendapatkan reaksi ketika bergerak naik.
 </p>
 
 <div class="chart">
 
 <div class="chart-title">
-Contoh SNR + Candlestick
+SNR + CANDLESTICK
 </div>
 
-<svg viewBox="0 0 760 390">
+<svg viewBox="0 0 760 400">
 
-<defs>
-<pattern id="gs" width="50" height="45"
-patternUnits="userSpaceOnUse">
-<path d="M50 0H0V45"
-fill="none"
-stroke="#132231"/>
-</pattern>
-</defs>
-
-<rect width="760" height="390" fill="#03080d"/>
-<rect width="760" height="390" fill="url(#gs)"/>
+<rect width="760"
+height="400"
+fill="#02070c"/>
 
 <!-- resistance -->
-<line x1="45" y1="75"
-x2="715" y2="75"
-stroke="#ff5367"
-stroke-width="3"/>
 
-<text x="55" y="58"
-fill="#ff5367"
-font-size="14">
+<line x1="40"
+y1="80"
+x2="720"
+y2="80"
+stroke="#ff5265"
+stroke-width="4"/>
+
+<text x="50"
+y="60"
+fill="#ff5265"
+font-size="16">
 RESISTANCE
 </text>
 
 <!-- support -->
-<line x1="45" y1="300"
-x2="715" y2="300"
-stroke="#2ca9ff"
-stroke-width="3"/>
 
-<text x="55" y="325"
-fill="#2ca9ff"
-font-size="14">
+<line x1="40"
+y1="315"
+x2="720"
+y2="315"
+stroke="#35aaff"
+stroke-width="4"/>
+
+<text x="50"
+y="345"
+fill="#35aaff"
+font-size="16">
 SUPPORT
 </text>
 
-<!-- candles -->
+<!-- CANDLE PATH -->
 
-<g stroke="#9fb0bf" stroke-width="2">
-
-<line x1="90" y1="220" x2="90" y2="310"/>
-<rect x="81" y="240" width="18" height="45" fill="#2ca9ff"/>
-
-<line x1="125" y1="165" x2="125" y2="250"/>
-<rect x="116" y="180" width="18" height="50" fill="#2ca9ff"/>
-
-<line x1="160" y1="90" x2="160" y2="195"/>
-<rect x="151" y="105" width="18" height="55" fill="#2ca9ff"/>
-
-<line x1="195" y1="60" x2="195" y2="145"/>
-<rect x="186" y="80" width="18" height="45" fill="#ff5367"/>
-
-<line x1="230" y1="70" x2="230" y2="155"/>
-<rect x="221" y="90" width="18" height="45" fill="#ff5367"/>
-
-<line x1="265" y1="105" x2="265" y2="185"/>
-<rect x="256" y="120" width="18" height="45" fill="#ff5367"/>
-
-<line x1="300" y1="155" x2="300" y2="245"/>
-<rect x="291" y="170" width="18" height="45" fill="#ff5367"/>
-
-<line x1="335" y1="215" x2="335" y2="315"/>
-<rect x="326" y="235" width="18" height="50" fill="#2ca9ff"/>
-
-<line x1="370" y1="225" x2="370" y2="310"/>
-<rect x="361" y="240" width="18" height="45" fill="#2ca9ff"/>
-
-<line x1="405" y1="185" x2="405" y2="275"/>
-<rect x="396" y="200" width="18" height="50" fill="#2ca9ff"/>
-
-</g>
+<polyline
+points="
+80,280
+120,230
+160,180
+200,95
+240,130
+280,180
+320,240
+360,300
+400,265
+440,210
+480,155
+520,100
+560,120
+600,190
+640,260"
+fill="none"
+stroke="#c0ced9"
+stroke-width="2"/>
 
 </svg>
 
-<div class="labels">
-<span>Resistance</span>
-<span>Support</span>
-<span>Rejection</span>
-<span>Break</span>
+<div class="tags">
+<span>SUPPORT</span>
+<span>RESISTANCE</span>
+<span>REAKSI</span>
+<span>BREAK</span>
+<span>RETEST</span>
 </div>
 
 </div>
 
 </div>
+
 </div>
 </section>
 
 
-<!-- =====================================================
-PARALLEL CHANNEL
-===================================================== -->
+<!-- ==================================================
+     PARALLEL CHANNEL
+================================================== -->
 
 <section id="channel" class="page">
 
 <header class="header">
-<div class="title">PARALLEL CHANNEL</div>
-<div class="subtitle">CHANNEL SEJAJAR</div>
+  <div class="title">PARALLEL CHANNEL</div>
+  <div class="subtitle">GARIS SEJAJAR</div>
 </header>
 
 <div class="container">
 
-<button class="back" onclick="goHome()">← Kembali ke Menu Utama</button>
+<button class="back" onclick="backToHome()">
+← Kembali ke Menu Utama
+</button>
 
 <div class="lesson">
 
 <h2>Parallel Channel</h2>
 
 <p>
-Parallel Channel menggunakan dua garis yang sejajar untuk
-membantu membaca pergerakan harga.
-</p>
-
-<p style="margin-top:12px">
-Harga dapat bergerak di antara batas atas dan batas bawah
-channel. Garis channel harus tetap sejajar.
+Parallel Channel adalah dua garis yang dibuat sejajar untuk
+membantu membaca pergerakan harga yang membentuk channel.
 </p>
 
 <div class="chart">
 
 <div class="chart-title">
-Contoh Parallel Channel + Candle
+PARALLEL CHANNEL + CANDLE
 </div>
 
 <svg viewBox="0 0 760 420">
 
-<defs>
-<pattern id="gch" width="50" height="45"
-patternUnits="userSpaceOnUse">
-<path d="M50 0H0V45"
-fill="none"
-stroke="#132231"/>
-</pattern>
-</defs>
+<rect width="760"
+height="420"
+fill="#02070c"/>
 
-<rect width="760" height="420" fill="#03080d"/>
-<rect width="760" height="420" fill="url(#gch)"/>
+<!-- CHANNEL -->
 
-<!-- channel -->
-<polygon
-points="55,320 700,90 700,180 55,410"
-fill="#2ca9ff"
-fill-opacity=".07"/>
+<line x1="50"
+y1="350"
+x2="710"
+y2="100"
+stroke="#35aaff"
+stroke-width="4"/>
 
-<line x1="55" y1="320"
-x2="700" y2="90"
-stroke="#2ca9ff"
-stroke-width="3"/>
+<line x1="50"
+y1="410"
+x2="710"
+y2="160"
+stroke="#35aaff"
+stroke-width="4"/>
 
-<line x1="55" y1="410"
-x2="700" y2="180"
-stroke="#2ca9ff"
-stroke-width="3"/>
+<!-- MID -->
 
-<!-- candles -->
+<line x1="50"
+y1="380"
+x2="710"
+y2="130"
+stroke="#236d9f"
+stroke-width="1"
+stroke-dasharray="7 7"/>
 
-<g stroke="#a4b4c2" stroke-width="2">
+<!-- CANDLES -->
 
-<line x1="90" y1="290" x2="90" y2="360"/>
-<rect x="81" y="305" width="18" height="35" fill="#2ca9ff"/>
+<g stroke="#b6c3ce"
+stroke-width="2">
 
-<line x1="125" y1="270" x2="125" y2="340"/>
-<rect x="116" y="285" width="18" height="35" fill="#ff5367"/>
+<line x1="90" y1="320" x2="90" y2="390"/>
+<rect x="82" y="335" width="16" height="35"
+fill="#1ba4ff"/>
 
-<line x1="160" y1="250" x2="160" y2="320"/>
-<rect x="151" y="265" width="18" height="35" fill="#2ca9ff"/>
+<line x1="125" y1="300" x2="125" y2="370"/>
+<rect x="117" y="315" width="16" height="35"
+fill="#ff5265"/>
 
-<line x1="195" y1="225" x2="195" y2="295"/>
-<rect x="186" y="240" width="18" height="35" fill="#2ca9ff"/>
+<line x1="160" y1="280" x2="160" y2="345"/>
+<rect x="152" y="295" width="16" height="35"
+fill="#1ba4ff"/>
 
-<line x1="230" y1="215" x2="230" y2="275"/>
-<rect x="221" y="225" width="18" height="32" fill="#ff5367"/>
+<line x1="195" y1="255" x2="195" y2="320"/>
+<rect x="187" y="270" width="16" height="35"
+fill="#1ba4ff"/>
 
-<line x1="265" y1="195" x2="265" y2="260"/>
-<rect x="256" y="205" width="18" height="35" fill="#2ca9ff"/>
+<line x1="230" y1="240" x2="230" y2="295"/>
+<rect x="222" y="250" width="16" height="30"
+fill="#ff5265"/>
 
-<line x1="300" y1="175" x2="300" y2="235"/>
-<rect x="291" y="185" width="18" height="32" fill="#2ca9ff"/>
+<line x1="265" y1="220" x2="265" y2="275"/>
+<rect x="257" y="230" width="16" height="30"
+fill="#1ba4ff"/>
 
-<line x1="335" y1="165" x2="335" y2="220"/>
-<rect x="326" y="175" width="18" height="30" fill="#ff5367"/>
+<line x1="300" y1="205" x2="300" y2="260"/>
+<rect x="292" y="215" width="16" height="30"
+fill="#1ba4ff"/>
 
-<line x1="370" y1="145" x2="370" y2="205"/>
-<rect x="361" y="155" width="18" height="32" fill="#2ca9ff"/>
+<line x1="335" y1="190" x2="335" y2="240"/>
+<rect x="327" y="200" width="16" height="28"
+fill="#ff5265"/>
 
-<line x1="405" y1="130" x2="405" y2="185"/>
-<rect x="396" y="140" width="18" height="30" fill="#2ca9ff"/>
+<line x1="370" y1="175" x2="370" y2="225"/>
+<rect x="362" y="185" width="16" height="28"
+fill="#1ba4ff"/>
 
 </g>
 
-<text x="530" y="75"
-fill="#2ca9ff"
-font-size="14">
-CHANNEL ATAS
+<text x="540"
+y="90"
+fill="#35aaff"
+font-size="15">
+GARIS ATAS
 </text>
 
-<text x="520" y="210"
-fill="#2ca9ff"
-font-size="14">
-CHANNEL BAWAH
+<text x="540"
+y="175"
+fill="#35aaff"
+font-size="15">
+GARIS BAWAH
 </text>
 
 </svg>
 
-<div class="labels">
-<span>Garis Atas</span>
-<span>Garis Bawah</span>
-<span>Sejajar</span>
+<div class="tags">
+<span>GARIS ATAS</span>
+<span>GARIS BAWAH</span>
+<span>SEJAJAR</span>
+<span>CHANNEL</span>
 </div>
 
 </div>
 
 </div>
+
 </div>
 </section>
 
 
-<!-- =====================================================
-SND
-===================================================== -->
+<!-- ==================================================
+     SND
+================================================== -->
 
 <section id="snd" class="page">
 
 <header class="header">
-<div class="title">SUPPLY & DEMAND</div>
-<div class="subtitle">SND</div>
+  <div class="title">SUPPLY & DEMAND</div>
+  <div class="subtitle">SND</div>
 </header>
 
 <div class="container">
 
-<button class="back" onclick="goHome()">← Kembali ke Menu Utama</button>
+<button class="back" onclick="backToHome()">
+← Kembali ke Menu Utama
+</button>
 
 <div class="lesson">
 
 <h2>Demand</h2>
 
 <p>
-Demand adalah area yang menunjukkan adanya permintaan yang dapat
-mendorong harga bergerak naik.
+Demand adalah area yang dapat menunjukkan adanya tekanan
+permintaan yang kemudian diikuti pergerakan harga naik.
 </p>
 
 <div class="example">
-Secara sederhana:<br><br>
-Base → Impulse naik → harga meninggalkan area Demand.
-</div>
+
+BASE → IMPULSE NAIK
 
 </div>
 
-<div class="lesson">
-
-<h2>Supply</h2>
+<h2 style="margin-top:22px">
+Supply
+</h2>
 
 <p>
-Supply adalah area yang menunjukkan adanya penawaran yang dapat
-mendorong harga bergerak turun.
+Supply adalah area yang dapat menunjukkan adanya tekanan
+penawaran yang kemudian diikuti pergerakan harga turun.
 </p>
 
 <div class="example">
-Secara sederhana:<br><br>
-Base → Impulse turun → harga meninggalkan area Supply.
-</div>
+
+BASE → IMPULSE TURUN
 
 </div>
 
-<div class="lesson">
-
-<h2>Yang diperhatikan</h2>
+<h3>Yang diperhatikan</h3>
 
 <ul>
 <li>Base.</li>
 <li>Impulse.</li>
-<li>Reaksi harga.</li>
 <li>Kekuatan pergerakan.</li>
-<li>Posisi area terhadap Market Structure.</li>
+<li>Reaksi ketika harga kembali ke area.</li>
+<li>Posisi area terhadap struktur market.</li>
 </ul>
 
 </div>
@@ -1231,151 +1366,153 @@ Base → Impulse turun → harga meninggalkan area Supply.
 </section>
 
 
-<!-- =====================================================
-FIBONACCI
-===================================================== -->
+<!-- ==================================================
+     FIBONACCI
+================================================== -->
 
 <section id="fib" class="page">
 
 <header class="header">
-<div class="title">FIBONACCI</div>
-<div class="subtitle">RETRACEMENT</div>
+  <div class="title">FIBONACCI</div>
+  <div class="subtitle">RETRACEMENT</div>
 </header>
 
 <div class="container">
 
-<button class="back" onclick="goHome()">← Kembali ke Menu Utama</button>
+<button class="back" onclick="backToHome()">
+← Kembali ke Menu Utama
+</button>
 
 <div class="lesson">
 
 <h2>High → Low</h2>
 
 <p>
-Jika ingin mengukur retracement dari sebuah pergerakan turun,
-Fibonacci dapat ditarik dari Swing High menuju Swing Low.
+Untuk mengukur retracement dari pergerakan turun,
+Fibonacci ditarik dari Swing High menuju Swing Low.
 </p>
 
 <div class="example">
-<b>SWING HIGH → SWING LOW</b><br><br>
+
+<b>SWING HIGH → SWING LOW</b>
+
+<br><br>
+
+Contoh:<br>
+
 High = 2600<br>
-Low = 2500<br><br>
-Tarik Fibonacci dari High menuju Low.
+Low = 2500
+
 </div>
 
 <div class="chart">
 
 <div class="chart-title">
-Contoh Fibonacci High → Low + Candle
+FIBONACCI HIGH → LOW
 </div>
 
 <svg viewBox="0 0 760 420">
 
-<defs>
-<pattern id="gf" width="50" height="45"
-patternUnits="userSpaceOnUse">
-<path d="M50 0H0V45"
-fill="none"
-stroke="#132231"/>
-</pattern>
-</defs>
+<rect width="760"
+height="420"
+fill="#02070c"/>
 
-<rect width="760" height="420" fill="#03080d"/>
-<rect width="760" height="420" fill="url(#gf)"/>
+<!-- FIB LEVEL -->
 
-<!-- candles -->
+<g stroke="#9b82ff"
+stroke-width="2">
 
-<g stroke="#9fb0bf" stroke-width="2">
+<line x1="340" y1="60"
+x2="720" y2="60"/>
 
-<line x1="100" y1="45" x2="100" y2="110"/>
-<rect x="91" y="55" width="18" height="35" fill="#2ca9ff"/>
+<line x1="340" y1="120"
+x2="720" y2="120"/>
 
-<line x1="135" y1="60" x2="135" y2="135"/>
-<rect x="126" y="75" width="18" height="40" fill="#ff5367"/>
+<line x1="340" y1="180"
+x2="720" y2="180"/>
 
-<line x1="170" y1="95" x2="170" y2="170"/>
-<rect x="161" y="110" width="18" height="40" fill="#ff5367"/>
+<line x1="340" y1="220"
+x2="720" y2="220"/>
 
-<line x1="205" y1="130" x2="205" y2="215"/>
-<rect x="196" y="145" width="18" height="50" fill="#ff5367"/>
+<line x1="340" y1="270"
+x2="720" y2="270"/>
 
-<line x1="240" y1="180" x2="240" y2="265"/>
-<rect x="231" y="195" width="18" height="50" fill="#ff5367"/>
-
-<line x1="275" y1="230" x2="275" y2="325"/>
-<rect x="266" y="245" width="18" height="55" fill="#ff5367"/>
-
-<line x1="310" y1="280" x2="310" y2="375"/>
-<rect x="301" y="300" width="18" height="50" fill="#ff5367"/>
+<line x1="340" y1="350"
+x2="720" y2="350"/>
 
 </g>
 
-<!-- fib levels -->
+<g fill="#b6a1ff"
+font-size="13">
 
-<line x1="350" y1="60" x2="720" y2="60"
-stroke="#9e7bff"/>
-
-<line x1="350" y1="125" x2="720" y2="125"
-stroke="#9e7bff"/>
-
-<line x1="350" y1="185" x2="720" y2="185"
-stroke="#9e7bff"/>
-
-<line x1="350" y1="225" x2="720" y2="225"
-stroke="#9e7bff"/>
-
-<line x1="350" y1="270" x2="720" y2="270"
-stroke="#9e7bff"/>
-
-<line x1="350" y1="350" x2="720" y2="350"
-stroke="#9e7bff"/>
-
-<text x="650" y="55" fill="#b99dff" font-size="12">
+<text x="650" y="55">
 0.786
 </text>
 
-<text x="650" y="120" fill="#b99dff" font-size="12">
+<text x="650" y="115">
 0.618
 </text>
 
-<text x="650" y="180" fill="#b99dff" font-size="12">
+<text x="650" y="175">
 0.500
 </text>
 
-<text x="650" y="220" fill="#b99dff" font-size="12">
+<text x="650" y="215">
 0.382
 </text>
 
-<text x="650" y="265" fill="#b99dff" font-size="12">
+<text x="650" y="265">
 0.236
 </text>
 
-<text x="650" y="345" fill="#b99dff" font-size="12">
+<text x="650" y="345">
 0.000
 </text>
 
-<text x="55" y="35"
-fill="#ff5367"
+</g>
+
+<!-- PRICE -->
+
+<polyline
+points="
+70,60
+110,85
+150,120
+190,165
+230,210
+270,255
+310,350"
+fill="none"
+stroke="#ff5265"
+stroke-width="3"/>
+
+<circle cx="70"
+cy="60"
+r="5"
+fill="#ff5265"/>
+
+<circle cx="310"
+cy="350"
+r="5"
+fill="#35aaff"/>
+
+<text x="50"
+y="40"
+fill="#ff5265"
 font-size="14">
 SWING HIGH
 </text>
 
-<text x="270" y="400"
-fill="#2ca9ff"
+<text x="250"
+y="385"
+fill="#35aaff"
 font-size="14">
 SWING LOW
 </text>
 
-<!-- measurement line -->
-
-<line x1="105" y1="60"
-x2="310" y2="350"
-stroke="#ff5367"
-stroke-width="2"
-stroke-dasharray="7 5"/>
-
 </svg>
 
-<div class="labels">
+<div class="tags">
 <span>0.236</span>
 <span>0.382</span>
 <span>0.500</span>
@@ -1385,20 +1522,14 @@ stroke-dasharray="7 5"/>
 
 </div>
 
-</div>
-
-<div class="lesson">
-
-<h2>Low → High</h2>
+<h2 style="margin-top:22px">
+Low → High
+</h2>
 
 <p>
-Jika mengukur pergerakan naik, Fibonacci ditarik dari Swing Low
+Untuk pergerakan naik, Fibonacci dapat ditarik dari Swing Low
 menuju Swing High.
 </p>
-
-<div class="example">
-<b>SWING LOW → SWING HIGH</b>
-</div>
 
 </div>
 
@@ -1406,43 +1537,41 @@ menuju Swing High.
 </section>
 
 
-<!-- =====================================================
-ENTRY
-===================================================== -->
+<!-- ==================================================
+     ENTRY
+================================================== -->
 
 <section id="entry" class="page">
 
 <header class="header">
-<div class="title">ENTRY</div>
-<div class="subtitle">KONFIRMASI</div>
+  <div class="title">ENTRY</div>
+  <div class="subtitle">KONFIRMASI</div>
 </header>
 
 <div class="container">
 
-<button class="back" onclick="goHome()">← Kembali ke Menu Utama</button>
+<button class="back" onclick="backToHome()">
+← Kembali ke Menu Utama
+</button>
 
 <div class="lesson">
 
-<h2>Langkah Sebelum Entry</h2>
+<h2>Urutan Sebelum Entry</h2>
 
 <ul>
-<li>Tentukan arah Market Structure.</li>
-<li>Tentukan area SNR.</li>
-<li>Perhatikan Parallel Channel jika ada.</li>
+<li>Lihat Market Structure.</li>
+<li>Tentukan arah.</li>
+<li>Tentukan SNR.</li>
+<li>Perhatikan Parallel Channel.</li>
 <li>Cari Supply atau Demand.</li>
-<li>Gunakan Fibonacci jika sesuai.</li>
+<li>Gunakan Fibonacci jika diperlukan.</li>
 <li>Tunggu harga masuk area.</li>
 <li>Tunggu konfirmasi.</li>
 <li>Tentukan Entry.</li>
-<li>Tentukan SL.</li>
-<li>Tentukan TP.</li>
+<li>Tentukan SL dan TP.</li>
 </ul>
 
-</div>
-
-<div class="lesson">
-
-<h2>Konfirmasi</h2>
+<h3>Konfirmasi</h3>
 
 <ul>
 <li>Rejection.</li>
@@ -1450,8 +1579,6 @@ ENTRY
 <li>Retest.</li>
 <li>Candle confirmation.</li>
 <li>Break dan close.</li>
-<li>Reaksi SNR.</li>
-<li>Reaksi Supply/Demand.</li>
 </ul>
 
 </div>
@@ -1460,62 +1587,49 @@ ENTRY
 </section>
 
 
-<!-- =====================================================
-SL TP BE
-===================================================== -->
+<!-- ==================================================
+     SL TP BE
+================================================== -->
 
-<section id="risk" class="page">
+<section id="sltp" class="page">
 
 <header class="header">
-<div class="title">SL • TP • BE</div>
-<div class="subtitle">MENGELOLA POSISI</div>
+  <div class="title">SL • TP • BE</div>
+  <div class="subtitle">MENGELOLA POSISI</div>
 </header>
 
 <div class="container">
 
-<button class="back" onclick="goHome()">← Kembali ke Menu Utama</button>
+<button class="back" onclick="backToHome()">
+← Kembali ke Menu Utama
+</button>
 
 <div class="lesson">
 
 <h2>Stop Loss</h2>
 
 <p>
-Stop Loss adalah batas harga yang digunakan untuk membatasi
-kerugian sebuah posisi.
+Stop Loss adalah batas yang digunakan untuk membatasi kerugian
+jika harga bergerak berlawanan dengan posisi.
 </p>
 
-<div class="example">
-BUY = 2500<br>
-SL = 2490<br><br>
-Jarak = 10 poin.
-</div>
-
-</div>
-
-<div class="lesson">
-
-<h2>Take Profit</h2>
+<h2 style="margin-top:22px">
+Take Profit
+</h2>
 
 <p>
-Take Profit adalah target harga untuk menutup posisi dengan
-keuntungan sesuai rencana.
+Take Profit adalah target harga untuk menutup posisi ketika
+harga mencapai target yang sudah direncanakan.
 </p>
 
-<div class="example">
-BUY = 2500<br>
-TP = 2520
-</div>
-
-</div>
-
-<div class="lesson">
-
-<h2>Break Even</h2>
+<h2 style="margin-top:22px">
+Break Even
+</h2>
 
 <p>
-Break Even atau BE adalah kondisi ketika Stop Loss dipindahkan
-mendekati harga entry setelah posisi bergerak sesuai rencana,
-dengan tujuan mengurangi risiko posisi.
+Break Even adalah kondisi ketika posisi dikelola dengan
+memindahkan Stop Loss mendekati atau ke harga entry sesuai
+rencana trader.
 </p>
 
 </div>
@@ -1524,52 +1638,52 @@ dengan tujuan mengurangi risiko posisi.
 </section>
 
 
-<!-- =====================================================
-MONEY MANAGEMENT
-===================================================== -->
+<!-- ==================================================
+     RISK
+================================================== -->
 
-<section id="money" class="page">
+<section id="risk" class="page">
 
 <header class="header">
-<div class="title">RISK MANAGEMENT</div>
-<div class="subtitle">MENGELOLA RISIKO</div>
+  <div class="title">RISK MANAGEMENT</div>
+  <div class="subtitle">MANAJEMEN RISIKO</div>
 </header>
 
 <div class="container">
 
-<button class="back" onclick="goHome()">← Kembali ke Menu Utama</button>
+<button class="back" onclick="backToHome()">
+← Kembali ke Menu Utama
+</button>
 
 <div class="lesson">
 
 <h2>Risk Management</h2>
 
 <p>
-Risk Management adalah cara mengatur risiko agar satu transaksi
-tidak menyebabkan kerugian yang terlalu besar terhadap modal.
+Risk Management digunakan untuk mengatur risiko setiap transaksi
+agar kerugian tidak menghabiskan modal.
 </p>
 
-<h3>Yang perlu diperhatikan:</h3>
-
 <ul>
-<li>Ukuran lot.</li>
-<li>Jarak Stop Loss.</li>
-<li>Risiko per transaksi.</li>
-<li>Risk : Reward.</li>
-<li>Jumlah posisi.</li>
-<li>Kondisi pasar.</li>
+<li>Atur lot.</li>
+<li>Tentukan SL.</li>
+<li>Tentukan risiko.</li>
+<li>Gunakan Risk : Reward yang masuk akal.</li>
+<li>Jangan overlot.</li>
+<li>Jangan mengejar kerugian.</li>
 </ul>
 
 <div class="example">
-Contoh konsep:<br><br>
-Entry = 2500<br>
-SL = 2490 → Risiko 10 poin<br>
-TP = 2520 → Target 20 poin<br><br>
-Risk : Reward = 1 : 2
-</div>
 
-<div class="note">
-Jangan menaikkan lot hanya karena ingin mengejar kerugian
-sebelumnya.
+Entry = 2500<br>
+SL = 2490<br>
+TP = 2520<br><br>
+
+Risiko = 10 poin<br>
+Target = 20 poin<br><br>
+
+Risk : Reward = 1 : 2
+
 </div>
 
 </div>
@@ -1578,102 +1692,99 @@ sebelumnya.
 </section>
 
 
-<!-- =====================================================
-WORKFLOW
-===================================================== -->
+<!-- ==================================================
+     WORKFLOW
+================================================== -->
 
 <section id="workflow" class="page">
 
 <header class="header">
-<div class="title">ALUR ANALISIS</div>
-<div class="subtitle">H4 → M30 → M5 → M1</div>
+  <div class="title">ALUR ANALISIS</div>
+  <div class="subtitle">H4 → M30 → M5 → M1</div>
 </header>
 
 <div class="container">
 
-<button class="back" onclick="goHome()">← Kembali ke Menu Utama</button>
+<button class="back" onclick="backToHome()">
+← Kembali ke Menu Utama
+</button>
 
 <div class="lesson">
 
-<h2>H4 — Struktur Besar</h2>
+<h2>H4</h2>
 
 <p>
-Mulai dari timeframe yang lebih besar untuk melihat arah dan
-struktur market secara lebih luas.
+Gunakan H4 untuk melihat struktur market yang lebih besar.
 </p>
 
 <ul>
-<li>Swing High</li>
-<li>Swing Low</li>
-<li>HH</li>
-<li>HL</li>
-<li>LH</li>
-<li>LL</li>
+<li>Swing High.</li>
+<li>Swing Low.</li>
+<li>HH.</li>
+<li>HL.</li>
+<li>LH.</li>
+<li>LL.</li>
 </ul>
 
 </div>
 
 <div class="lesson">
 
-<h2>M30 — Detail Pergerakan</h2>
+<h2>M30</h2>
 
 <p>
-Turun ke M30 untuk memperjelas struktur, SNR dan kemungkinan
-Parallel Channel.
+Turun ke M30 untuk melihat struktur yang lebih detail,
+SNR dan kemungkinan Parallel Channel.
 </p>
 
 </div>
 
 <div class="lesson">
 
-<h2>M5 — Area</h2>
+<h2>M5</h2>
 
 <p>
-Gunakan M5 untuk mencari area Supply dan Demand serta
-mempersiapkan rencana entry.
+Gunakan M5 untuk mencari area Supply & Demand dan
+mempersiapkan area entry.
 </p>
 
 </div>
 
 <div class="lesson">
 
-<h2>M1 — Konfirmasi</h2>
+<h2>M1</h2>
 
 <p>
-Gunakan M1 untuk melihat konfirmasi entry yang lebih detail.
+Gunakan M1 untuk mencari konfirmasi entry yang lebih detail.
 </p>
 
 </div>
 
 <div class="lesson">
 
-<h2>Urutan Sederhana</h2>
+<h2>Urutan Analisis</h2>
 
 <div class="example">
 
 <b>H4</b><br>
 Market Structure
-<br><br>
-↓
-<br><br>
+
+<br><br>↓<br><br>
 
 <b>M30</b><br>
 SNR + Parallel Channel
-<br><br>
-↓
-<br><br>
+
+<br><br>↓<br><br>
 
 <b>M5</b><br>
 Supply & Demand + Fibonacci
-<br><br>
-↓
-<br><br>
+
+<br><br>↓<br><br>
 
 <b>M1</b><br>
-Konfirmasi
-<br><br>
-↓
-<br><br>
+Konfirmasi Entry
+
+<br><br>↓<br><br>
 
 <b>ENTRY → SL → TP → BE</b>
 
@@ -1685,113 +1796,143 @@ Konfirmasi
 </section>
 
 
-</div>
-
-
 <script>
 
 /* =====================================================
-LINK EXNESS
+   LINK EXNESS
+=====================================================
 
-GANTI ISI DI BAWAH DENGAN LINK EXNESS KAMU.
-===================================================== */
+   GANTI LINK DI BAWAH DENGAN LINK EXNESS KAMU.
+*/
 
-const EXNESS_LINK = "MASUKKAN_LINK_EXNESS_KAMU_DI_SINI";
+const EXNESS_LINK =
+"https://one.exnessonelink.com/a/qy4b0v4ek5?source=app";
 
-document.getElementById("exnessButton").href = EXNESS_LINK;
+document.getElementById("exnessLink").href = EXNESS_LINK;
 
 
 /* =====================================================
-SISTEM POSISI MENU
+   SISTEM NAVIGASI
+=====================================================
 
-Posisi menu disimpan sebelum membuka materi.
-Ketika kembali, posisi tersebut dipulihkan.
+   INI BAGIAN PENTING:
+
+   Saat membuka materi:
+   - posisi scroll menu disimpan.
+
+   Saat kembali:
+   - menu utama ditampilkan lagi.
+   - browser TIDAK DIPAKSA scroll.
+   - posisi terakhir dikembalikan.
+   - tidak ada scroll otomatis ke bawah.
 ===================================================== */
 
-let posisiMenu = 0;
+let menuScrollPosition = 0;
 
 
 /* Buka materi */
 
-function openPage(id){
+function openLesson(id){
 
   /*
-  Simpan posisi scroll menu utama.
+    Simpan posisi menu saat ini.
+    Contoh:
+    user sedang melihat menu nomor 08,
+    posisi tersebut disimpan.
   */
-  posisiMenu = window.scrollY;
+
+  menuScrollPosition = window.scrollY;
+
 
   /*
-  Sembunyikan semua halaman.
+    Sembunyikan semua halaman.
   */
-  document.querySelectorAll(".page").forEach(function(page){
-    page.classList.remove("active");
-  });
 
-  /*
-  Tampilkan halaman materi.
-  */
-  const page = document.getElementById(id);
+  document
+    .querySelectorAll(".page")
+    .forEach(function(page){
 
-  if(page){
-    page.classList.add("active");
-  }
-
-  /*
-  Materi dimulai dari bagian atas.
-  */
-  window.scrollTo(0,0);
-  document.documentElement.scrollTop = 0;
-  document.body.scrollTop = 0;
-}
-
-
-/* Kembali */
-
-function goHome(){
-
-  /*
-  Sembunyikan semua halaman.
-  */
-  document.querySelectorAll(".page").forEach(function(page){
-    page.classList.remove("active");
-  });
-
-  /*
-  Tampilkan menu utama.
-  */
-  document.getElementById("home").classList.add("active");
-
-  /*
-  Tunggu menu aktif terlebih dahulu,
-  kemudian kembalikan posisi sebelumnya.
-  */
-  requestAnimationFrame(function(){
-
-    requestAnimationFrame(function(){
-
-      window.scrollTo({
-        top:posisiMenu,
-        left:0,
-        behavior:"auto"
-      });
-
-      document.documentElement.scrollTop = posisiMenu;
-      document.body.scrollTop = posisiMenu;
+      page.classList.remove("active");
 
     });
 
-  });
+
+  /*
+    Buka materi yang dipilih.
+  */
+
+  const lesson =
+    document.getElementById(id);
+
+  if(lesson){
+
+    lesson.classList.add("active");
+
+  }
+
+  /*
+    Materi memang dimulai dari bagian atas
+    agar isi materi terbaca dari judul.
+
+    Ini TIDAK mengubah posisi menu utama.
+  */
+
+  window.scrollTo(0,0);
+}
+
+
+/* =====================================================
+   KEMBALI KE MENU
+===================================================== */
+
+function backToHome(){
+
+  /*
+    Sembunyikan semua halaman.
+  */
+
+  document
+    .querySelectorAll(".page")
+    .forEach(function(page){
+
+      page.classList.remove("active");
+
+    });
+
+
+  /*
+    Tampilkan menu utama.
+  */
+
+  document
+    .getElementById("home")
+    .classList.add("active");
+
+
+  /*
+    Kembalikan posisi menu terakhir.
+
+    Tidak menggunakan smooth scroll.
+    Jadi tidak ada animasi bergerak.
+  */
+
+  window.scrollTo(
+    0,
+    menuScrollPosition
+  );
 
 }
 
 
 /*
-Supaya browser tidak mengambil alih posisi
-scroll saat halaman berubah.
+  Jangan biarkan browser sendiri
+  mengubah posisi scroll ketika navigasi.
 */
 
 if("scrollRestoration" in history){
+
   history.scrollRestoration = "manual";
+
 }
 
 </script>
