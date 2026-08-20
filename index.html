@@ -294,7 +294,7 @@ body{
 
 <div class="card">
 <h2>🔥 Supply & Demand</h2>
-<p>Belajar SND BUY dan SND SELL dengan konfirmasi M5 dan SND kecil M1 untuk entry.</p>
+<p>Belajar SND BUY dan SND SELL menggunakan contoh candle yang rapat dan jelas.</p>
 <button class="btn" onclick="openPage('snd')">BUKA MATERI</button>
 </div>
 
@@ -305,8 +305,8 @@ body{
 </div>
 
 <div class="card">
-<h2>🎯 Timeframe & Entry</h2>
-<p>Pasangan timeframe Scalping, Intraday dan Swing dari analisis sampai entry.</p>
+<h2>🎯 H4 → M30 → M5 → M1</h2>
+<p>Alur analisis dari timeframe besar sampai konfirmasi entry.</p>
 <button class="btn" onclick="openPage('entry')">BUKA MATERI</button>
 </div>
 
@@ -690,122 +690,240 @@ yang menjamin harga pasti berbalik.
 
 <h2>🔥 SUPPLY & DEMAND</h2>
 
-<h3>SND BUY — DEMAND</h3>
+<h3>SND BUY — M5</h3>
 
 <p>
-Pada M5, contoh konfirmasi SND BUY menggunakan pola
-<b>HIJAU → MERAH → HIJAU</b>.
-Pola ini digunakan untuk membaca perubahan tekanan harga
-di area Demand sebelum turun ke M1.
+Pada M5, SND BUY dicari di area pangkal sebelum harga melakukan
+impuls naik. Contoh konfirmasi dibuat dengan pola
+<strong>HIJAU → MERAH → HIJAU</strong>. Candle hijau terakhir
+menjadi bagian dari konfirmasi pergerakan naik.
 </p>
 
 <div class="chart">
 
-<div class="chart-title">
-M5 — CONTOH SND BUY
-</div>
+<div class="chart-title">M5 — SND BUY</div>
 
-<svg viewBox="0 0 700 400">
+<svg viewBox="0 0 700 480">
 
-<g stroke="#18283a">
-<line x1="20" y1="70" x2="680" y2="70"/>
-<line x1="20" y1="140" x2="680" y2="140"/>
-<line x1="20" y1="210" x2="680" y2="210"/>
-<line x1="20" y1="280" x2="680" y2="280"/>
-<line x1="20" y1="350" x2="680" y2="350"/>
+<g stroke="#18283a" stroke-width="1">
+<line x1="25" y1="70" x2="675" y2="70"/>
+<line x1="25" y1="145" x2="675" y2="145"/>
+<line x1="25" y1="220" x2="675" y2="220"/>
+<line x1="25" y1="295" x2="675" y2="295"/>
+<line x1="25" y1="370" x2="675" y2="370"/>
 </g>
 
-<rect x="190" y="205"
-width="260"
-height="100"
+<!-- candle sebelum SND -->
+
+<line x1="80" y1="260" x2="80" y2="370"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="62" y="285" width="36" height="58"
+fill="#ef4444"/>
+
+<line x1="130" y1="275" x2="130" y2="380"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="112" y="300" width="36" height="55"
+fill="#ef4444"/>
+
+<!-- candle SND -->
+<rect x="185" y="260" width="150" height="125"
 fill="#22c55e"
-opacity=".13"
+opacity=".10"
 stroke="#22c55e"
 stroke-width="3"/>
 
-<text x="270" y="295"
+<text x="205" y="250"
 fill="#22c55e"
-font-size="19"
+font-size="20"
 font-weight="bold">
-DEMAND
+DEMAND / SND
 </text>
 
-<line x1="230" y1="145" x2="230" y2="270"
-stroke="#22c55e"
-stroke-width="4"/>
-
-<rect x="210" y="170"
-width="40" height="70"
+<!-- HIJAU -->
+<line x1="215" y1="235" x2="215" y2="365"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="195" y="270" width="40" height="65"
 fill="#22c55e"/>
 
-<text x="200" y="125"
-fill="#22c55e"
-font-size="18"
-font-weight="bold">
-HIJAU
-</text>
-
-<line x1="330" y1="165" x2="330" y2="285"
-stroke="#ef4444"
-stroke-width="4"/>
-
-<rect x="310" y="190"
-width="40" height="65"
+<!-- MERAH -->
+<line x1="270" y1="250" x2="270" y2="375"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="250" y="280" width="40" height="65"
 fill="#ef4444"/>
 
-<text x="300" y="145"
-fill="#ef4444"
-font-size="18"
-font-weight="bold">
-MERAH
-</text>
-
-<line x1="430" y1="110" x2="430" y2="250"
-stroke="#22c55e"
-stroke-width="4"/>
-
-<rect x="410" y="135"
-width="40" height="85"
+<!-- HIJAU KONFIRMASI -->
+<line x1="325" y1="205" x2="325" y2="350"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="305" y="235" width="40" height="85"
 fill="#22c55e"/>
 
-<text x="400" y="90"
-fill="#22c55e"
-font-size="18"
-font-weight="bold">
-HIJAU
-</text>
-
-<line x1="455" y1="190"
-x2="570" y2="85"
-stroke="#22c55e"
-stroke-width="4"/>
-
-<polygon points="570,85 548,91 564,108"
+<!-- impuls -->
+<line x1="390" y1="120" x2="390" y2="300"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="370" y="145" width="40" height="120"
 fill="#22c55e"/>
 
-<text x="475" y="225"
-fill="#22c55e"
-font-size="17"
-font-weight="bold">
-BUY
-</text>
+<line x1="450" y1="45" x2="450" y2="180"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="430" y="65" width="40" height="90"
+fill="#22c55e"/>
 
-<text x="245" y="370"
+<line x1="510" y1="35" x2="510" y2="130"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="490" y="55" width="40" height="65"
+fill="#22c55e"/>
+
+<!-- panah -->
+<line x1="320" y1="410" x2="270" y2="360"
+stroke="#facc15"
+stroke-width="5"/>
+
+<polyline
+points="270,360 270,385 245,375"
+fill="none"
+stroke="#facc15"
+stroke-width="5"/>
+
+<text x="355" y="425"
 fill="white"
-font-size="18">
+font-size="22"
+font-weight="bold">
+SND BUY
+</text>
+
+<text x="190" y="455"
+fill="#22c55e"
+font-size="18"
+font-weight="bold">
 M5 — HIJAU → MERAH → HIJAU
 </text>
 
 </svg>
 
 <div class="caption">
-Pola M5 untuk contoh BUY adalah
-<b>HIJAU → MERAH → HIJAU</b>.
-Area merah berada di sekitar Demand dan candle hijau berikutnya
-menjadi bagian dari konfirmasi. Setelah M5 terkonfirmasi,
-turun ke M1 untuk mencari SND kecil sebagai area entry.
+Contoh M5 BUY: area SND berada di pangkal sebelum impuls naik.
+Pola konfirmasi ditunjukkan dengan HIJAU → MERAH → HIJAU.
+Setelah M5 terkonfirmasi, turun ke M1 untuk mencari SND kecil
+sebagai area entry.
+</div>
 </div>
 
+
+<h3>SND SELL — M5</h3>
+
+<p>
+Pada M5, SND SELL dicari di area pangkal sebelum harga melakukan
+impuls turun. Contoh konfirmasi dibuat dengan pola
+<strong>MERAH → HIJAU → MERAH</strong>.
+</p>
+
+<div class="chart">
+
+<div class="chart-title">M5 — SND SELL</div>
+
+<svg viewBox="0 0 700 480">
+
+<g stroke="#18283a" stroke-width="1">
+<line x1="25" y1="70" x2="675" y2="70"/>
+<line x1="25" y1="145" x2="675" y2="145"/>
+<line x1="25" y1="220" x2="675" y2="220"/>
+<line x1="25" y1="295" x2="675" y2="295"/>
+<line x1="25" y1="370" x2="675" y2="370"/>
+</g>
+
+<!-- candle sebelum SND -->
+
+<line x1="80" y1="80" x2="80" y2="205"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="62" y="105" width="36" height="65"
+fill="#22c55e"/>
+
+<line x1="130" y1="65" x2="130" y2="190"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="112" y="90" width="36" height="65"
+fill="#22c55e"/>
+
+<!-- SUPPLY AREA -->
+<rect x="185" y="80" width="150" height="125"
+fill="#ef4444"
+opacity=".10"
+stroke="#ef4444"
+stroke-width="3"/>
+
+<text x="205" y="68"
+fill="#ef4444"
+font-size="20"
+font-weight="bold">
+SUPPLY / SND
+</text>
+
+<!-- MERAH -->
+<line x1="215" y1="70" x2="215" y2="205"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="195" y="100" width="40" height="70"
+fill="#ef4444"/>
+
+<!-- HIJAU -->
+<line x1="270" y1="90" x2="270" y2="210"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="250" y="115" width="40" height="65"
+fill="#22c55e"/>
+
+<!-- MERAH KONFIRMASI -->
+<line x1="325" y1="60" x2="325" y2="215"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="305" y="85" width="40" height="95"
+fill="#ef4444"/>
+
+<!-- IMPULS TURUN -->
+<line x1="390" y1="170" x2="390" y2="350"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="370" y="195" width="40" height="120"
+fill="#ef4444"/>
+
+<line x1="450" y1="250" x2="450" y2="425"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="430" y="275" width="40" height="115"
+fill="#ef4444"/>
+
+<line x1="510" y1="315" x2="510" y2="450"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="490" y="335" width="40" height="85"
+fill="#ef4444"/>
+
+<!-- panah -->
+<line x1="350" y1="375" x2="275" y2="205"
+stroke="#facc15"
+stroke-width="5"/>
+
+<polyline
+points="275,205 290,225 260,220"
+fill="none"
+stroke="#facc15"
+stroke-width="5"/>
+
+<text x="360" y="425"
+fill="white"
+font-size="22"
+font-weight="bold">
+SND SELL
+</text>
+
+<text x="190" y="455"
+fill="#ef4444"
+font-size="18"
+font-weight="bold">
+M5 — MERAH → HIJAU → MERAH
+</text>
+
+</svg>
+
+<div class="caption">
+Contoh M5 SELL: area SND berada di pangkal sebelum impuls turun.
+Pola konfirmasi ditunjukkan dengan MERAH → HIJAU → MERAH.
+Setelah M5 terkonfirmasi, turun ke M1 untuk mencari SND kecil
+sebagai area entry.
+</div>
 </div>
 
 
@@ -813,225 +931,120 @@ turun ke M1 untuk mencari SND kecil sebagai area entry.
 
 <p>
 Setelah SND BUY terkonfirmasi di M5, turun ke M1.
-Di M1 dapat terbentuk SND yang lebih kecil.
-Area kecil tersebut digunakan untuk mencari entry yang lebih presisi.
+Di M1 cari SND yang lebih kecil di pangkal pergerakan sebelum
+harga melanjutkan naik. Area ini digunakan untuk mencari
+entry yang lebih presisi.
 </p>
 
 <div class="chart">
 
-<div class="chart-title">
-M1 — SND KECIL UNTUK ENTRY BUY
-</div>
+<div class="chart-title">M1 — SND KECIL UNTUK ENTRY BUY</div>
 
-<svg viewBox="0 0 700 380">
+<svg viewBox="0 0 700 460">
 
 <g stroke="#18283a">
-<line x1="20" y1="70" x2="680" y2="70"/>
-<line x1="20" y1="140" x2="680" y2="140"/>
-<line x1="20" y1="210" x2="680" y2="210"/>
-<line x1="20" y1="280" x2="680" y2="280"/>
+<line x1="25" y1="70" x2="675" y2="70"/>
+<line x1="25" y1="145" x2="675" y2="145"/>
+<line x1="25" y1="220" x2="675" y2="220"/>
+<line x1="25" y1="295" x2="675" y2="295"/>
+<line x1="25" y1="370" x2="675" y2="370"/>
 </g>
 
-<rect x="250" y="190"
-width="150"
-height="80"
+<!-- pergerakan kecil -->
+
+<line x1="90" y1="160" x2="90" y2="285"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="72" y="190" width="36" height="65"
+fill="#22c55e"/>
+
+<line x1="140" y1="175" x2="140" y2="300"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="122" y="205" width="36" height="65"
+fill="#ef4444"/>
+
+<!-- SND KECIL -->
+<rect x="175" y="185" width="135" height="120"
 fill="#22c55e"
-opacity=".14"
+opacity=".12"
 stroke="#22c55e"
 stroke-width="3"/>
 
-<text x="275" y="260"
+<text x="190" y="175"
 fill="#22c55e"
-font-size="17"
+font-size="18"
 font-weight="bold">
-SND M1
+SND KECIL
 </text>
 
-<line x1="110" y1="150" x2="110" y2="250"
-stroke="#22c55e"
-stroke-width="4"/>
-<rect x="94" y="175"
-width="32" height="55"
+<!-- HIJAU -->
+<line x1="205" y1="170" x2="205" y2="290"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="187" y="200" width="36" height="65"
 fill="#22c55e"/>
 
-<line x1="160" y1="165" x2="160" y2="255"
-stroke="#ef4444"
-stroke-width="4"/>
-<rect x="144" y="185"
-width="32" height="50"
+<!-- MERAH -->
+<line x1="255" y1="190" x2="255" y2="315"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="237" y="220" width="36" height="65"
 fill="#ef4444"/>
 
-<line x1="215" y1="175" x2="215" y2="265"
-stroke="#ef4444"
-stroke-width="4"/>
-<rect x="199" y="195"
-width="32" height="50"
-fill="#ef4444"/>
-
-<line x1="285" y1="180" x2="285" y2="260"
-stroke="#22c55e"
-stroke-width="4"/>
-<rect x="269" y="195"
-width="32" height="45"
+<!-- HIJAU BREAK -->
+<line x1="305" y1="120" x2="305" y2="270"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="287" y="145" width="36" height="90"
 fill="#22c55e"/>
 
-<line x1="345" y1="145" x2="345" y2="225"
-stroke="#22c55e"
-stroke-width="4"/>
-<rect x="329" y="160"
-width="32" height="48"
+<!-- impuls -->
+<line x1="370" y1="60" x2="370" y2="220"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="352" y="80" width="36" height="115"
 fill="#22c55e"/>
 
-<circle cx="390" cy="180"
-r="9"
-fill="#facc15"/>
+<line x1="425" y1="35" x2="425" y2="155"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="407" y="55" width="36" height="75"
+fill="#22c55e"/>
 
-<text x="410" y="185"
+<line x1="480" y1="25" x2="480" y2="130"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="462" y="45" width="36" height="65"
+fill="#22c55e"/>
+
+<!-- ENTRY -->
+<circle cx="305" cy="270" r="9" fill="#facc15"/>
+
+<line x1="315" y1="270" x2="390" y2="335"
+stroke="#facc15"
+stroke-width="5"/>
+
+<polyline
+points="390,335 365,330 382,310"
+fill="none"
+stroke="#facc15"
+stroke-width="5"/>
+
+<text x="400" y="350"
 fill="#facc15"
 font-size="20"
 font-weight="bold">
 ENTRY BUY
 </text>
 
-<line x1="405" y1="175"
-x2="555" y2="70"
-stroke="#22c55e"
-stroke-width="4"/>
-
-<polygon points="555,70 533,77 548,94"
-fill="#22c55e"/>
-
-<text x="220" y="330"
+<text x="205" y="420"
 fill="white"
-font-size="18">
-M1 — SND KECIL → ENTRY
-</text>
-
-</svg>
-
-<div class="caption">
-M1 digunakan untuk mencari SND kecil setelah konfirmasi M5.
-SND kecil ini membantu menentukan area entry BUY yang lebih presisi.
-</div>
-
-</div>
-
-
-<h3>SND SELL — SUPPLY</h3>
-
-<p>
-Untuk SELL, pola M5 dibuat kebalikan:
-<b>MERAH → HIJAU → MERAH</b>.
-Pola ini digunakan untuk membaca tekanan jual di area Supply.
-</p>
-
-<div class="chart">
-
-<div class="chart-title">
-M5 — CONTOH SND SELL
-</div>
-
-<svg viewBox="0 0 700 400">
-
-<g stroke="#18283a">
-<line x1="20" y1="70" x2="680" y2="70"/>
-<line x1="20" y1="140" x2="680" y2="140"/>
-<line x1="20" y1="210" x2="680" y2="210"/>
-<line x1="20" y1="280" x2="680" y2="280"/>
-<line x1="20" y1="350" x2="680" y2="350"/>
-</g>
-
-<rect x="190" y="90"
-width="260"
-height="100"
-fill="#ef4444"
-opacity=".13"
-stroke="#ef4444"
-stroke-width="3"/>
-
-<text x="270" y="120"
-fill="#ef4444"
 font-size="19"
 font-weight="bold">
-SUPPLY
-</text>
-
-<line x1="230" y1="80" x2="230" y2="215"
-stroke="#ef4444"
-stroke-width="4"/>
-
-<rect x="210" y="105"
-width="40" height="80"
-fill="#ef4444"/>
-
-<text x="200" y="65"
-fill="#ef4444"
-font-size="18"
-font-weight="bold">
-MERAH
-</text>
-
-<line x1="330" y1="110" x2="330" y2="220"
-stroke="#22c55e"
-stroke-width="4"/>
-
-<rect x="310" y="135"
-width="40" height="65"
-fill="#22c55e"/>
-
-<text x="300" y="95"
-fill="#22c55e"
-font-size="18"
-font-weight="bold">
-HIJAU
-</text>
-
-<line x1="430" y1="80" x2="430" y2="250"
-stroke="#ef4444"
-stroke-width="4"/>
-
-<rect x="410" y="105"
-width="40" height="105"
-fill="#ef4444"/>
-
-<text x="400" y="65"
-fill="#ef4444"
-font-size="18"
-font-weight="bold">
-MERAH
-</text>
-
-<line x1="455" y1="210"
-x2="570" y2="315"
-stroke="#ef4444"
-stroke-width="4"/>
-
-<polygon points="570,315 548,306 562,290"
-fill="#ef4444"/>
-
-<text x="480" y="255"
-fill="#ef4444"
-font-size="17"
-font-weight="bold">
-SELL
-</text>
-
-<text x="245" y="370"
-fill="white"
-font-size="18">
-M5 — MERAH → HIJAU → MERAH
+M1 — SND KECIL → ENTRY BUY
 </text>
 
 </svg>
 
 <div class="caption">
-Pola M5 untuk contoh SELL adalah
-<b>MERAH → HIJAU → MERAH</b>.
-Area hijau merupakan pullback/retest di sekitar Supply.
-Candle merah berikutnya menjadi bagian dari konfirmasi.
-Setelah itu turun ke M1 untuk mencari SND kecil sebagai entry.
+M1 digunakan setelah konfirmasi M5. Cari SND kecil di pangkal
+pergerakan. Setelah area tersebut memberikan reaksi dan sesuai
+dengan arah analisis, area tersebut dapat digunakan untuk
+mencari entry BUY yang lebih presisi.
 </div>
-
 </div>
 
 
@@ -1039,106 +1052,116 @@ Setelah itu turun ke M1 untuk mencari SND kecil sebagai entry.
 
 <p>
 Setelah SND SELL terkonfirmasi di M5, turun ke M1.
-Cari SND kecil untuk mendapatkan area entry SELL yang lebih presisi.
+Cari SND kecil di pangkal pergerakan turun sebagai area
+untuk mencari entry SELL.
 </p>
 
 <div class="chart">
 
-<div class="chart-title">
-M1 — SND KECIL UNTUK ENTRY SELL
-</div>
+<div class="chart-title">M1 — SND KECIL UNTUK ENTRY SELL</div>
 
-<svg viewBox="0 0 700 380">
+<svg viewBox="0 0 700 460">
 
 <g stroke="#18283a">
-<line x1="20" y1="70" x2="680" y2="70"/>
-<line x1="20" y1="140" x2="680" y2="140"/>
-<line x1="20" y1="210" x2="680" y2="210"/>
-<line x1="20" y1="280" x2="680" y2="280"/>
+<line x1="25" y1="70" x2="675" y2="70"/>
+<line x1="25" y1="145" x2="675" y2="145"/>
+<line x1="25" y1="220" x2="675" y2="220"/>
+<line x1="25" y1="295" x2="675" y2="295"/>
+<line x1="25" y1="370" x2="675" y2="370"/>
 </g>
 
-<rect x="250" y="100"
-width="150"
-height="80"
+<line x1="90" y1="180" x2="90" y2="310"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="72" y="205" width="36" height="70"
+fill="#22c55e"/>
+
+<line x1="140" y1="155" x2="140" y2="285"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="122" y="180" width="36" height="70"
+fill="#22c55e"/>
+
+<!-- SND kecil -->
+<rect x="175" y="120" width="135" height="125"
 fill="#ef4444"
-opacity=".14"
+opacity=".12"
 stroke="#ef4444"
 stroke-width="3"/>
 
-<text x="275" y="130"
+<text x="190" y="110"
 fill="#ef4444"
-font-size="17"
+font-size="18"
 font-weight="bold">
-SND M1
+SND KECIL
 </text>
 
-<line x1="110" y1="100" x2="110" y2="205"
-stroke="#ef4444"
-stroke-width="4"/>
-<rect x="94" y="120"
-width="32" height="60"
+<!-- MERAH -->
+<line x1="205" y1="105" x2="205" y2="235"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="187" y="135" width="36" height="70"
 fill="#ef4444"/>
 
-<line x1="160" y1="125" x2="160" y2="220"
-stroke="#22c55e"
-stroke-width="4"/>
-<rect x="144" y="145"
-width="32" height="55"
+<!-- HIJAU -->
+<line x1="255" y1="125" x2="255" y2="250"
+stroke="#22c55e" stroke-width="5"/>
+<rect x="237" y="150" width="36" height="65"
 fill="#22c55e"/>
 
-<line x1="215" y1="115" x2="215" y2="210"
-stroke="#22c55e"
-stroke-width="4"/>
-<rect x="199" y="135"
-width="32" height="55"
-fill="#22c55e"/>
-
-<line x1="285" y1="95" x2="285" y2="190"
-stroke="#ef4444"
-stroke-width="4"/>
-<rect x="269" y="115"
-width="32" height="55"
+<!-- MERAH BREAK -->
+<line x1="305" y1="90" x2="305" y2="260"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="287" y="115" width="36" height="105"
 fill="#ef4444"/>
 
-<line x1="345" y1="120" x2="345" y2="220"
-stroke="#ef4444"
-stroke-width="4"/>
-<rect x="329" y="140"
-width="32" height="55"
+<!-- impuls turun -->
+<line x1="370" y1="170" x2="370" y2="350"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="352" y="195" width="36" height="120"
 fill="#ef4444"/>
 
-<circle cx="390" cy="175"
-r="9"
-fill="#facc15"/>
+<line x1="425" y1="245" x2="425" y2="420"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="407" y="270" width="36" height="110"
+fill="#ef4444"/>
 
-<text x="410" y="180"
+<line x1="480" y1="320" x2="480" y2="450"
+stroke="#ef4444" stroke-width="5"/>
+<rect x="462" y="340" width="36" height="85"
+fill="#ef4444"/>
+
+<!-- ENTRY -->
+<circle cx="305" cy="235" r="9" fill="#facc15"/>
+
+<line x1="315" y1="235" x2="390" y2="300"
+stroke="#facc15"
+stroke-width="5"/>
+
+<polyline
+points="390,300 365,295 382,275"
+fill="none"
+stroke="#facc15"
+stroke-width="5"/>
+
+<text x="400" y="315"
 fill="#facc15"
 font-size="20"
 font-weight="bold">
 ENTRY SELL
 </text>
 
-<line x1="405" y1="180"
-x2="555" y2="300"
-stroke="#ef4444"
-stroke-width="4"/>
-
-<polygon points="555,300 533,295 545,278"
-fill="#ef4444"/>
-
-<text x="220" y="330"
+<text x="205" y="420"
 fill="white"
-font-size="18">
-M1 — SND KECIL → ENTRY
+font-size="19"
+font-weight="bold">
+M1 — SND KECIL → ENTRY SELL
 </text>
 
 </svg>
 
 <div class="caption">
-M1 digunakan untuk mencari SND kecil setelah konfirmasi M5.
-SND kecil ini membantu menentukan area entry SELL yang lebih presisi.
+M1 digunakan untuk mencari SND kecil setelah SND SELL
+terkonfirmasi di M5. Area SND kecil digunakan untuk
+membantu menentukan entry SELL yang lebih presisi.
 </div>
-
 </div>
 
 
@@ -1147,21 +1170,23 @@ SND kecil ini membantu menentukan area entry SELL yang lebih presisi.
 <b>RINGKASAN SND</b>
 
 <ul>
-<li>🟢 BUY M5 = <b>HIJAU → MERAH → HIJAU</b></li>
-<li>🔴 SELL M5 = <b>MERAH → HIJAU → MERAH</b></li>
-<li>M5 = konfirmasi SND utama.</li>
-<li>M1 = mencari SND kecil untuk entry.</li>
+
+<li>🟢 BUY M5 = HIJAU → MERAH → HIJAU</li>
+
+<li>🔴 SELL M5 = MERAH → HIJAU → MERAH</li>
+
+<li>M5 = tempat konfirmasi SND utama.</li>
+
+<li>M1 = mencari SND kecil untuk area entry.</li>
+
+<li>SND berada di pangkal sebelum impuls.</li>
+
+<li>Jangan mengejar candle impuls yang sudah terlalu jauh.</li>
+
 <li>SND bukan jaminan harga pasti berbalik.</li>
+
 </ul>
 
-</div>
-
-<div class="warning">
-<b>INGAT</b>
-<p>
-SND adalah area analisis. Tetap perhatikan struktur market,
-SNR dan manajemen risiko.
-</p>
 </div>
 
 </div>
@@ -1266,122 +1291,151 @@ keduanya semakin rendah.
 <div id="entry" class="page">
 <div class="materi">
 
-<h2>🎯 PASANGAN TIMEFRAME</h2>
+<h2>🎯 TIMEFRAME & ALUR ENTRY</h2>
 
 <p>
-Gunakan pasangan timeframe sesuai gaya trading yang dipilih.
-Timeframe pertama untuk melihat konteks, timeframe berikutnya
-untuk memperjelas area, dan timeframe terakhir untuk konfirmasi
-atau entry.
+Timeframe besar digunakan untuk melihat konteks dan arah market.
+Timeframe berikutnya digunakan untuk memperjelas struktur dan area.
+Timeframe kecil digunakan untuk konfirmasi dan mencari entry.
 </p>
 
-<h3>🔥 SCALPING</h3>
+<h3>SCALPING</h3>
 
 <div class="flow">
 
 <div class="flow-item">
 <b>M30</b>
-Arah & Struktur
+Arah & struktur
 </div>
 
 <div class="flow-item">
 <b>M5</b>
-SND & Konfirmasi
+SND & konfirmasi
 </div>
 
 <div class="flow-item">
 <b>M1</b>
-SND Kecil & Entry
+SND kecil & entry
 </div>
 
 </div>
-
-<p>
-<b>M30 → M5 → M1</b>
-</p>
 
 <div class="info">
 <b>Alur Scalping</b>
 <p>
-M30 melihat struktur → M5 mencari SND dan konfirmasi →
-M1 mencari SND kecil untuk entry.
+M30 → M5 → M1
 </p>
+
+<ul>
+<li>M30 = melihat arah dan struktur.</li>
+<li>M5 = mencari SND utama dan konfirmasi.</li>
+<li>M1 = mencari SND kecil untuk entry.</li>
+</ul>
 </div>
 
 
-<h3>📊 INTRADAY</h3>
+<h3>INTRADAY</h3>
 
 <div class="flow">
 
 <div class="flow-item">
 <b>H4</b>
-Arah Besar
+Arah besar
 </div>
 
 <div class="flow-item">
 <b>M30</b>
-Struktur & Area
+Struktur
 </div>
 
 <div class="flow-item">
 <b>M15</b>
-Konfirmasi & Entry
+Area & setup
 </div>
 
 </div>
-
-<p>
-<b>H4 → M30 → M15</b>
-</p>
 
 <div class="info">
 <b>Alur Intraday</b>
 <p>
-H4 melihat struktur besar → M30 mencari struktur dan area →
-M15 digunakan untuk konfirmasi dan entry.
+H4 → M30 → M15
 </p>
+
+<ul>
+<li>H4 = melihat arah market dan swing mayor.</li>
+<li>M30 = memperjelas struktur.</li>
+<li>M15 = mencari area dan setup entry.</li>
+</ul>
 </div>
 
 
-<h3>📈 SWING</h3>
+<h3>SWING</h3>
 
 <div class="flow">
 
 <div class="flow-item">
 <b>W1</b>
-Struktur Besar
+Arah utama
 </div>
 
 <div class="flow-item">
 <b>H4</b>
-Area Utama
+Struktur
 </div>
 
 <div class="flow-item">
 <b>H1</b>
-Konfirmasi & Entry
+Area entry
 </div>
 
 </div>
-
-<p>
-<b>W1 → H4 → H1</b>
-</p>
 
 <div class="info">
 <b>Alur Swing</b>
 <p>
-W1 melihat struktur besar → H4 menentukan area utama →
-H1 digunakan untuk konfirmasi dan mencari entry.
+W1 → H4 → H1
+</p>
+
+<ul>
+<li>W1 = melihat arah besar.</li>
+<li>H4 = melihat struktur dan swing.</li>
+<li>H1 = memperjelas area untuk entry.</li>
+</ul>
+</div>
+
+
+<h3>SCALPING — DETAIL ENTRY</h3>
+
+<p>
+Untuk scalping, setelah arah dan struktur dilihat di M30,
+turun ke M5 untuk mencari SND. M5 menjadi timeframe konfirmasi.
+Setelah SND M5 terkonfirmasi, turun ke M1 untuk mencari
+SND kecil sebagai area entry.
+</p>
+
+<div class="warning">
+<b>URUTAN UTAMA</b>
+<p>
+M30 → M5 → M1
+</p>
+<p>
+M30 = Arah/struktur → M5 = SND/konfirmasi →
+M1 = SND kecil/entry.
 </p>
 </div>
 
+<h3>M1</h3>
+
+<p>
+M1 digunakan sebagai timeframe entry untuk scalping.
+Jangan langsung entry hanya karena harga menyentuh area.
+Cari SND kecil yang searah dengan konfirmasi M5.
+</p>
 
 <div class="warning">
 <b>TIDAK ADA SETUP = TIDAK ENTRY</b>
 <p>
-Tidak perlu memaksakan entry. Tunggu struktur, area dan
-konfirmasi yang sesuai dengan gaya trading.
+Menunggu adalah bagian dari trading.
 </p>
 </div>
 
@@ -1497,33 +1551,26 @@ bergerak berlawanan dengan rencana.
 </p>
 
 <div class="price-box">
-
 <div class="example-title">CONTOH</div>
-
 <p>BUY = 1.1000</p>
 <p>SL = 1.0990</p>
 <p>Risiko = 10 pip</p>
 <p>TP = 1.1020</p>
 <p>Target = 20 pip</p>
-
 </div>
 
 <h3>Risk Reward</h3>
-
 <p>
 Risiko 10 pip dengan target 20 pip secara sederhana memiliki
 Risk : Reward sebesar 1 : 2.
 </p>
 
 <div class="warning">
-
 <b>JANGAN ALL IN</b>
-
 <p>
 Ukuran posisi harus disesuaikan dengan modal, jarak SL dan
 risiko yang sanggup diterima.
 </p>
-
 </div>
 
 </div>
@@ -1554,7 +1601,6 @@ Terlalu banyak entry dapat membuat keputusan menjadi emosional.
 </p>
 
 <h3>Disiplin</h3>
-
 <ul>
 <li>Tunggu setup.</li>
 <li>Ikuti rencana.</li>
@@ -1618,9 +1664,11 @@ setup dan disiplin.
 <li>☐ Struktur market jelas?</li>
 <li>☐ Sudah menentukan SNR/SND?</li>
 <li>☐ Ada Parallel Channel jika relevan?</li>
-<li>☐ Arah timeframe utama masuk akal?</li>
-<li>☐ Area timeframe menengah jelas?</li>
-<li>☐ Ada konfirmasi timeframe entry?</li>
+<li>☐ Arah timeframe besar masuk akal?</li>
+<li>☐ Area M5/M15/H1 jelas sesuai gaya trading?</li>
+<li>☐ Ada konfirmasi?</li>
+<li>☐ Jika scalping, SND M5 sudah terkonfirmasi?</li>
+<li>☐ Jika scalping, SND kecil M1 sudah ditemukan?</li>
 <li>☐ Stop Loss sudah ditentukan?</li>
 <li>☐ Take Profit sudah direncanakan?</li>
 <li>☐ Risiko masih sesuai rencana?</li>
@@ -1629,13 +1677,10 @@ setup dan disiplin.
 </ul>
 
 <div class="warning">
-
 <b>JIKA SETUP BELUM LENGKAP</b>
-
 <p>
 Lebih baik menunggu daripada memaksakan entry.
 </p>
-
 </div>
 
 </div>
@@ -1673,14 +1718,18 @@ let homeScrollPosition = 0;
 
 function openPage(id){
 
+  /* Simpan posisi menu sebelum masuk materi */
   homeScrollPosition = window.scrollY;
 
+  /* Sembunyikan home */
   document.getElementById("home").style.display = "none";
 
+  /* Sembunyikan semua materi */
   document.querySelectorAll(".page").forEach(function(page){
     page.style.display = "none";
   });
 
+  /* Tampilkan materi yang dipilih */
   const selected = document.getElementById(id);
 
   if(selected){
@@ -1688,8 +1737,16 @@ function openPage(id){
     currentPage = id;
   }
 
+  /*
+  Masuk materi dari awal materi.
+  Tidak menggunakan smooth scroll.
+  */
   window.scrollTo(0,0);
 
+  /*
+  Tambahkan state browser.
+  Back HP akan ditangkap oleh popstate.
+  */
   history.pushState(
     {page:id},
     "",
@@ -1706,6 +1763,10 @@ BACK HP / BROWSER
 
 window.addEventListener("popstate", function(){
 
+  /*
+  Kalau sedang berada di materi,
+  kembali ke menu utama.
+  */
   if(currentPage !== "home"){
 
     document.querySelectorAll(".page").forEach(function(page){
@@ -1716,6 +1777,10 @@ window.addEventListener("popstate", function(){
 
     currentPage = "home";
 
+    /*
+    Kembalikan posisi menu persis seperti sebelum
+    materi dibuka.
+    */
     requestAnimationFrame(function(){
       window.scrollTo(0, homeScrollPosition);
     });
@@ -1729,7 +1794,6 @@ window.addEventListener("popstate", function(){
 Mencegah hash langsung membuat halaman materi
 ketika website pertama kali dibuka.
 */
-
 window.addEventListener("load",function(){
 
   history.replaceState(
