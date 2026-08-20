@@ -9,281 +9,318 @@
 <style>
 *{box-sizing:border-box}
 
+html{scroll-behavior:smooth}
+
 body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#07111f;
-  color:white;
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#06101d;
+color:#fff;
 }
 
 .header{
-  padding:35px 20px;
-  text-align:center;
-  background:linear-gradient(135deg,#0d1b2f,#102a43);
+padding:38px 18px;
+text-align:center;
+background:linear-gradient(135deg,#0b1b30,#123a5c);
 }
 
 .header h1{
-  margin:0;
-  font-size:34px;
-  font-weight:900;
+margin:0;
+font-size:34px;
+font-weight:900;
 }
 
 .header p{
-  color:#cbd5e1;
-  margin:10px 0 0;
+margin:10px 0 0;
+color:#cbd5e1;
+font-size:16px;
 }
 
 .container{
-  max-width:720px;
-  margin:auto;
-  padding:18px;
+max-width:760px;
+margin:auto;
+padding:18px;
 }
 
 .card{
-  background:#101c2d;
-  border:1px solid #26384f;
-  border-radius:18px;
-  padding:20px;
-  margin-bottom:15px;
-  box-shadow:0 8px 25px #0005;
+background:#101d2d;
+border:1px solid #263b55;
+border-radius:18px;
+padding:20px;
+margin-bottom:15px;
+box-shadow:0 8px 25px #0006;
 }
 
 .card h2{
-  margin:0 0 10px;
-  font-size:22px;
+margin:0 0 9px;
+font-size:22px;
 }
 
 .card p{
-  color:#cbd5e1;
-  line-height:1.6;
+margin:0 0 16px;
+color:#cbd5e1;
+line-height:1.65;
 }
 
 .btn{
-  width:100%;
-  padding:16px;
-  border:0;
-  border-radius:13px;
-  background:#2563eb;
-  color:white;
-  font-size:17px;
-  font-weight:bold;
+width:100%;
+padding:16px;
+border:0;
+border-radius:12px;
+background:#2563eb;
+color:#fff;
+font-size:17px;
+font-weight:bold;
 }
 
-.page{display:none}
+.page{
+display:none;
+}
 
 .materi{
-  background:#101c2d;
-  border:1px solid #26384f;
-  border-radius:18px;
-  padding:20px;
-}
-
-.back{
-  width:100%;
-  padding:14px;
-  border:0;
-  border-radius:12px;
-  background:#374151;
-  color:white;
-  font-weight:bold;
-  font-size:16px;
-  margin-bottom:20px;
+background:#0d1a2a;
+border:1px solid #263b55;
+border-radius:18px;
+padding:20px;
 }
 
 .materi h2{
-  font-size:28px;
-  margin-top:0;
+margin:0 0 20px;
+font-size:29px;
 }
 
 .materi h3{
-  color:#facc15;
-  font-size:21px;
-  margin-top:28px;
+color:#facc15;
+font-size:21px;
+margin-top:30px;
 }
 
 .materi p,
 .materi li{
-  color:#d6deea;
-  line-height:1.75;
+color:#d8e1ec;
+line-height:1.8;
+font-size:16px;
 }
 
-.example{
-  margin:20px 0;
-  padding:15px;
-  background:#07111f;
-  border:1px solid #334155;
-  border-radius:15px;
+.materi ul{
+padding-left:23px;
 }
 
-.example-title{
-  font-weight:bold;
-  color:#60a5fa;
-  margin-bottom:10px;
+.chart-box{
+margin:22px 0;
+background:#050b13;
+padding:10px;
+border-radius:15px;
+border:1px solid #334155;
 }
 
-/* CHART */
-
-.chart{
-  height:230px;
-  position:relative;
-  overflow:hidden;
-  border-radius:12px;
-  background:
-    linear-gradient(#ffffff08 1px,transparent 1px),
-    linear-gradient(90deg,#ffffff08 1px,transparent 1px);
-  background-size:25px 25px;
-  border:1px solid #334155;
+.chart-box img{
+display:block;
+width:100%;
+height:auto;
+border-radius:10px;
+cursor:pointer;
 }
 
-.candles{
-  position:absolute;
-  bottom:25px;
-  left:15px;
-  right:15px;
-  height:170px;
-  display:flex;
-  align-items:flex-end;
-  gap:7px;
+.caption{
+padding:12px 5px 4px;
+color:#cbd5e1;
+font-size:14px;
+line-height:1.6;
 }
 
-.candle{
-  width:10px;
-  position:relative;
-  background:#22c55e;
-  border-radius:2px;
+.info{
+margin:18px 0;
+padding:16px;
+border-left:5px solid #3b82f6;
+background:#0b1d32;
+border-radius:9px;
 }
 
-.candle:before{
-  content:"";
-  position:absolute;
-  width:2px;
-  background:currentColor;
-  left:4px;
-  top:-15px;
-  height:calc(100% + 30px);
+.buy{
+margin:18px 0;
+padding:16px;
+border-left:5px solid #22c55e;
+background:#092619;
+border-radius:9px;
 }
 
-.red{
-  background:#ef4444;
-  color:#ef4444;
-}
-
-.green{
-  background:#22c55e;
-  color:#22c55e;
-}
-
-.line{
-  position:absolute;
-  left:0;
-  right:0;
-  height:3px;
-}
-
-.support{
-  bottom:42px;
-  background:#22c55e;
-}
-
-.resistance{
-  top:45px;
-  background:#ef4444;
-}
-
-.label{
-  position:absolute;
-  right:10px;
-  padding:5px 8px;
-  border-radius:6px;
-  font-size:12px;
-  font-weight:bold;
-}
-
-.label.green{
-  bottom:48px;
-  background:#166534;
-}
-
-.label.red{
-  top:28px;
-  background:#991b1b;
-}
-
-/* FLOW */
-
-.flow{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:7px;
-  margin:20px 0;
-}
-
-.flow div{
-  background:#17263a;
-  border:1px solid #334155;
-  padding:13px 5px;
-  text-align:center;
-  border-radius:10px;
-}
-
-.flow b{
-  display:block;
-  color:#facc15;
-  font-size:18px;
-  margin-bottom:5px;
-}
-
-.box-buy{
-  border-left:5px solid #22c55e;
-  background:#0b2a1b;
-  padding:15px;
-  border-radius:10px;
-}
-
-.box-sell{
-  border-left:5px solid #ef4444;
-  background:#301313;
-  padding:15px;
-  border-radius:10px;
+.sell{
+margin:18px 0;
+padding:16px;
+border-left:5px solid #ef4444;
+background:#301313;
+border-radius:9px;
 }
 
 .warning{
-  border-left:5px solid #facc15;
-  background:#30270b;
-  padding:15px;
-  border-radius:10px;
+margin:18px 0;
+padding:16px;
+border-left:5px solid #facc15;
+background:#30270a;
+border-radius:9px;
 }
 
-.bottom{
-  margin-top:25px;
+.example{
+margin:18px 0;
+padding:16px;
+border-left:5px solid #a855f7;
+background:#21132f;
+border-radius:9px;
 }
 
-.bottom a{
-  display:block;
-  text-align:center;
-  padding:17px;
-  margin-bottom:12px;
-  border-radius:14px;
-  text-decoration:none;
-  font-size:18px;
-  font-weight:bold;
+.step{
+margin:20px 0;
+color:#d8e1ec;
+line-height:1.8;
+}
+
+.step-number{
+display:inline-flex;
+width:32px;
+height:32px;
+align-items:center;
+justify-content:center;
+background:#2563eb;
+border-radius:50%;
+font-weight:bold;
+margin-right:8px;
+}
+
+.flow{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:7px;
+margin:20px 0;
+}
+
+.flow-item{
+text-align:center;
+background:#17283d;
+border:1px solid #334155;
+border-radius:10px;
+padding:13px 4px;
+font-size:13px;
+}
+
+.flow-item b{
+display:block;
+color:#facc15;
+font-size:19px;
+margin-bottom:5px;
+}
+
+.price-box{
+background:#07111e;
+border:1px solid #334155;
+padding:15px;
+border-radius:10px;
+margin:15px 0;
+}
+
+.check{
+background:#101d2d;
+border:1px solid #334155;
+border-radius:12px;
+padding:15px;
+margin:10px 0;
+line-height:1.7;
+color:#d8e1ec;
+}
+
+.bottom-links{
+margin-top:30px;
+}
+
+.bottom-links a{
+display:block;
+text-align:center;
+padding:17px;
+margin-bottom:13px;
+border-radius:14px;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
 }
 
 .telegram{
-  background:#229ED9;
-  color:white;
+background:#229ED9;
+color:#fff;
 }
 
 .exness{
-  background:#FFD600;
-  color:#111;
+background:#FFD600;
+color:#111;
 }
 
 .footer{
-  text-align:center;
-  color:#64748b;
-  padding:25px 10px;
-  font-size:13px;
+text-align:center;
+color:#64748b;
+padding:30px 5px;
+line-height:1.7;
+font-size:13px;
+}
+
+/* FOTO BESAR */
+
+.photo-viewer{
+display:none;
+position:fixed;
+z-index:9999;
+inset:0;
+background:rgba(0,0,0,.95);
+align-items:center;
+justify-content:center;
+padding:15px;
+}
+
+.photo-viewer img{
+max-width:100%;
+max-height:92vh;
+border-radius:10px;
+object-fit:contain;
+}
+
+.close-photo{
+position:absolute;
+top:15px;
+right:18px;
+width:45px;
+height:45px;
+border:0;
+border-radius:50%;
+background:#ef4444;
+color:white;
+font-size:25px;
+font-weight:bold;
+}
+
+@media(max-width:480px){
+
+.header h1{
+font-size:30px;
+}
+
+.flow-item{
+font-size:12px;
+}
+
+.flow-item b{
+font-size:17px;
+}
+
+.materi{
+padding:17px;
+}
+
+.materi h2{
+font-size:26px;
+}
+
+.materi p,
+.materi li{
+font-size:15px;
+}
 }
 </style>
 </head>
@@ -291,8 +328,11 @@ body{
 <body>
 
 <div class="header">
+
 <h1>MEQ MEMBAWA TEPAK</h1>
+
 <p>Edukasi Trading Dari Dasar Sampai Paham</p>
+
 </div>
 
 <div class="container">
@@ -303,53 +343,77 @@ body{
 
 <div class="card">
 <h2>📘 Dasar-Dasar Trading</h2>
-<p>Pelajari trading, forex, candle, BUY, SELL dan risiko.</p>
+<p>Belajar trading dari nol sampai memahami chart, candle, BUY dan SELL.</p>
 <button class="btn" onclick="openPage('dasar')">BUKA MATERI</button>
 </div>
 
 <div class="card">
+<h2>🕯️ Candlestick</h2>
+<p>Belajar membaca body, wick, candle bullish, bearish dan contoh sederhananya.</p>
+<button class="btn" onclick="openPage('candle')">BUKA MATERI</button>
+</div>
+
+<div class="card">
 <h2>📊 Support & Resistance</h2>
-<p>Pelajari area support, resistance dan contoh reaksinya.</p>
+<p>Belajar mencari area harga yang sering mendapatkan reaksi.</p>
 <button class="btn" onclick="openPage('snr')">BUKA MATERI</button>
 </div>
 
 <div class="card">
 <h2>🔥 Supply & Demand</h2>
-<p>Pelajari Demand, Supply dan cara mencari area entry.</p>
+<p>Belajar mencari area asal harga bergerak kuat sebelum mencari peluang entry.</p>
 <button class="btn" onclick="openPage('snd')">BUKA MATERI</button>
 </div>
 
 <div class="card">
-<h2>📈 Garis Sakti</h2>
-<p>Pelajari swing mayor, body candle, breakout dan close.</p>
+<h2>📈 Garis Struktur</h2>
+<p>Belajar garis pada chart dengan bahasa sederhana: kapan dibuat dan apa yang harus ditunggu.</p>
 <button class="btn" onclick="openPage('garis')">BUKA MATERI</button>
 </div>
 
 <div class="card">
 <h2>📐 Parallel Channel</h2>
-<p>Pelajari cara membaca arah harga menggunakan channel.</p>
+<p>Belajar membaca pergerakan harga yang bergerak di dalam channel naik atau turun.</p>
 <button class="btn" onclick="openPage('channel')">BUKA MATERI</button>
 </div>
 
 <div class="card">
-<h2>🎯 Entry M5 & Konfirmasi M1</h2>
-<p>Pelajari alur H4 → M30 → M5 → M1.</p>
+<h2>🎯 H4 → M30 → M5 → M1</h2>
+<p>Belajar cara turun timeframe dari melihat arah sampai mencari konfirmasi entry.</p>
 <button class="btn" onclick="openPage('entry')">BUKA MATERI</button>
 </div>
 
 <div class="card">
 <h2>📏 Fibonacci</h2>
-<p>Pelajari Fibonacci sebagai alat bantu retracement dan target.</p>
+<p>Belajar Fibonacci sebagai alat bantu mencari area retracement dan confluence.</p>
 <button class="btn" onclick="openPage('fibo')">BUKA MATERI</button>
 </div>
 
 <div class="card">
 <h2>🛡️ Risk Management</h2>
-<p>Pelajari Stop Loss, Take Profit dan pengaturan risiko.</p>
+<p>Belajar Stop Loss, Take Profit, risiko dan Risk Reward.</p>
 <button class="btn" onclick="openPage('risk')">BUKA MATERI</button>
 </div>
 
-<div class="bottom">
+<div class="card">
+<h2>🧠 Psikologi Trading</h2>
+<p>Belajar menghindari FOMO, revenge trading dan overtrading.</p>
+<button class="btn" onclick="openPage('psikologi')">BUKA MATERI</button>
+</div>
+
+<div class="card">
+<h2>💰 Manajemen Modal</h2>
+<p>Belajar menjaga modal dan menghindari overlot.</p>
+<button class="btn" onclick="openPage('modal')">BUKA MATERI</button>
+</div>
+
+<div class="card">
+<h2>✅ Checklist Entry</h2>
+<p>Periksa semua syarat sebelum membuka posisi.</p>
+<button class="btn" onclick="openPage('checklist')">BUKA MATERI</button>
+</div>
+
+<div class="bottom-links">
 
 <a class="telegram"
 href="https://t.me/meq491"
@@ -373,84 +437,140 @@ target="_blank">
 <div id="dasar" class="page">
 <div class="materi">
 
-<button class="back" onclick="goHome()">← KEMBALI</button>
-
 <h2>📘 DASAR-DASAR TRADING</h2>
 
 <h3>Apa Itu Trading?</h3>
+
 <p>
-Trading adalah aktivitas membeli dan menjual aset dengan tujuan
-mencari keuntungan dari perubahan harga.
+Trading adalah kegiatan membeli atau menjual suatu instrumen
+berdasarkan analisis pergerakan harga. Sederhananya, kita
+mencoba membaca kemungkinan harga akan bergerak ke mana.
 </p>
 
-<h3>Contoh BUY</h3>
+<p>
+Contohnya harga sedang berada di area yang menurut analisis
+menarik untuk BUY. Kita tidak langsung membeli hanya karena
+harga terlihat murah. Kita tetap mencari alasan, konfirmasi,
+Stop Loss dan target.
+</p>
+
+<h3>Apa Itu Forex?</h3>
+
+<p>
+Forex adalah pasar pertukaran mata uang. Contohnya EUR/USD.
+EUR adalah mata uang pertama dan USD adalah mata uang kedua.
+Pergerakan pair menunjukkan perubahan nilai satu mata uang
+terhadap mata uang lainnya.
+</p>
+
+<h3>Contoh Sederhana</h3>
 
 <div class="example">
-<div class="example-title">CONTOH</div>
+
 <p>
-Harga EUR/USD = 1.1000
+Misalnya EUR/USD bergerak dari 1.1000 ke 1.1050.
+Jika seorang trader mengambil BUY di 1.1000 dan harga naik,
+maka posisi tersebut bergerak sesuai arah analisis.
+Sebaliknya jika harga turun, posisi BUY mengalami kerugian.
 </p>
-<p>
-Kita melakukan BUY di 1.1000.
-Kemudian harga naik menjadi 1.1050.
-</p>
-<p>
-Pergerakan = 50 pip.
-</p>
+
 </div>
+
+<div class="chart-box">
+
+<img src="chart-structure.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Contoh struktur harga">
+
+<div class="caption">
+Contoh struktur harga. Klik gambar untuk melihat lebih besar.
+</div>
+
+</div>
+
+<h3>Hal Yang Harus Dipahami Pemula</h3>
+
+<ul>
+<li>Harga tidak selalu bergerak sesuai prediksi.</li>
+<li>Profit tidak bisa dijamin.</li>
+<li>Setiap entry harus mempunyai alasan.</li>
+<li>Stop Loss membantu membatasi risiko.</li>
+<li>Jangan menggunakan modal yang tidak siap menanggung risiko.</li>
+</ul>
+
+</div>
+</div>
+
+
+<!-- ================= CANDLE ================= -->
+
+<div id="candle" class="page">
+<div class="materi">
+
+<h2>🕯️ BELAJAR CANDLESTICK</h2>
 
 <h3>Apa Itu Candle?</h3>
 
 <p>
-Candle menunjukkan pergerakan harga dalam periode tertentu.
-Setiap candle mempunyai Open, High, Low dan Close.
+Candle menunjukkan perjalanan harga dalam satu periode.
+Jika timeframe M5 digunakan, satu candle mewakili lima menit.
+Jika H4 digunakan, satu candle mewakili empat jam.
 </p>
 
-<div class="example">
+<div class="chart-box">
 
-<div class="chart">
+<img src="chart-candle.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Contoh candlestick">
 
-<div class="candles">
-<span class="candle green" style="height:70px"></span>
-<span class="candle red" style="height:50px"></span>
-<span class="candle green" style="height:90px"></span>
-<span class="candle green" style="height:110px"></span>
-<span class="candle red" style="height:60px"></span>
-<span class="candle green" style="height:130px"></span>
-<span class="candle green" style="height:150px"></span>
+<div class="caption">
+Contoh candlestick. Klik gambar untuk memperbesar.
 </div>
 
 </div>
 
-</div>
+<h3>Body Candle</h3>
 
-<h3>BUY dan SELL</h3>
-
-<div class="box-buy">
-<b>BUY</b>
 <p>
-Digunakan ketika analisis menunjukkan peluang harga bergerak naik.
+Body adalah bagian tebal candle antara harga Open dan Close.
+Body yang besar menunjukkan pergerakan dari Open ke Close
+yang relatif besar dalam periode tersebut.
 </p>
-</div>
 
-<br>
+<h3>Wick</h3>
 
-<div class="box-sell">
-<b>SELL</b>
 <p>
-Digunakan ketika analisis menunjukkan peluang harga bergerak turun.
+Wick adalah ekor candle. Wick atas menunjukkan harga sempat
+bergerak lebih tinggi, sedangkan wick bawah menunjukkan harga
+sempat bergerak lebih rendah.
+</p>
+
+<h3>Candle Hijau dan Merah</h3>
+
+<div class="buy">
+<b>Candle Bullish</b>
+<p>
+Biasanya menunjukkan Close berada di atas Open.
+Namun candle bullish tidak otomatis berarti kita harus BUY.
 </p>
 </div>
 
-<h3>Kesalahan Pemula</h3>
+<div class="sell">
+<b>Candle Bearish</b>
+<p>
+Biasanya menunjukkan Close berada di bawah Open.
+Namun candle bearish tidak otomatis berarti kita harus SELL.
+</p>
+</div>
 
-<ul>
-<li>Entry tanpa alasan.</li>
-<li>Lot terlalu besar.</li>
-<li>Tidak menggunakan Stop Loss.</li>
-<li>Mengejar harga karena FOMO.</li>
-<li>Balas dendam setelah loss.</li>
-</ul>
+<h3>Contoh Membaca Candle</h3>
+
+<p>
+Jika harga masuk support lalu membentuk candle bullish dengan
+reaksi yang jelas, kita bisa menjadikan candle tersebut sebagai
+informasi tambahan. Kita tetap melihat struktur dan area,
+bukan satu candle saja.
+</p>
 
 </div>
 </div>
@@ -461,77 +581,115 @@ Digunakan ketika analisis menunjukkan peluang harga bergerak turun.
 <div id="snr" class="page">
 <div class="materi">
 
-<button class="back" onclick="goHome()">← KEMBALI</button>
-
 <h2>📊 SUPPORT & RESISTANCE</h2>
 
-<h3>Support</h3>
+<h3>Support Itu Apa?</h3>
 
 <p>
-Support adalah area tempat harga sebelumnya mendapatkan tekanan beli.
-Harga dapat bereaksi ketika kembali ke area tersebut.
+Support adalah area di bawah harga yang sebelumnya sering
+mendapatkan reaksi naik. Bayangkan seperti lantai.
+Ketika harga turun ke area tersebut, kita melihat apakah
+harga kembali mendapatkan tekanan beli.
 </p>
+
+<div class="chart-box">
+
+<img src="chart-snr-support.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Support">
+
+<div class="caption">
+Contoh Support. Perhatikan area tempat harga beberapa kali
+mendapatkan reaksi naik.
+</div>
+
+</div>
+
+<h3>Resistance Itu Apa?</h3>
+
+<p>
+Resistance adalah area di atas harga yang sebelumnya sering
+mendapatkan reaksi turun. Bayangkan seperti plafon.
+Ketika harga naik ke area tersebut, kita melihat apakah
+tekanan jual kembali muncul.
+</p>
+
+<div class="chart-box">
+
+<img src="chart-snr-resistance.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Resistance">
+
+<div class="caption">
+Contoh Resistance. Perhatikan area tempat harga beberapa
+kali mendapatkan reaksi turun.
+</div>
+
+</div>
+
+<h3>Cara Menentukan SNR</h3>
+
+<div class="step">
+<span class="step-number">1</span>
+Cari titik harga yang terlihat jelas mendapatkan reaksi.
+</div>
+
+<div class="step">
+<span class="step-number">2</span>
+Lihat apakah harga pernah kembali ke area tersebut.
+</div>
+
+<div class="step">
+<span class="step-number">3</span>
+Gambarkan area dengan rapi.
+</div>
+
+<div class="step">
+<span class="step-number">4</span>
+Tunggu harga kembali ke area.
+</div>
+
+<div class="step">
+<span class="step-number">5</span>
+Lihat reaksinya sebelum mengambil keputusan.
+</div>
+
+<h3>Contoh SNR BUY</h3>
 
 <div class="example">
 
-<div class="example-title">CONTOH SUPPORT</div>
-
-<div class="chart">
-
-<div class="line support"></div>
-<div class="label green">SUPPORT</div>
-
-<div class="candles">
-<span class="candle red" style="height:100px"></span>
-<span class="candle red" style="height:75px"></span>
-<span class="candle green" style="height:50px"></span>
-<span class="candle red" style="height:40px"></span>
-<span class="candle green" style="height:45px"></span>
-<span class="candle red" style="height:35px"></span>
-<span class="candle green" style="height:70px"></span>
-<span class="candle green" style="height:100px"></span>
-<span class="candle green" style="height:130px"></span>
-</div>
-
-</div>
-</div>
-
-<h3>Resistance</h3>
-
 <p>
-Resistance adalah area tempat harga sebelumnya mendapatkan tekanan jual.
+Harga turun → menyentuh support → muncul reaksi bullish.
+Support tersebut kemudian menjadi area yang kita amati.
+Bukan berarti langsung BUY. Kita masih menunggu konfirmasi.
 </p>
 
-<div class="example">
-
-<div class="example-title">CONTOH RESISTANCE</div>
-
-<div class="chart">
-
-<div class="line resistance"></div>
-<div class="label red">RESISTANCE</div>
-
-<div class="candles">
-<span class="candle green" style="height:80px"></span>
-<span class="candle green" style="height:120px"></span>
-<span class="candle red" style="height:90px"></span>
-<span class="candle green" style="height:110px"></span>
-<span class="candle red" style="height:100px"></span>
-<span class="candle green" style="height:115px"></span>
-<span class="candle red" style="height:90px"></span>
-<span class="candle red" style="height:70px"></span>
-<span class="candle red" style="height:50px"></span>
 </div>
 
+<h3>Contoh Breakout</h3>
+
+<div class="chart-box">
+
+<img src="chart-snr-breakout.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Breakout Support Resistance">
+
+<div class="caption">
+Contoh breakout. Perhatikan apakah harga benar-benar close
+melewati area, bukan hanya wick yang menembus.
 </div>
+
 </div>
 
 <div class="warning">
-<b>INGAT:</b>
+
+<b>Ingat:</b>
+
 <p>
-Support dan resistance bukan jaminan harga pasti berbalik.
-Tunggu reaksi dan konfirmasi.
+SNR adalah area, bukan garis yang pasti membuat harga berbalik.
+Harga bisa menembus, melakukan retest, atau membuat false breakout.
 </p>
+
 </div>
 
 </div>
@@ -543,127 +701,179 @@ Tunggu reaksi dan konfirmasi.
 <div id="snd" class="page">
 <div class="materi">
 
-<button class="back" onclick="goHome()">← KEMBALI</button>
-
 <h2>🔥 SUPPLY & DEMAND</h2>
 
 <h3>Demand</h3>
 
 <p>
-Demand adalah area yang menunjukkan adanya tekanan beli.
-Area ini dapat menjadi tempat untuk mencari peluang BUY.
+Demand adalah area yang menjadi asal pergerakan harga naik
+dengan kuat. Kita menandai area tersebut untuk melihat
+reaksi ketika harga kembali.
 </p>
 
-<div class="example">
-<div class="box-buy">
-<b>CONTOH BUY</b>
-<p>
-Harga turun → masuk Demand → muncul reaksi bullish →
-tunggu konfirmasi → cari BUY.
-</p>
+<div class="chart-box">
+
+<img src="chart-snd-buy.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Demand BUY">
+
+<div class="caption">
+Contoh Demand BUY. Klik gambar untuk memperbesar.
 </div>
+
+</div>
+
+<h3>Contoh Mudah Demand</h3>
+
+<p>
+Bayangkan harga bergerak sideways sebentar. Setelah itu harga
+tiba-tiba naik kuat. Area sebelum kenaikan tersebut bisa
+menjadi area yang kita pelajari sebagai Demand.
+</p>
+
+<div class="buy">
+
+<b>Alurnya:</b>
+
+<p>
+Base → harga naik kuat → tandai area → tunggu harga kembali
+→ lihat reaksi → cari konfirmasi → pertimbangkan BUY.
+</p>
+
 </div>
 
 <h3>Supply</h3>
 
 <p>
-Supply adalah area yang menunjukkan adanya tekanan jual.
-Area ini dapat menjadi tempat mencari peluang SELL.
+Supply adalah area yang menjadi asal pergerakan harga turun
+dengan kuat. Ketika harga kembali ke area tersebut, kita
+mengamati apakah tekanan jual muncul lagi.
 </p>
 
-<div class="example">
-<div class="box-sell">
-<b>CONTOH SELL</b>
+<div class="chart-box">
+
+<img src="chart-snd-sell.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Supply SELL">
+
+<div class="caption">
+Contoh Supply SELL.
+</div>
+
+</div>
+
+<div class="sell">
+
+<b>Alurnya:</b>
+
 <p>
-Harga naik → masuk Supply → muncul reaksi bearish →
-tunggu konfirmasi → cari SELL.
+Base → harga turun kuat → tandai area → harga kembali →
+lihat reaksi → cari konfirmasi → pertimbangkan SELL.
 </p>
+
+</div>
+
+<h3>Retest Area</h3>
+
+<div class="chart-box">
+
+<img src="chart-snd-retest.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Retest Supply Demand">
+
+<div class="caption">
+Contoh harga kembali melakukan retest ke area.
+</div>
+
+</div>
+
+<div class="warning">
+
+<p>
+Jangan BUY hanya karena harga menyentuh Demand.
+Jangan SELL hanya karena harga menyentuh Supply.
+Tunggu reaksi dan konfirmasi.
+</p>
+
+</div>
+
 </div>
 </div>
 
-<h3>Yang Harus Diingat</h3>
 
-<ul>
-<li>Jangan BUY hanya karena harga menyentuh Demand.</li>
-<li>Jangan SELL hanya karena harga menyentuh Supply.</li>
-<li>Tunggu reaksi harga.</li>
-<li>Tunggu konfirmasi.</li>
-</ul>
-
-</div>
-</div>
-
-
-<!-- ================= GARIS SAKTI ================= -->
+<!-- ================= GARIS ================= -->
 
 <div id="garis" class="page">
 <div class="materi">
 
-<button class="back" onclick="goHome()">← KEMBALI</button>
+<h2>📈 GARIS STRUKTUR</h2>
 
-<h2>📈 GARIS SAKTI</h2>
-
-<h3>1. Tentukan Swing Mayor</h3>
+<h3>Jangan Bingung Dengan Istilah</h3>
 
 <p>
-Mulai dari timeframe besar seperti H4.
-Cari swing high dan swing low yang jelas.
+Garis ini sebenarnya digunakan sebagai alat bantu untuk
+membaca struktur harga. Tujuannya sederhana: membantu kita
+melihat area penting dan menunggu harga memberikan konfirmasi.
 </p>
 
-<div class="example">
+<h3>Mulai Dari Swing</h3>
 
-<div class="chart">
+<p>
+Cari titik tinggi dan titik rendah yang jelas. Jangan asal
+menarik garis ke sembarang candle.
+</p>
 
-<div class="candles">
-<span class="candle green" style="height:45px"></span>
-<span class="candle green" style="height:75px"></span>
-<span class="candle green" style="height:110px"></span>
-<span class="candle green" style="height:150px"></span>
-<span class="candle red" style="height:90px"></span>
-<span class="candle red" style="height:70px"></span>
-<span class="candle green" style="height:65px"></span>
-<span class="candle green" style="height:100px"></span>
+<h3>Contoh Garis Untuk BUY</h3>
+
+<div class="chart-box">
+
+<img src="chart-garis-buy.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Garis struktur BUY">
+
+<div class="caption">
+Contoh garis dan pergerakan BUY. Perhatikan bagaimana harga
+bergerak melewati area lalu memberikan penutupan.
 </div>
 
 </div>
 
 <p>
-Cari titik swing yang jelas, bukan candle acak.
+Contohnya harga sebelumnya bergerak turun. Kemudian harga
+mulai naik dan melewati garis. Kita tidak langsung BUY.
+Kita tunggu candle close dan melihat struktur timeframe
+yang lebih kecil.
 </p>
+
+<h3>Contoh Garis Untuk SELL</h3>
+
+<div class="chart-box">
+
+<img src="chart-garis-sell.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Garis struktur SELL">
+
+<div class="caption">
+Contoh garis dan pergerakan SELL.
+</div>
 
 </div>
 
-<h3>2. Perhatikan Body Candle</h3>
-
 <p>
-Dalam metode ini, body candle menjadi perhatian utama.
-Jangan hanya menggunakan ujung wick sebagai patokan.
+Jika harga turun melewati garis, kita juga tidak langsung
+SELL. Tunggu close, lihat apakah struktur mendukung, lalu
+cari area entry.
 </p>
 
-<h3>3. Tunggu Break & Close</h3>
+<div class="warning">
+
+<b>Bahasa sederhananya:</b>
 
 <p>
-Jika harga hanya menembus garis menggunakan wick,
-itu belum cukup sebagai konfirmasi.
-Perhatikan apakah candle benar-benar close melewati level.
+Garis → harga mendekati → harga menembus → tunggu close →
+lihat struktur → cari area → tunggu konfirmasi.
 </p>
 
-<div class="box-buy">
-<b>CONTOH BUY</b>
-<p>
-Harga break garis sakti → candle close di atas →
-turun timeframe → cari area entry → tunggu konfirmasi.
-</p>
-</div>
-
-<br>
-
-<div class="box-sell">
-<b>CONTOH SELL</b>
-<p>
-Harga break garis sakti ke bawah → candle close di bawah →
-turun timeframe → cari area entry → tunggu konfirmasi.
-</p>
 </div>
 
 </div>
@@ -675,63 +885,65 @@ turun timeframe → cari area entry → tunggu konfirmasi.
 <div id="channel" class="page">
 <div class="materi">
 
-<button class="back" onclick="goHome()">← KEMBALI</button>
-
 <h2>📐 PARALLEL CHANNEL</h2>
 
-<h3>Apa Itu Parallel Channel?</h3>
+<h3>Channel Naik</h3>
 
 <p>
-Parallel channel digunakan untuk membantu melihat arah
-pergerakan harga dalam sebuah channel.
+Channel naik terjadi ketika harga membentuk kecenderungan
+bergerak naik dan swing-swingnya dapat dihubungkan dengan
+garis yang sejajar.
 </p>
 
-<div class="example">
+<div class="chart-box">
 
-<div class="chart">
+<img src="chart-channel-up.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Parallel channel naik">
 
-<div style="
-position:absolute;
-width:130%;
-height:3px;
-background:#ef4444;
-transform:rotate(-15deg);
-top:65px;
-left:-20px">
-</div>
-
-<div style="
-position:absolute;
-width:130%;
-height:3px;
-background:#22c55e;
-transform:rotate(-15deg);
-top:170px;
-left:-20px">
-</div>
-
-<div class="candles">
-<span class="candle green" style="height:45px"></span>
-<span class="candle green" style="height:75px"></span>
-<span class="candle red" style="height:50px"></span>
-<span class="candle green" style="height:100px"></span>
-<span class="candle red" style="height:65px"></span>
-<span class="candle green" style="height:120px"></span>
-<span class="candle green" style="height:145px"></span>
+<div class="caption">
+Contoh channel naik.
 </div>
 
 </div>
 
+<h3>Channel Turun</h3>
+
+<p>
+Channel turun adalah kebalikan dari channel naik. Harga
+membentuk lower high dan lower low dalam kecenderungan turun.
+</p>
+
+<div class="chart-box">
+
+<img src="chart-channel-down.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Parallel channel turun">
+
+<div class="caption">
+Contoh channel turun.
 </div>
 
-<h3>Cara Membaca</h3>
+</div>
+
+<h3>Cara Membacanya</h3>
 
 <ul>
-<li>Garis atas = resistance channel.</li>
-<li>Garis bawah = support channel.</li>
-<li>Perhatikan reaksi harga.</li>
-<li>Jangan menganggap channel selalu bertahan.</li>
+<li>Lihat arah channel.</li>
+<li>Lihat reaksi harga di sisi atas.</li>
+<li>Lihat reaksi harga di sisi bawah.</li>
+<li>Perhatikan jika harga keluar dari channel.</li>
+<li>Gabungkan dengan SNR dan struktur.</li>
 </ul>
+
+<div class="warning">
+
+<p>
+Channel hanya alat bantu. Jangan menganggap setiap sentuhan
+garis channel pasti menghasilkan reversal.
+</p>
+
+</div>
 
 </div>
 </div>
@@ -742,139 +954,175 @@ left:-20px">
 <div id="entry" class="page">
 <div class="materi">
 
-<button class="back" onclick="goHome()">← KEMBALI</button>
+<h2>🎯 H4 → M30 → M5 → M1</h2>
 
-<h2>🎯 ENTRY M5 & KONFIRMASI M1</h2>
-
-<h3>Alur Analisis</h3>
+<p>
+Bagian ini dibuat sederhana. Jangan langsung mencari entry
+di timeframe kecil sebelum tahu kondisi timeframe besar.
+</p>
 
 <div class="flow">
 
-<div>
+<div class="flow-item">
 <b>H4</b>
-Arah besar
+Arah
 </div>
 
-<div>
+<div class="flow-item">
 <b>M30</b>
 Struktur
 </div>
 
-<div>
+<div class="flow-item">
 <b>M5</b>
-SND/SNR
+Area
 </div>
 
-<div>
+<div class="flow-item">
 <b>M1</b>
 Konfirmasi
 </div>
 
 </div>
 
-<h3>Contoh Setup BUY</h3>
+<h3>H4 — Lihat Arah</h3>
 
-<div class="box-buy">
+<div class="chart-box">
+
+<img src="chart-h4.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Chart H4">
+
+<div class="caption">
+Contoh chart H4. Cari gambaran besar terlebih dahulu.
+</div>
+
+</div>
 
 <p>
-<b>H4:</b> struktur bullish.
+Di H4 kita tidak perlu buru-buru entry. Kita melihat apakah
+struktur cenderung naik, turun atau sideways.
 </p>
 
-<p>
-<b>M30:</b> arah masih mendukung BUY.
-</p>
+<h3>M30 — Perjelas</h3>
+
+<div class="chart-box">
+
+<img src="chart-m30.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Chart M30">
+
+<div class="caption">
+Contoh M30 untuk melihat struktur yang lebih dekat.
+</div>
+
+</div>
+
+<h3>M5 — Cari Area</h3>
+
+<div class="chart-box">
+
+<img src="chart-m5.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Chart M5">
+
+<div class="caption">
+Contoh M5 untuk mencari area entry seperti SNR atau SND.
+</div>
+
+</div>
+
+<h3>M1 — Konfirmasi</h3>
+
+<div class="chart-box">
+
+<img src="chart-m1.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Chart M1">
+
+<div class="caption">
+Contoh M1 untuk melihat reaksi harga secara lebih detail.
+</div>
+
+</div>
+
+<div class="buy">
+
+<b>Contoh BUY:</b>
 
 <p>
-<b>M5:</b> harga masuk Demand.
-</p>
-
-<p>
-<b>M1:</b> muncul konfirmasi bullish.
-</p>
-
-<p>
-<b>→ Cari entry BUY.</b>
+H4 naik → M30 mendukung → M5 menemukan Demand →
+harga kembali ke Demand → M1 memberi konfirmasi →
+baru pertimbangkan BUY.
 </p>
 
 </div>
 
-<h3>Contoh Setup SELL</h3>
+<div class="sell">
 
-<div class="box-sell">
-
-<p>
-<b>H4:</b> struktur bearish.
-</p>
+<b>Contoh SELL:</b>
 
 <p>
-<b>M30:</b> arah masih mendukung SELL.
-</p>
-
-<p>
-<b>M5:</b> harga masuk Supply.
-</p>
-
-<p>
-<b>M1:</b> muncul konfirmasi bearish.
-</p>
-
-<p>
-<b>→ Cari entry SELL.</b>
+H4 turun → M30 mendukung → M5 menemukan Supply →
+harga kembali ke Supply → M1 memberi konfirmasi →
+baru pertimbangkan SELL.
 </p>
 
 </div>
-
-<h3>Jangan Entry Terburu-buru</h3>
-
-<p>
-Harga menyentuh area bukan berarti harus langsung entry.
-Tunggu reaksi dan konfirmasi.
-</p>
 
 </div>
 </div>
 
 
-<!-- ================= FIBONACCI ================= -->
+<!-- ================= FIBO ================= -->
 
 <div id="fibo" class="page">
 <div class="materi">
 
-<button class="back" onclick="goHome()">← KEMBALI</button>
-
 <h2>📏 FIBONACCI</h2>
 
-<h3>Fungsi Fibonacci</h3>
+<h3>Fibonacci Itu Untuk Apa?</h3>
 
 <p>
 Fibonacci dapat digunakan sebagai alat bantu untuk melihat
-area retracement dan memperkirakan target harga.
+kemungkinan area retracement setelah harga bergerak cukup jauh.
 </p>
 
-<h3>Contoh</h3>
+<div class="chart-box">
 
-<div class="example">
+<img src="chart-fibonacci.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Fibonacci">
 
-<p>
-Harga bergerak naik dari Swing Low menuju Swing High.
-Kemudian harga melakukan retracement.
-</p>
-
-<p>
-Fibonacci dapat digunakan untuk melihat area retracement
-sebagai salah satu bahan analisis.
-</p>
+<div class="caption">
+Contoh penggunaan Fibonacci.
+</div>
 
 </div>
 
-<h3>Jangan Gunakan Sendirian</h3>
+<h3>Contoh Mudah</h3>
 
-<ul>
-<li>Gabungkan dengan market structure.</li>
-<li>Gabungkan dengan SNR.</li>
-<li>Gabungkan dengan SND.</li>
-<li>Tunggu konfirmasi.</li>
-</ul>
+<p>
+Misalnya harga bergerak naik sangat kuat. Setelah itu harga
+tidak langsung naik terus, tetapi melakukan koreksi turun.
+Fibonacci dapat digunakan untuk melihat area retracement.
+</p>
+
+<p>
+Kemudian kita mencari apakah area Fibonacci tersebut juga
+bertemu dengan Support atau Demand. Jika beberapa alasan
+bertemu pada area yang sama, area tersebut menjadi lebih
+menarik untuk diamati.
+</p>
+
+<div class="warning">
+
+<p>
+Fibonacci bukan alat untuk memastikan harga pasti berbalik.
+Gunakan sebagai alat bantu, bukan satu-satunya alasan entry.
+</p>
+
+</div>
 
 </div>
 </div>
@@ -885,133 +1133,326 @@ sebagai salah satu bahan analisis.
 <div id="risk" class="page">
 <div class="materi">
 
-<button class="back" onclick="goHome()">← KEMBALI</button>
-
 <h2>🛡️ RISK MANAGEMENT</h2>
 
 <h3>Stop Loss</h3>
 
 <p>
-Stop Loss digunakan untuk membatasi kerugian jika analisis
-tidak berjalan sesuai rencana.
+Stop Loss adalah batas kerugian yang sudah direncanakan.
+Jika analisis ternyata salah, posisi dapat ditutup sesuai
+rencana risiko.
 </p>
 
-<div class="example">
+<div class="price-box">
 
-<p>
-BUY = 1.1000
-</p>
+<b>Contoh:</b>
 
-<p>
-SL = 1.0990
-</p>
-
-<p>
-Risiko = 10 pip.
-</p>
+<p>BUY = 1.1000</p>
+<p>SL = 1.0990</p>
+<p>Risiko = 10 pip</p>
+<p>TP = 1.1020</p>
+<p>Target = 20 pip</p>
 
 </div>
 
-<h3>Take Profit</h3>
+<h3>Risk Reward</h3>
 
 <p>
-Take Profit digunakan untuk mengambil keuntungan ketika harga
-mencapai target.
+Risiko 10 pip dan target 20 pip berarti jaraknya 1:2.
+Risk Reward membantu kita mengetahui berapa risiko yang
+diambil dibandingkan target.
 </p>
 
-<div class="example">
+<h3>Jangan All In</h3>
 
 <p>
-BUY = 1.1000
-</p>
-
-<p>
-SL = 1.0990
-</p>
-
-<p>
-TP = 1.1020
-</p>
-
-<p>
-Risk : Reward = 1 : 2
-</p>
-
-</div>
-
-<h3>Contoh Risiko</h3>
-
-<p>
-Misalnya modal Rp1.000.000 dan risiko yang dipilih 1%.
+Jangan menggunakan ukuran posisi yang terlalu besar hanya
+karena ingin profit cepat. Satu transaksi tidak boleh
+menghancurkan akun.
 </p>
 
 <div class="warning">
 
-<b>1% dari Rp1.000.000 = Rp10.000</b>
-
 <p>
-Artinya risiko yang direncanakan sekitar Rp10.000
-untuk satu transaksi. Ukuran lot tetap harus disesuaikan
+Contoh modal Rp1.000.000 dengan risiko 1% berarti sekitar
+Rp10.000 risiko yang direncanakan. Ukuran lot harus disesuaikan
 dengan instrumen dan jarak Stop Loss.
 </p>
 
 </div>
 
-<h3>Ingat</h3>
+</div>
+</div>
 
-<ul>
-<li>Jangan mempertaruhkan seluruh modal.</li>
-<li>Gunakan Stop Loss.</li>
-<li>Hindari overtrading.</li>
-<li>Jangan balas dendam setelah loss.</li>
-<li>Disiplin lebih penting daripada mengejar profit besar.</li>
-</ul>
+
+<!-- ================= PSIKOLOGI ================= -->
+
+<div id="psikologi" class="page">
+<div class="materi">
+
+<h2>🧠 PSIKOLOGI TRADING</h2>
+
+<h3>FOMO</h3>
+
+<p>
+Harga tiba-tiba naik dan kita merasa takut ketinggalan.
+Akhirnya kita BUY di harga yang sudah jauh tanpa setup.
+Itulah contoh FOMO.
+</p>
+
+<h3>Revenge Trading</h3>
+
+<p>
+Setelah loss, kita merasa harus membalas kerugian.
+Kemudian membuka posisi lagi tanpa alasan yang jelas.
+Ini disebut revenge trading.
+</p>
+
+<h3>Overtrading</h3>
+
+<p>
+Hari ini tidak ada setup, tetapi trader tetap membuka posisi
+berkali-kali karena ingin profit. Ini bisa menyebabkan
+keputusan semakin buruk.
+</p>
+
+<div class="buy">
+
+<b>Trader disiplin:</b>
+
+<p>
+Tidak ada setup → tidak entry.<br>
+Ada setup → tunggu konfirmasi.<br>
+Setup gagal → terima loss sesuai risiko.<br>
+Setelah loss → tunggu setup berikutnya.
+</p>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= MODAL ================= -->
+
+<div id="modal" class="page">
+<div class="materi">
+
+<h2>💰 MANAJEMEN MODAL</h2>
+
+<h3>Kenapa Modal Harus Dijaga?</h3>
+
+<p>
+Tujuan utama manajemen modal adalah membuat akun tetap
+mempunyai kesempatan untuk melakukan transaksi berikutnya.
+Jangan sampai satu posisi membuat modal habis.
+</p>
+
+<div class="price-box">
+
+<p>Modal = Rp1.000.000</p>
+<p>Risiko 1% = Rp10.000</p>
+<p>Risiko harus dihitung sebelum entry.</p>
+
+</div>
+
+<h3>Bahaya Overlot</h3>
+
+<p>
+Jika modal kecil tetapi lot terlalu besar, pergerakan kecil
+saja dapat membuat kerugian besar. Karena itu ukuran posisi
+harus disesuaikan dengan modal dan Stop Loss.
+</p>
+
+<div class="warning">
+
+<p>
+Tujuan trading bukan menang setiap transaksi.
+Tujuannya adalah menjaga risiko agar satu kesalahan
+tidak menghancurkan akun.
+</p>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= CHECKLIST ================= -->
+
+<div id="checklist" class="page">
+<div class="materi">
+
+<h2>✅ CHECKLIST SEBELUM ENTRY</h2>
+
+<div class="check">
+<b>1. H4</b><br>
+Apakah arah besar sudah jelas?
+</div>
+
+<div class="check">
+<b>2. M30</b><br>
+Apakah struktur mendukung?
+</div>
+
+<div class="check">
+<b>3. Level</b><br>
+Apakah Support atau Resistance sudah ditandai?
+</div>
+
+<div class="check">
+<b>4. M5</b><br>
+Apakah ada Supply atau Demand yang jelas?
+</div>
+
+<div class="check">
+<b>5. Area</b><br>
+Apakah harga sudah masuk area yang direncanakan?
+</div>
+
+<div class="check">
+<b>6. M1</b><br>
+Apakah sudah ada konfirmasi?
+</div>
+
+<div class="check">
+<b>7. SL</b><br>
+Apakah Stop Loss sudah jelas?
+</div>
+
+<div class="check">
+<b>8. TP</b><br>
+Apakah target sudah direncanakan?
+</div>
+
+<div class="check">
+<b>9. Risiko</b><br>
+Apakah ukuran posisi sesuai modal?
+</div>
+
+<div class="check">
+<b>10. Psikologi</b><br>
+Apakah entry dilakukan karena setup, bukan FOMO?
+</div>
+
+<div class="chart-box">
+
+<img src="chart-entry.jpg"
+onclick="zoomPhoto(this.src)"
+alt="Contoh entry">
+
+<div class="caption">
+Contoh chart entry. Gunakan sebagai bahan belajar membaca
+hubungan area, struktur dan konfirmasi.
+</div>
+
+</div>
+
+<div class="warning">
+
+<b>Kalau setup tidak lengkap, jangan dipaksa entry.</b>
+
+<p>
+Tidak entry juga merupakan keputusan trading.
+</p>
+
+</div>
 
 </div>
 </div>
 
 
 <div class="footer">
+
 MEQ MEMBAWA TEPAK<br>
-Belajar trading dengan disiplin dan manajemen risiko.
+Belajar trading dengan disiplin dan memahami risiko.
+
 </div>
+
+</div>
+
+
+<!-- ================= FOTO FULLSCREEN ================= -->
+
+<div id="photoViewer" class="photo-viewer">
+
+<button class="close-photo" onclick="closePhoto()">×</button>
+
+<img id="zoomedPhoto" src="" alt="Chart">
 
 </div>
 
 
 <script>
 
-function openPage(pageName){
+let currentPage="home";
+
+function openPage(page){
 
 document.getElementById("home").style.display="none";
 
-document.querySelectorAll(".page").forEach(function(page){
-page.style.display="none";
+document.querySelectorAll(".page").forEach(function(el){
+el.style.display="none";
 });
 
-document.getElementById(pageName).style.display="block";
+document.getElementById(page).style.display="block";
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+currentPage=page;
+
+history.pushState(
+{page:page},
+"",
+"#"+page
+);
+
+window.scrollTo(0,0);
 
 }
 
-function goHome(){
+window.addEventListener("popstate",function(){
 
-document.querySelectorAll(".page").forEach(function(page){
-page.style.display="none";
+if(currentPage!=="home"){
+
+document.querySelectorAll(".page").forEach(function(el){
+el.style.display="none";
 });
 
 document.getElementById("home").style.display="block";
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+currentPage="home";
+
+window.scrollTo(0,0);
 
 }
+
+});
+
+
+function zoomPhoto(src){
+
+document.getElementById("zoomedPhoto").src=src;
+
+document.getElementById("photoViewer").style.display="flex";
+
+}
+
+function closePhoto(){
+
+document.getElementById("photoViewer").style.display="none";
+
+document.getElementById("zoomedPhoto").src="";
+
+}
+
+document.getElementById("photoViewer").addEventListener(
+"click",
+function(e){
+
+if(e.target===this){
+closePhoto();
+}
+
+});
 
 </script>
 
