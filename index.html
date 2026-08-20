@@ -3,256 +3,286 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>MEQ MEMBAWA TEPAK</title>
 
 <style>
 *{box-sizing:border-box}
 
-html{scroll-behavior:auto}
-
 body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#06101d;
-  color:white;
+ margin:0;
+ font-family:Arial,Helvetica,sans-serif;
+ background:#06101d;
+ color:white;
 }
 
 .header{
-  padding:38px 18px;
-  text-align:center;
-  background:linear-gradient(135deg,#0b1b30,#123a5c);
+ padding:38px 18px;
+ text-align:center;
+ background:linear-gradient(135deg,#0b1b30,#123a5c);
 }
 
 .header h1{
-  margin:0;
-  font-size:34px;
-  font-weight:900;
+ margin:0;
+ font-size:34px;
+ font-weight:900;
 }
 
 .header p{
-  margin:10px 0 0;
-  color:#cbd5e1;
-  font-size:16px;
+ margin:10px 0 0;
+ color:#cbd5e1;
+ font-size:16px;
 }
 
 .container{
-  max-width:760px;
-  margin:auto;
-  padding:18px;
+ max-width:760px;
+ margin:auto;
+ padding:18px;
 }
 
 .card{
-  background:#101d2d;
-  border:1px solid #263b55;
-  border-radius:18px;
-  padding:20px;
-  margin-bottom:15px;
-  box-shadow:0 8px 25px #0006;
+ background:#101d2d;
+ border:1px solid #263b55;
+ border-radius:18px;
+ padding:20px;
+ margin-bottom:15px;
+ box-shadow:0 8px 25px #0006;
 }
 
 .card h2{
-  margin:0 0 9px;
-  font-size:22px;
+ margin:0 0 9px;
+ font-size:22px;
 }
 
 .card p{
-  color:#cbd5e1;
-  line-height:1.65;
+ color:#cbd5e1;
+ line-height:1.65;
 }
 
 .btn{
-  width:100%;
-  padding:16px;
-  border:0;
-  border-radius:12px;
-  background:#2563eb;
-  color:white;
-  font-size:17px;
-  font-weight:bold;
+ width:100%;
+ padding:16px;
+ border:0;
+ border-radius:12px;
+ background:#2563eb;
+ color:white;
+ font-size:17px;
+ font-weight:bold;
 }
 
 .page{display:none}
 
 .materi{
-  background:#0d1a2a;
-  border:1px solid #263b55;
-  border-radius:18px;
-  padding:20px;
+ background:#0d1a2a;
+ border:1px solid #263b55;
+ border-radius:18px;
+ padding:20px;
 }
 
 .materi h2{
-  margin:0 0 20px;
-  font-size:29px;
+ margin:0 0 20px;
+ font-size:29px;
 }
 
 .materi h3{
-  color:#facc15;
-  font-size:21px;
-  margin-top:30px;
+ color:#facc15;
+ font-size:21px;
+ margin-top:30px;
 }
 
-.materi p,
-.materi li{
-  color:#d8e1ec;
-  line-height:1.8;
-  font-size:16px;
+.materi p,.materi li{
+ color:#d8e1ec;
+ line-height:1.8;
+ font-size:16px;
 }
 
-.materi ul{
-  padding-left:23px;
-}
+.materi ul{padding-left:23px}
 
 .chart{
-  margin:20px 0;
-  background:#030812;
-  border:1px solid #334155;
-  border-radius:15px;
-  padding:8px;
-  overflow:hidden;
+ margin:20px 0;
+ background:#030812;
+ border:1px solid #334155;
+ border-radius:15px;
+ padding:8px;
+ overflow:hidden;
 }
 
 .chart svg{
-  width:100%;
-  height:auto;
-  display:block;
-  background:#050b13;
-  border-radius:10px;
+ width:100%;
+ height:auto;
+ display:block;
+ background:#050b13;
+ border-radius:10px;
 }
 
 .chart-title{
-  font-size:17px;
-  font-weight:bold;
-  color:#60a5fa;
-  margin:5px 5px 12px;
+ font-size:17px;
+ font-weight:bold;
+ color:#60a5fa;
+ margin:5px 5px 12px;
+}
+
+.grid{
+ stroke:#172638;
+ stroke-width:1;
+}
+
+.bull{
+ stroke:#22c55e;
+ fill:#22c55e;
+}
+
+.bear{
+ stroke:#ef4444;
+ fill:#ef4444;
+}
+
+.fibo{
+ stroke:#facc15;
+ stroke-width:2;
+ stroke-dasharray:7 5;
+}
+
+.support{
+ stroke:#22c55e;
+ stroke-width:3;
+ stroke-dasharray:8 5;
+}
+
+.resistance{
+ stroke:#ef4444;
+ stroke-width:3;
+ stroke-dasharray:8 5;
+}
+
+.channel-top{
+ stroke:#ef4444;
+ stroke-width:4;
+}
+
+.channel-bottom{
+ stroke:#22c55e;
+ stroke-width:4;
 }
 
 .caption{
-  color:#cbd5e1;
-  line-height:1.7;
-  font-size:14px;
-  padding:12px 5px 4px;
+ color:#cbd5e1;
+ line-height:1.7;
+ font-size:14px;
+ padding:12px 5px 4px;
 }
 
-.info,
-.buy,
-.sell,
-.warning{
-  margin:18px 0;
-  padding:16px;
-  border-radius:9px;
+.info,.buy,.sell,.warning{
+ margin:18px 0;
+ padding:16px;
+ border-radius:9px;
 }
 
 .info{
-  border-left:5px solid #3b82f6;
-  background:#0b1d32;
+ border-left:5px solid #3b82f6;
+ background:#0b1d32;
 }
 
 .buy{
-  border-left:5px solid #22c55e;
-  background:#092619;
+ border-left:5px solid #22c55e;
+ background:#092619;
 }
 
 .sell{
-  border-left:5px solid #ef4444;
-  background:#301313;
+ border-left:5px solid #ef4444;
+ background:#301313;
 }
 
 .warning{
-  border-left:5px solid #facc15;
-  background:#30270a;
+ border-left:5px solid #facc15;
+ background:#30270a;
 }
 
-.step{
-  margin:20px 0;
-}
+.step{margin:20px 0}
 
 .step-number{
-  display:inline-flex;
-  width:32px;
-  height:32px;
-  align-items:center;
-  justify-content:center;
-  background:#2563eb;
-  border-radius:50%;
-  font-weight:bold;
-  margin-right:8px;
+ display:inline-flex;
+ width:32px;
+ height:32px;
+ align-items:center;
+ justify-content:center;
+ background:#2563eb;
+ border-radius:50%;
+ font-weight:bold;
+ margin-right:8px;
 }
 
 .flow{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:7px;
-  margin:20px 0;
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:7px;
+ margin:20px 0;
 }
 
 .flow-item{
-  text-align:center;
-  background:#17283d;
-  border:1px solid #334155;
-  border-radius:10px;
-  padding:13px 4px;
-  font-size:13px;
+ text-align:center;
+ background:#17283d;
+ border:1px solid #334155;
+ border-radius:10px;
+ padding:13px 4px;
+ font-size:13px;
 }
 
 .flow-item b{
-  display:block;
-  color:#facc15;
-  font-size:19px;
-  margin-bottom:5px;
+ display:block;
+ color:#facc15;
+ font-size:19px;
+ margin-bottom:5px;
 }
 
 .price-box{
-  background:#07111e;
-  border:1px solid #334155;
-  padding:15px;
-  border-radius:10px;
-  margin:15px 0;
+ background:#07111e;
+ border:1px solid #334155;
+ padding:15px;
+ border-radius:10px;
+ margin:15px 0;
 }
 
 .example-title{
-  color:#60a5fa;
-  font-weight:bold;
-  font-size:18px;
+ color:#60a5fa;
+ font-weight:bold;
+ font-size:18px;
 }
 
-.bottom-links{
-  margin-top:30px;
-}
+.bottom-links{margin-top:30px}
 
 .bottom-links a{
-  display:block;
-  text-align:center;
-  padding:17px;
-  margin-bottom:13px;
-  border-radius:14px;
-  text-decoration:none;
-  font-size:18px;
-  font-weight:bold;
+ display:block;
+ text-align:center;
+ padding:17px;
+ margin-bottom:13px;
+ border-radius:14px;
+ text-decoration:none;
+ font-size:18px;
+ font-weight:bold;
 }
 
 .telegram{
-  background:#229ED9;
-  color:white;
+ background:#229ED9;
+ color:white;
 }
 
 .exness{
-  background:#FFD600;
-  color:#111;
+ background:#FFD600;
+ color:#111;
 }
 
 .footer{
-  text-align:center;
-  color:#64748b;
-  padding:30px 5px;
-  font-size:13px;
-  line-height:1.7;
+ text-align:center;
+ color:#64748b;
+ padding:30px 5px;
+ font-size:13px;
+ line-height:1.7;
 }
 
 @media(max-width:480px){
-  .header h1{font-size:30px}
-  .materi{padding:17px}
-  .flow-item{font-size:12px}
+ .header h1{font-size:30px}
+ .materi{padding:17px}
+ .flow-item{font-size:12px}
 }
 </style>
 </head>
@@ -266,44 +296,44 @@ body{
 
 <div class="container">
 
-<!-- ================= HOME ================= -->
+<!-- HOME -->
 
 <div id="home">
 
 <div class="card">
-<h2>📘 Dasar-Dasar Trading & Forex</h2>
-<p>Kenali forex, broker, pair, MT5, spread, leverage, lot, pip, BUY dan SELL.</p>
+<h2>📘 Dasar-Dasar Trading</h2>
+<p>Belajar forex, broker, candlestick, BUY, SELL, harga dan dasar membaca chart.</p>
 <button class="btn" onclick="openPage('dasar')">BUKA MATERI</button>
 </div>
 
 <div class="card">
-<h2>🕯️ Candlestick</h2>
-<p>Pelajari Open, High, Low, Close serta candle bullish dan bearish.</p>
-<button class="btn" onclick="openPage('candle')">BUKA MATERI</button>
-</div>
-
-<div class="card">
 <h2>📊 Market Structure</h2>
-<p>Pelajari Swing High, Swing Low, HH, HL, LH dan LL.</p>
+<p>Belajar Swing High, Swing Low, HH, HL, LH dan LL dengan contoh candle yang rapi.</p>
 <button class="btn" onclick="openPage('structure')">BUKA MATERI</button>
 </div>
 
 <div class="card">
 <h2>📊 Support & Resistance</h2>
-<p>Belajar membuat garis SNR berdasarkan reaksi harga.</p>
+<p>Belajar membuat garis SNR dan memahami reaksi harga pada level penting.</p>
 <button class="btn" onclick="openPage('snr')">BUKA MATERI</button>
 </div>
 
 <div class="card">
 <h2>🔥 Supply & Demand</h2>
-<p>Kenali area Supply dan Demand menggunakan struktur candle.</p>
+<p>Belajar SND BUY dan SND SELL menggunakan pola candle yang sederhana.</p>
 <button class="btn" onclick="openPage('snd')">BUKA MATERI</button>
 </div>
 
 <div class="card">
 <h2>📐 Parallel Channel</h2>
-<p>Belajar membuat channel naik dan turun dari swing yang jelas.</p>
+<p>Belajar membuat channel naik dan turun dari swing yang benar.</p>
 <button class="btn" onclick="openPage('channel')">BUKA MATERI</button>
+</div>
+
+<div class="card">
+<h2>📈 Garis Sakti</h2>
+<p>Belajar menentukan level dari struktur dan body candle kemudian menunggu break dan close.</p>
+<button class="btn" onclick="openPage('garis')">BUKA MATERI</button>
 </div>
 
 <div class="card">
@@ -314,31 +344,31 @@ body{
 
 <div class="card">
 <h2>📏 Fibonacci</h2>
-<p>Belajar menarik Fibonacci dari swing dan mencari area retracement.</p>
+<p>Memahami retracement dan cara menggabungkannya dengan struktur.</p>
 <button class="btn" onclick="openPage('fibo')">BUKA MATERI</button>
 </div>
 
 <div class="card">
-<h2>🎯 Entry, Stop Loss & Take Profit</h2>
-<p>Belajar menentukan entry, SL, TP dan Risk Reward.</p>
+<h2>🛡️ Risk Management</h2>
+<p>Belajar Stop Loss, Take Profit dan Risk Reward.</p>
 <button class="btn" onclick="openPage('risk')">BUKA MATERI</button>
 </div>
 
 <div class="card">
 <h2>🧠 Psikologi Trading</h2>
-<p>Pelajari FOMO, revenge trading, overtrading dan disiplin.</p>
+<p>Belajar menghindari FOMO, revenge trading dan overtrading.</p>
 <button class="btn" onclick="openPage('psikologi')">BUKA MATERI</button>
 </div>
 
 <div class="card">
 <h2>💰 Manajemen Modal</h2>
-<p>Belajar menjaga modal dan mengatur risiko setiap transaksi.</p>
+<p>Belajar menjaga modal dan mengatur risiko.</p>
 <button class="btn" onclick="openPage('modal')">BUKA MATERI</button>
 </div>
 
 <div class="card">
 <h2>✅ Checklist Entry</h2>
-<p>Periksa semua kondisi sebelum membuka posisi.</p>
+<p>Checklist sebelum membuka posisi.</p>
 <button class="btn" onclick="openPage('checklist')">BUKA MATERI</button>
 </div>
 
@@ -359,340 +389,238 @@ rel="noopener noreferrer">
 </a>
 
 </div>
-
 </div>
 
 
-<!-- ================================================= -->
-<!-- DASAR FOREX -->
-<!-- ================================================= -->
+<!-- DASAR -->
 
 <div id="dasar" class="page">
 <div class="materi">
 
-<h2>📘 DASAR-DASAR TRADING & FOREX</h2>
+<h2>📘 DASAR-DASAR TRADING</h2>
 
 <h3>Apa Itu Trading?</h3>
-
 <p>
-Trading adalah kegiatan membeli atau menjual instrumen keuangan
+Trading adalah aktivitas membeli atau menjual suatu instrumen
 dengan tujuan mendapatkan keuntungan dari perubahan harga.
-Trader menganalisis kemungkinan pergerakan harga sebelum
-membuka posisi.
+Harga dapat bergerak naik maupun turun sehingga trading memiliki risiko.
 </p>
 
 <h3>Apa Itu Forex?</h3>
-
 <p>
-Forex adalah singkatan dari Foreign Exchange, yaitu pasar
-pertukaran mata uang. Contohnya EUR/USD berarti pasangan
-Euro terhadap US Dollar.
-</p>
-
-<p>
-Jika harga EUR/USD naik, berarti nilai Euro menguat relatif
-terhadap US Dollar. Jika harga turun, berarti Euro melemah
-relatif terhadap US Dollar.
-</p>
-
-<h3>Awal Mula Forex</h3>
-
-<p>
-Pertukaran mata uang sudah dilakukan sejak lama karena
-perdagangan antarnegara membutuhkan pertukaran mata uang.
-Pasar valuta asing modern berkembang seiring sistem keuangan
-internasional dan penggunaan nilai tukar yang lebih fleksibel.
+Forex adalah pasar pertukaran mata uang. Contohnya EUR/USD,
+GBP/USD dan USD/JPY. Trader mencoba menganalisis kemungkinan
+arah harga berdasarkan pergerakan market.
 </p>
 
 <h3>Apa Itu Broker?</h3>
-
 <p>
-Broker adalah perusahaan yang menyediakan akses bagi trader
-untuk melakukan transaksi pada instrumen yang tersedia di
-platform mereka. Sederhananya, broker menjadi perantara antara
-trader dan pasar/infrastruktur perdagangan.
+Broker adalah perusahaan yang menjadi perantara agar trader dapat
+mengakses pasar dan melakukan transaksi melalui platform trading.
 </p>
 
-<h3>Apa Itu MT5?</h3>
-
+<h3>Contoh Pair</h3>
 <p>
-MetaTrader 5 atau MT5 adalah platform trading. Di MT5 trader
-dapat melihat chart, memilih instrumen, melakukan analisis,
-memasang order, Stop Loss dan Take Profit, serta memantau
-posisi melalui broker yang mendukung MT5.
+EUR/USD adalah pasangan Euro dan US Dollar. XAU/USD adalah
+pasangan harga emas terhadap US Dollar.
 </p>
 
-<div class="info">
-<b>Alur sederhananya:</b>
+<h3>MetaTrader 5</h3>
 <p>
-Trader → Broker → Platform MT5 → Chart → Analisis → Order
-</p>
-</div>
-
-<h3>Apa Itu Pair?</h3>
-
-<p>
-Pair adalah pasangan dua mata uang. Contohnya:
+MetaTrader 5 atau MT5 adalah platform yang dapat digunakan untuk
+melihat chart, melakukan analisis, membuka posisi BUY atau SELL,
+mengatur Stop Loss dan Take Profit.
 </p>
 
-<ul>
-<li>EUR/USD</li>
-<li>GBP/USD</li>
-<li>USD/JPY</li>
-<li>AUD/USD</li>
-</ul>
-
-<h3>XAU/USD</h3>
-
+<h3>Candlestick</h3>
 <p>
-XAU/USD adalah instrumen yang menunjukkan harga emas terhadap
-US Dollar. XAU adalah simbol emas, sedangkan USD adalah
-US Dollar. Karena karakter pergerakannya dapat berbeda dari
-pair forex, trader perlu memahami volatilitas dan risikonya.
-</p>
-
-<h3>Spread</h3>
-
-<p>
-Spread adalah selisih antara harga Bid dan Ask. Spread merupakan
-salah satu biaya transaksi yang perlu diperhatikan sebelum
-membuka posisi.
-</p>
-
-<h3>Leverage</h3>
-
-<p>
-Leverage memungkinkan trader mengendalikan posisi dengan
-kebutuhan margin yang lebih kecil dibanding nilai posisi penuh.
-Namun leverage juga dapat memperbesar risiko ketika posisi
-bergerak melawan trader.
-</p>
-
-<h3>Lot</h3>
-
-<p>
-Lot adalah ukuran volume transaksi. Semakin besar volume,
-semakin besar pula nilai pergerakan harga terhadap akun.
-Karena itu volume harus disesuaikan dengan modal dan risiko.
-</p>
-
-<h3>Pip dan Point</h3>
-
-<p>
-Pip dan point digunakan untuk mengukur perubahan harga.
-Cara perhitungan dapat berbeda tergantung instrumen dan
-jumlah digit harga yang digunakan broker.
-</p>
-
-<div class="warning">
-<b>PENTING</b>
-<p>
-Trading bukan cara mendapatkan keuntungan yang pasti.
-Harga dapat bergerak berlawanan dengan analisis. Selalu
-gunakan manajemen risiko.
-</p>
-</div>
-
-</div>
-</div>
-
-
-<!-- ================================================= -->
-<!-- CANDLE -->
-<!-- ================================================= -->
-
-<div id="candle" class="page">
-<div class="materi">
-
-<h2>🕯️ CANDLESTICK</h2>
-
-<h3>Bagian Candlestick</h3>
-
-<p>
-Satu candle mempunyai empat informasi utama:
-Open, High, Low dan Close.
+Satu candle menunjukkan Open, High, Low dan Close dalam periode
+tertentu. Body menunjukkan jarak Open dan Close, sedangkan wick
+menunjukkan harga tertinggi dan terendah yang dicapai.
 </p>
 
 <div class="chart">
-<div class="chart-title">Contoh Candle Dengan OHLC</div>
+<div class="chart-title">🕯️ Contoh Candlestick</div>
 
-<svg viewBox="0 0 700 350">
+<svg viewBox="0 0 700 300">
 
-<g stroke="#18283a">
-<line x1="30" y1="80" x2="670" y2="80"/>
-<line x1="30" y1="150" x2="670" y2="150"/>
-<line x1="30" y1="220" x2="670" y2="220"/>
-<line x1="30" y1="290" x2="670" y2="290"/>
+<g class="grid">
+<line x1="20" y1="60" x2="680" y2="60"/>
+<line x1="20" y1="120" x2="680" y2="120"/>
+<line x1="20" y1="180" x2="680" y2="180"/>
+<line x1="20" y1="240" x2="680" y2="240"/>
 </g>
 
-<line x1="350" y1="60" x2="350" y2="300"
-stroke="#22c55e" stroke-width="5"/>
+<g stroke-width="3">
 
-<rect x="305" y="125" width="90" height="110"
-fill="#22c55e"/>
+<line x1="100" y1="65" x2="100" y2="220" class="bull"/>
+<rect x="88" y="110" width="24" height="70" class="bull"/>
 
-<line x1="395" y1="125" x2="470" y2="125"
-stroke="white" stroke-width="2"/>
+<line x1="200" y1="70" x2="200" y2="225" class="bear"/>
+<rect x="188" y="100" width="24" height="90" class="bear"/>
 
-<line x1="395" y1="235" x2="470" y2="235"
-stroke="white" stroke-width="2"/>
+<line x1="300" y1="55" x2="300" y2="215" class="bull"/>
+<rect x="288" y="90" width="24" height="80" class="bull"/>
 
-<line x1="350" y1="60" x2="470" y2="60"
-stroke="white" stroke-width="2"/>
+<line x1="400" y1="75" x2="400" y2="230" class="bear"/>
+<rect x="388" y="105" width="24" height="75" class="bear"/>
 
-<line x1="350" y1="300" x2="470" y2="300"
-stroke="white" stroke-width="2"/>
+<line x1="500" y1="45" x2="500" y2="200" class="bull"/>
+<rect x="488" y="75" width="24" height="80" class="bull"/>
 
-<text x="480" y="66" fill="white">High</text>
-<text x="480" y="131" fill="white">Open</text>
-<text x="480" y="241" fill="white">Close</text>
-<text x="480" y="306" fill="white">Low</text>
+</g>
+
+<text x="75" y="265" fill="white">Bullish</text>
+<text x="175" y="265" fill="white">Bearish</text>
+<text x="275" y="265" fill="white">Bullish</text>
+<text x="375" y="265" fill="white">Bearish</text>
+<text x="475" y="265" fill="white">Bullish</text>
 
 </svg>
 
 <div class="caption">
-Pada candle bullish, Close berada lebih tinggi dari Open.
-Pada candle bearish, Close berada lebih rendah dari Open.
+Hijau menunjukkan candle bullish dan merah menunjukkan candle bearish.
 </div>
 </div>
-
-<h3>Bullish dan Bearish</h3>
 
 <div class="buy">
-<b>🟢 BULLISH</b>
-<p>
-Menunjukkan harga ditutup lebih tinggi daripada pembukaan
-pada periode tersebut.
-</p>
+<b>BUY</b>
+<p>BUY berarti mengambil posisi dengan harapan harga bergerak naik.</p>
 </div>
 
 <div class="sell">
-<b>🔴 BEARISH</b>
-<p>
-Menunjukkan harga ditutup lebih rendah daripada pembukaan
-pada periode tersebut.
-</p>
+<b>SELL</b>
+<p>SELL berarti mengambil posisi dengan harapan harga bergerak turun.</p>
 </div>
 
 </div>
 </div>
 
 
-<!-- ================================================= -->
-<!-- STRUCTURE -->
-<!-- ================================================= -->
+<!-- MARKET STRUCTURE -->
 
 <div id="structure" class="page">
 <div class="materi">
 
 <h2>📊 MARKET STRUCTURE</h2>
 
-<h3>Swing High dan Swing Low</h3>
-
+<h3>Apa Itu Market Structure?</h3>
 <p>
-Swing High adalah titik puncak yang terbentuk setelah harga
-bergerak naik lalu mengalami penurunan. Swing Low adalah titik
-lembah setelah harga turun lalu mengalami kenaikan.
+Market structure adalah cara membaca rangkaian swing yang dibentuk
+oleh harga. Struktur membantu melihat kecenderungan market naik,
+turun atau sideways.
 </p>
 
-<h3>Struktur Bullish</h3>
-
+<h3>Bullish Structure</h3>
 <p>
-Struktur bullish biasanya ditandai dengan rangkaian
-Higher High dan Higher Low.
+Bullish biasanya ditandai dengan Higher High (HH) dan Higher Low (HL).
 </p>
 
 <div class="chart">
-<div class="chart-title">Bullish — HH dan HL Mengikuti Candle</div>
+<div class="chart-title">📊 HH → HL → HH → HL → HH</div>
 
-<svg viewBox="0 0 700 400">
+<svg viewBox="0 0 700 360">
 
-<g stroke="#18283a">
-<line x1="20" y1="80" x2="680" y2="80"/>
-<line x1="20" y1="160" x2="680" y2="160"/>
+<g class="grid">
+<line x1="20" y1="60" x2="680" y2="60"/>
+<line x1="20" y1="120" x2="680" y2="120"/>
+<line x1="20" y1="180" x2="680" y2="180"/>
 <line x1="20" y1="240" x2="680" y2="240"/>
-<line x1="20" y1="320" x2="680" y2="320"/>
+<line x1="20" y1="300" x2="680" y2="300"/>
 </g>
 
-<!-- candles -->
-<g stroke-width="3">
-
-<line x1="60" y1="285" x2="60" y2="350" stroke="#22c55e"/>
-<rect x="51" y="300" width="18" height="35" fill="#22c55e"/>
-
-<line x1="90" y1="245" x2="90" y2="305" stroke="#22c55e"/>
-<rect x="81" y="260" width="18" height="32" fill="#22c55e"/>
-
-<line x1="120" y1="205" x2="120" y2="270" stroke="#22c55e"/>
-<rect x="111" y="220" width="18" height="35" fill="#22c55e"/>
-
-<line x1="150" y1="165" x2="150" y2="225" stroke="#22c55e"/>
-<rect x="141" y="180" width="18" height="30" fill="#22c55e"/>
-
-<line x1="180" y1="135" x2="180" y2="195" stroke="#22c55e"/>
-<rect x="171" y="150" width="18" height="32" fill="#22c55e"/>
-
-<line x1="210" y1="160" x2="210" y2="225" stroke="#ef4444"/>
-<rect x="201" y="175" width="18" height="32" fill="#ef4444"/>
-
-<line x1="240" y1="190" x2="240" y2="250" stroke="#ef4444"/>
-<rect x="231" y="205" width="18" height="30" fill="#ef4444"/>
-
-<line x1="270" y1="165" x2="270" y2="220" stroke="#22c55e"/>
-<rect x="261" y="178" width="18" height="30" fill="#22c55e"/>
-
-<line x1="300" y1="120" x2="300" y2="185" stroke="#22c55e"/>
-<rect x="291" y="135" width="18" height="35" fill="#22c55e"/>
-
-<line x1="330" y1="85" x2="330" y2="145" stroke="#22c55e"/>
-<rect x="321" y="100" width="18" height="32" fill="#22c55e"/>
-
-<line x1="360" y1="110" x2="360" y2="170" stroke="#ef4444"/>
-<rect x="351" y="125" width="18" height="30" fill="#ef4444"/>
-
-<line x1="390" y1="140" x2="390" y2="195" stroke="#ef4444"/>
-<rect x="381" y="150" width="18" height="30" fill="#ef4444"/>
-
-<line x1="420" y1="115" x2="420" y2="170" stroke="#22c55e"/>
-<rect x="411" y="125" width="18" height="30" fill="#22c55e"/>
-
-<line x1="450" y1="70" x2="450" y2="135" stroke="#22c55e"/>
-<rect x="441" y="85" width="18" height="35" fill="#22c55e"/>
-
-<line x1="480" y1="45" x2="480" y2="105" stroke="#22c55e"/>
-<rect x="471" y="58" width="18" height="32" fill="#22c55e"/>
-
-</g>
-
-<!-- zigzag structure -->
 <polyline
-points="60,285 180,135 240,190 330,85 390,140 480,45"
+points="45,290 130,145 210,235 300,95 385,190 475,70 560,165 645,50"
 fill="none"
 stroke="#60a5fa"
-stroke-width="3"
-stroke-dasharray="6 5"/>
+stroke-width="3"/>
 
-<text x="165" y="120" fill="#facc15" font-size="18" font-weight="bold">HH</text>
-<text x="220" y="220" fill="#facc15" font-size="18" font-weight="bold">HL</text>
-<text x="315" y="70" fill="#facc15" font-size="18" font-weight="bold">HH</text>
-<text x="375" y="170" fill="#facc15" font-size="18" font-weight="bold">HL</text>
-<text x="465" y="35" fill="#facc15" font-size="18" font-weight="bold">HH</text>
+<circle cx="130" cy="145" r="6" fill="#facc15"/>
+<circle cx="210" cy="235" r="6" fill="#facc15"/>
+<circle cx="300" cy="95" r="6" fill="#facc15"/>
+<circle cx="385" cy="190" r="6" fill="#facc15"/>
+<circle cx="475" cy="70" r="6" fill="#facc15"/>
+<circle cx="560" cy="165" r="6" fill="#facc15"/>
+
+<text x="110" y="120" fill="#facc15" font-size="19" font-weight="bold">HH</text>
+<text x="190" y="265" fill="#60a5fa" font-size="19" font-weight="bold">HL</text>
+<text x="280" y="70" fill="#facc15" font-size="19" font-weight="bold">HH</text>
+<text x="365" y="220" fill="#60a5fa" font-size="19" font-weight="bold">HL</text>
+<text x="455" y="45" fill="#facc15" font-size="19" font-weight="bold">HH</text>
+<text x="540" y="195" fill="#60a5fa" font-size="19" font-weight="bold">HL</text>
+
+<g stroke-width="2.5">
+
+<line x1="65" y1="265" x2="65" y2="315" class="bull"/>
+<rect x="59" y="275" width="12" height="28" class="bull"/>
+
+<line x1="87" y1="235" x2="87" y2="285" class="bull"/>
+<rect x="81" y="245" width="12" height="27" class="bull"/>
+
+<line x1="109" y1="190" x2="109" y2="250" class="bull"/>
+<rect x="103" y="200" width="12" height="35" class="bull"/>
+
+<line x1="131" y1="135" x2="131" y2="205" class="bull"/>
+<rect x="125" y="150" width="12" height="38" class="bull"/>
+
+<line x1="153" y1="145" x2="153" y2="205" class="bear"/>
+<rect x="147" y="155" width="12" height="32" class="bear"/>
+
+<line x1="175" y1="185" x2="175" y2="250" class="bear"/>
+<rect x="169" y="195" width="12" height="35" class="bear"/>
+
+<line x1="197" y1="215" x2="197" y2="270" class="bull"/>
+<rect x="191" y="225" width="12" height="30" class="bull"/>
+
+<line x1="219" y1="155" x2="219" y2="210" class="bull"/>
+<rect x="213" y="165" width="12" height="32" class="bull"/>
+
+<line x1="241" y1="115" x2="241" y2="180" class="bull"/>
+<rect x="235" y="125" width="12" height="38" class="bull"/>
+
+<line x1="263" y1="95" x2="263" y2="150" class="bull"/>
+<rect x="257" y="105" width="12" height="32" class="bull"/>
+
+<line x1="285" y1="80" x2="285" y2="140" class="bull"/>
+<rect x="279" y="90" width="12" height="35" class="bull"/>
+
+<line x1="307" y1="100" x2="307" y2="165" class="bear"/>
+<rect x="301" y="110" width="12" height="35" class="bear"/>
+
+<line x1="329" y1="135" x2="329" y2="200" class="bear"/>
+<rect x="323" y="145" width="12" height="35" class="bear"/>
+
+<line x1="351" y1="165" x2="351" y2="215" class="bull"/>
+<rect x="345" y="175" width="12" height="28" class="bull"/>
+
+<line x1="373" y1="135" x2="373" y2="195" class="bull"/>
+<rect x="367" y="145" width="12" height="32" class="bull"/>
+
+<line x1="395" y1="105" x2="395" y2="165" class="bull"/>
+<rect x="389" y="115" width="12" height="34" class="bull"/>
+
+</g>
 
 </svg>
 
 <div class="caption">
-Garis zig-zag hanya mengikuti swing utama. Candle tetap menjadi
-dasar pembentukan swing, sehingga struktur tidak dibuat secara
-acak.
+Harga membuat HH, turun membentuk HL, kemudian membuat HH baru.
+Pola ini berulang sehingga struktur bullish terlihat jelas.
 </div>
 </div>
+
+<h3>Bearish Structure</h3>
+<p>
+Bearish biasanya ditandai dengan Lower High (LH) dan Lower Low (LL).
+Harga membentuk puncak yang semakin rendah dan lembah yang semakin rendah.
+</p>
 
 <div class="info">
 <b>Ingat:</b>
 <ul>
-<li>Bullish = HH + HL</li>
-<li>Bearish = LH + LL</li>
-<li>Jangan menentukan struktur dari satu candle saja.</li>
+<li>Naik = HH + HL</li>
+<li>Turun = LH + LL</li>
+<li>Jangan menentukan market hanya dari satu candle.</li>
 <li>Lihat rangkaian swing.</li>
 </ul>
 </div>
@@ -701,374 +629,460 @@ acak.
 </div>
 
 
-<!-- ================================================= -->
 <!-- SNR -->
-<!-- ================================================= -->
 
 <div id="snr" class="page">
 <div class="materi">
 
 <h2>📊 SUPPORT & RESISTANCE</h2>
 
+<h3>Support</h3>
 <p>
-Support dan Resistance atau SNR digunakan untuk menandai area
-harga yang sebelumnya mendapat reaksi.
+Support adalah area tempat harga sebelumnya mendapatkan reaksi beli.
+</p>
+
+<h3>Resistance</h3>
+<p>
+Resistance adalah area tempat harga sebelumnya mendapatkan reaksi jual.
 </p>
 
 <div class="chart">
-<div class="chart-title">SNR — Garis Mengikuti Reaksi Harga</div>
+<div class="chart-title">📊 Contoh SNR</div>
 
-<svg viewBox="0 0 700 400">
+<svg viewBox="0 0 700 350">
 
-<g stroke="#18283a">
-<line x1="20" y1="80" x2="680" y2="80"/>
-<line x1="20" y1="160" x2="680" y2="160"/>
-<line x1="20" y1="240" x2="680" y2="240"/>
-<line x1="20" y1="320" x2="680" y2="320"/>
+<g class="grid">
+<line x1="20" y1="70" x2="680" y2="70"/>
+<line x1="20" y1="140" x2="680" y2="140"/>
+<line x1="20" y1="210" x2="680" y2="210"/>
+<line x1="20" y1="280" x2="680" y2="280"/>
 </g>
 
-<!-- resistance -->
-<line x1="30" y1="105" x2="670" y2="105"
-stroke="#ef4444" stroke-width="4"/>
+<line x1="20" y1="85" x2="680" y2="85" class="resistance"/>
+<line x1="20" y1="275" x2="680" y2="275" class="support"/>
 
-<!-- support -->
-<line x1="30" y1="300" x2="670" y2="300"
-stroke="#22c55e" stroke-width="4"/>
+<text x="35" y="75" fill="#ef4444" font-size="17" font-weight="bold">
+RESISTANCE
+</text>
 
-<text x="40" y="95" fill="#ef4444"
-font-size="18" font-weight="bold">RESISTANCE</text>
+<text x="35" y="268" fill="#22c55e" font-size="17" font-weight="bold">
+SUPPORT
+</text>
 
-<text x="40" y="325" fill="#22c55e"
-font-size="18" font-weight="bold">SUPPORT</text>
-
-<!-- candles -->
-<g stroke-width="3">
-
-<line x1="70" y1="230" x2="70" y2="315" stroke="#22c55e"/>
-<rect x="61" y="245" width="18" height="45" fill="#22c55e"/>
-
-<line x1="105" y1="175" x2="105" y2="255" stroke="#22c55e"/>
-<rect x="96" y="190" width="18" height="45" fill="#22c55e"/>
-
-<line x1="140" y1="105" x2="140" y2="200" stroke="#22c55e"/>
-<rect x="131" y="120" width="18" height="55" fill="#22c55e"/>
-
-<line x1="175" y1="90" x2="175" y2="150" stroke="#ef4444"/>
-<rect x="166" y="105" width="18" height="30" fill="#ef4444"/>
-
-<line x1="210" y1="125" x2="210" y2="210" stroke="#ef4444"/>
-<rect x="201" y="140" width="18" height="45" fill="#ef4444"/>
-
-<line x1="245" y1="180" x2="245" y2="270" stroke="#ef4444"/>
-<rect x="236" y="195" width="18" height="50" fill="#ef4444"/>
-
-<line x1="280" y1="235" x2="280" y2="310" stroke="#22c55e"/>
-<rect x="271" y="250" width="18" height="40" fill="#22c55e"/>
-
-<line x1="315" y1="205" x2="315" y2="275" stroke="#22c55e"/>
-<rect x="306" y="220" width="18" height="40" fill="#22c55e"/>
-
-<line x1="350" y1="135" x2="350" y2="225" stroke="#22c55e"/>
-<rect x="341" y="150" width="18" height="50" fill="#22c55e"/>
-
-<line x1="385" y1="95" x2="385" y2="165" stroke="#ef4444"/>
-<rect x="376" y="110" width="18" height="35" fill="#ef4444"/>
-
-<line x1="420" y1="130" x2="420" y2="220" stroke="#ef4444"/>
-<rect x="411" y="145" width="18" height="50" fill="#ef4444"/>
-
-</g>
+<polyline
+points="45,250 90,205 135,150 180,95 225,120 270,180 315,270 360,235 405,175 450,105 495,90 540,140 585,205 630,260"
+fill="none"
+stroke="#60a5fa"
+stroke-width="3"/>
 
 </svg>
 
 <div class="caption">
-Resistance berada di atas sebagai area yang pernah mendapat
-reaksi jual. Support berada di bawah sebagai area yang pernah
-mendapat reaksi beli. Harga tidak wajib memantul setiap kali
-menyentuh garis.
+Resistance berada di bagian atas dan support di bagian bawah.
+Keduanya sebaiknya dianggap sebagai area, bukan angka yang pasti.
 </div>
 </div>
 
-<h3>Cara Menentukan SNR</h3>
+<h3>Cara Membuat SNR</h3>
 
 <div class="step"><span class="step-number">1</span>Cari swing yang jelas.</div>
-<div class="step"><span class="step-number">2</span>Cari area yang mendapat reaksi berulang.</div>
+<div class="step"><span class="step-number">2</span>Lihat area yang pernah mendapat reaksi.</div>
 <div class="step"><span class="step-number">3</span>Tarik garis horizontal.</div>
-<div class="step"><span class="step-number">4</span>Anggap sebagai area, bukan angka mutlak.</div>
-<div class="step"><span class="step-number">5</span>Tunggu reaksi sebelum entry.</div>
+<div class="step"><span class="step-number">4</span>Perhatikan reaksi harga.</div>
 
 </div>
 </div>
 
 
-<!-- ================================================= -->
 <!-- SND -->
-<!-- ================================================= -->
 
 <div id="snd" class="page">
 <div class="materi">
 
 <h2>🔥 SUPPLY & DEMAND</h2>
 
-<h3>Demand</h3>
-
+<h3>SND BUY — Demand</h3>
 <p>
-Demand adalah area yang menunjukkan lokasi harga sebelum terjadi
-dorongan naik yang kuat.
+Untuk contoh BUY, pola candle dibuat merah → hijau → merah → hijau
+dan kemudian harga meninggalkan area dengan impuls naik.
 </p>
 
 <div class="chart">
-<div class="chart-title">Demand — Base Kemudian Impuls Naik</div>
+<div class="chart-title">🟢 SND BUY — Merah → Hijau → Merah → Hijau</div>
 
-<svg viewBox="0 0 700 400">
+<svg viewBox="0 0 700 340">
 
-<g stroke="#18283a">
-<line x1="20" y1="80" x2="680" y2="80"/>
-<line x1="20" y1="160" x2="680" y2="160"/>
-<line x1="20" y1="240" x2="680" y2="240"/>
-<line x1="20" y1="320" x2="680" y2="320"/>
+<g class="grid">
+<line x1="20" y1="70" x2="680" y2="70"/>
+<line x1="20" y1="130" x2="680" y2="130"/>
+<line x1="20" y1="190" x2="680" y2="190"/>
+<line x1="20" y1="250" x2="680" y2="250"/>
 </g>
 
-<!-- demand zone -->
-<rect x="210" y="215" width="150" height="70"
-fill="#22c55e" opacity=".16"
-stroke="#22c55e" stroke-width="3"/>
+<rect x="145" y="145" width="145" height="90"
+fill="#22c55e" opacity=".12"
+stroke="#22c55e" stroke-width="2"/>
 
-<text x="220" y="250" fill="#22c55e"
-font-size="18" font-weight="bold">DEMAND</text>
+<text x="155" y="170" fill="#22c55e"
+font-size="17" font-weight="bold">
+DEMAND / SND BUY
+</text>
 
-<!-- candles -->
-<g stroke-width="3">
+<g stroke-width="2.5">
 
-<line x1="70" y1="240" x2="70" y2="320" stroke="#ef4444"/>
-<rect x="61" y="255" width="18" height="45" fill="#ef4444"/>
+<line x1="90" y1="125" x2="90" y2="220" class="bear"/>
+<rect x="82" y="145" width="16" height="55" class="bear"/>
 
-<line x1="105" y1="225" x2="105" y2="300" stroke="#22c55e"/>
-<rect x="96" y="240" width="18" height="42" fill="#22c55e"/>
+<line x1="120" y1="140" x2="120" y2="215" class="bull"/>
+<rect x="112" y="155" width="16" height="45" class="bull"/>
 
-<line x1="140" y1="235" x2="140" y2="300" stroke="#ef4444"/>
-<rect x="131" y="250" width="18" height="35" fill="#ef4444"/>
+<line x1="150" y1="150" x2="150" y2="225" class="bear"/>
+<rect x="142" y="165" width="16" height="42" class="bear"/>
 
-<line x1="175" y1="245" x2="175" y2="300" stroke="#22c55e"/>
-<rect x="166" y="255" width="18" height="30" fill="#22c55e"/>
+<line x1="180" y1="140" x2="180" y2="215" class="bull"/>
+<rect x="172" y="155" width="16" height="45" class="bull"/>
 
-<line x1="215" y1="235" x2="215" y2="295" stroke="#ef4444"/>
-<rect x="206" y="250" width="18" height="30" fill="#ef4444"/>
+<line x1="210" y1="105" x2="210" y2="200" class="bull"/>
+<rect x="202" y="115" width="16" height="65" class="bull"/>
 
-<line x1="250" y1="225" x2="250" y2="290" stroke="#22c55e"/>
-<rect x="241" y="240" width="18" height="35" fill="#22c55e"/>
+<line x1="240" y1="70" x2="240" y2="145" class="bull"/>
+<rect x="232" y="80" width="16" height="52" class="bull"/>
 
-<!-- impulse -->
-<line x1="300" y1="180" x2="300" y2="270" stroke="#22c55e"/>
-<rect x="291" y="190" width="18" height="65" fill="#22c55e"/>
+<line x1="270" y1="45" x2="270" y2="110" class="bull"/>
+<rect x="262" y="55" width="16" height="45" class="bull"/>
 
-<line x1="335" y1="120" x2="335" y2="205" stroke="#22c55e"/>
-<rect x="326" y="135" width="18" height="55" fill="#22c55e"/>
+<line x1="300" y1="65" x2="300" y2="125" class="bear"/>
+<rect x="292" y="75" width="16" height="35" class="bear"/>
 
-<line x1="370" y1="65" x2="370" y2="150" stroke="#22c55e"/>
-<rect x="361" y="80" width="18" height="55" fill="#22c55e"/>
-
-<line x1="405" y1="80" x2="405" y2="140" stroke="#ef4444"/>
-<rect x="396" y="92" width="18" height="32" fill="#ef4444"/>
+<line x1="330" y1="40" x2="330" y2="105" class="bull"/>
+<rect x="322" y="50" width="16" height="45" class="bull"/>
 
 </g>
+
+<text x="220" y="285" fill="#22c55e"
+font-size="18" font-weight="bold">
+IMPULS NAIK
+</text>
 
 </svg>
 
 <div class="caption">
-Area demand berada sebelum dorongan naik. Ketika harga kembali
-ke area tersebut, tetap tunggu reaksi dan konfirmasi.
+Candle dibuat rapat agar area SND mudah dilihat. Setelah area,
+harga meninggalkan demand dengan impuls naik.
 </div>
 </div>
 
-<h3>Supply</h3>
-
+<h3>SND SELL — Supply</h3>
 <p>
-Supply adalah area sebelum terjadi dorongan turun yang kuat.
+Untuk contoh SELL, pola candle dibuat hijau → merah → hijau → merah
+dan kemudian harga meninggalkan area dengan impuls turun.
 </p>
 
 <div class="chart">
-<div class="chart-title">Supply — Base Kemudian Impuls Turun</div>
+<div class="chart-title">🔴 SND SELL — Hijau → Merah → Hijau → Merah</div>
 
-<svg viewBox="0 0 700 400">
+<svg viewBox="0 0 700 340">
 
-<g stroke="#18283a">
-<line x1="20" y1="80" x2="680" y2="80"/>
-<line x1="20" y1="160" x2="680" y2="160"/>
-<line x1="20" y1="240" x2="680" y2="240"/>
-<line x1="20" y1="320" x2="680" y2="320"/>
+<g class="grid">
+<line x1="20" y1="70" x2="680" y2="70"/>
+<line x1="20" y1="130" x2="680" y2="130"/>
+<line x1="20" y1="190" x2="680" y2="190"/>
+<line x1="20" y1="250" x2="680" y2="250"/>
 </g>
 
-<rect x="210" y="105" width="150" height="70"
-fill="#ef4444" opacity=".16"
-stroke="#ef4444" stroke-width="3"/>
+<rect x="145" y="70" width="145" height="90"
+fill="#ef4444" opacity=".12"
+stroke="#ef4444" stroke-width="2"/>
 
-<text x="220" y="140" fill="#ef4444"
-font-size="18" font-weight="bold">SUPPLY</text>
+<text x="155" y="95" fill="#ef4444"
+font-size="17" font-weight="bold">
+SUPPLY / SND SELL
+</text>
 
-<g stroke-width="3">
+<g stroke-width="2.5">
 
-<line x1="70" y1="170" x2="70" y2="250" stroke="#22c55e"/>
-<rect x="61" y="185" width="18" height="45" fill="#22c55e"/>
+<line x1="90" y1="145" x2="90" y2="235" class="bull"/>
+<rect x="82" y="160" width="16" height="50" class="bull"/>
 
-<line x1="105" y1="140" x2="105" y2="215" stroke="#22c55e"/>
-<rect x="96" y="155" width="18" height="42" fill="#22c55e"/>
+<line x1="120" y1="125" x2="120" y2="210" class="bear"/>
+<rect x="112" y="140" width="16" height="50" class="bear"/>
 
-<line x1="140" y1="115" x2="140" y2="180" stroke="#ef4444"/>
-<rect x="131" y="125" width="18" height="38" fill="#ef4444"/>
+<line x1="150" y1="105" x2="150" y2="185" class="bull"/>
+<rect x="142" y="120" width="16" height="45" class="bull"/>
 
-<line x1="175" y1="105" x2="175" y2="170" stroke="#22c55e"/>
-<rect x="166" y="120" width="18" height="35" fill="#22c55e"/>
+<line x1="180" y1="90" x2="180" y2="170" class="bear"/>
+<rect x="172" y="105" width="16" height="48" class="bear"/>
 
-<line x1="215" y1="110" x2="215" y2="170" stroke="#ef4444"/>
-<rect x="206" y="120" width="18" height="35" fill="#ef4444"/>
+<line x1="210" y1="80" x2="210" y2="185" class="bear"/>
+<rect x="202" y="95" width="16" height="70" class="bear"/>
 
-<line x1="250" y1="105" x2="250" y2="170" stroke="#22c55e"/>
-<rect x="241" y="120" width="18" height="35" fill="#22c55e"/>
+<line x1="240" y1="110" x2="240" y2="215" class="bear"/>
+<rect x="232" y="125" width="16" height="65" class="bear"/>
 
-<!-- impulse down -->
-<line x1="300" y1="145" x2="300" y2="260" stroke="#ef4444"/>
-<rect x="291" y="160" width="18" height="75" fill="#ef4444"/>
+<line x1="270" y1="155" x2="270" y2="250" class="bear"/>
+<rect x="262" y="170" width="16" height="60" class="bear"/>
 
-<line x1="335" y1="205" x2="335" y2="315" stroke="#ef4444"/>
-<rect x="326" y="220" width="18" height="70" fill="#ef4444"/>
+<line x1="300" y1="195" x2="300" y2="285" class="bear"/>
+<rect x="292" y="210" width="16" height="55" class="bear"/>
 
-<line x1="370" y1="265" x2="370" y2="350" stroke="#ef4444"/>
-<rect x="361" y="280" width="18" height="55" fill="#ef4444"/>
+<line x1="330" y1="225" x2="330" y2="310" class="bear"/>
+<rect x="322" y="240" width="16" height="52" class="bear"/>
 
 </g>
+
+<text x="205" y="325" fill="#ef4444"
+font-size="18" font-weight="bold">
+IMPULS TURUN
+</text>
 
 </svg>
 
 <div class="caption">
-Supply berada sebelum dorongan turun. Ketika harga kembali,
-tunggu reaksi bearish sebelum mempertimbangkan SELL.
+Candle dibuat rapat agar area supply terlihat jelas. Setelah area,
+harga meninggalkan supply dengan impuls turun.
 </div>
+</div>
+
+<div class="warning">
+<b>PENTING</b>
+<p>
+SND bukan berarti setiap menyentuh area langsung entry.
+Tetap perhatikan struktur, SNR dan konfirmasi.
+</p>
 </div>
 
 </div>
 </div>
 
 
-<!-- ================================================= -->
 <!-- CHANNEL -->
-<!-- ================================================= -->
 
 <div id="channel" class="page">
 <div class="materi">
 
 <h2>📐 PARALLEL CHANNEL</h2>
 
-<h3>Channel Naik</h3>
-
+<h3>Apa Itu Parallel Channel?</h3>
 <p>
-Parallel Channel terdiri dari dua garis yang sejajar.
-Pada channel bullish, kedua garis sama-sama miring ke atas.
+Parallel Channel adalah dua garis yang berjalan sejajar untuk
+membantu membaca arah pergerakan harga.
 </p>
 
 <div class="chart">
-<div class="chart-title">Bullish Parallel Channel — Candle Mengikuti Channel</div>
+<div class="chart-title">📐 Bullish Parallel Channel</div>
 
-<svg viewBox="0 0 700 420">
+<svg viewBox="0 0 700 380">
 
-<g stroke="#18283a">
-<line x1="20" y1="80" x2="680" y2="80"/>
-<line x1="20" y1="160" x2="680" y2="160"/>
+<g class="grid">
+<line x1="20" y1="60" x2="680" y2="60"/>
+<line x1="20" y1="120" x2="680" y2="120"/>
+<line x1="20" y1="180" x2="680" y2="180"/>
 <line x1="20" y1="240" x2="680" y2="240"/>
-<line x1="20" y1="320" x2="680" y2="320"/>
+<line x1="20" y1="300" x2="680" y2="300"/>
 </g>
 
-<!-- parallel boundaries -->
-<line x1="50" y1="350" x2="630" y2="100"
-stroke="#22c55e" stroke-width="4"/>
+<!-- DUA GARIS BENAR-BENAR SEJAJAR -->
 
-<line x1="110" y1="410" x2="690" y2="160"
-stroke="#ef4444" stroke-width="4"/>
+<line x1="45" y1="315"
+x2="650" y2="75"
+class="channel-bottom"/>
 
-<!-- candles -->
-<g stroke-width="3">
+<line x1="45" y1="205"
+x2="650" y2="-35"
+class="channel-top"/>
 
-<line x1="70" y1="300" x2="70" y2="355" stroke="#22c55e"/>
-<rect x="61" y="315" width="18" height="28" fill="#22c55e"/>
+<!-- CANDLE RAPAT -->
 
-<line x1="105" y1="270" x2="105" y2="325" stroke="#22c55e"/>
-<rect x="96" y="282" width="18" height="30" fill="#22c55e"/>
+<g stroke-width="2.5">
 
-<line x1="140" y1="295" x2="140" y2="350" stroke="#ef4444"/>
-<rect x="131" y="305" width="18" height="30" fill="#ef4444"/>
+<line x1="65" y1="275" x2="65" y2="330" class="bull"/>
+<rect x="59" y="285" width="12" height="32" class="bull"/>
 
-<line x1="175" y1="245" x2="175" y2="305" stroke="#22c55e"/>
-<rect x="166" y="258" width="18" height="34" fill="#22c55e"/>
+<line x1="87" y1="245" x2="87" y2="300" class="bull"/>
+<rect x="81" y="255" width="12" height="30" class="bull"/>
 
-<line x1="210" y1="215" x2="210" y2="270" stroke="#22c55e"/>
-<rect x="201" y="225" width="18" height="30" fill="#22c55e"/>
+<line x1="109" y1="265" x2="109" y2="320" class="bear"/>
+<rect x="103" y="275" width="12" height="30" class="bear"/>
 
-<line x1="245" y1="240" x2="245" y2="295" stroke="#ef4444"/>
-<rect x="236" y="250" width="18" height="30" fill="#ef4444"/>
+<line x1="131" y1="225" x2="131" y2="280" class="bull"/>
+<rect x="125" y="235" width="12" height="30" class="bull"/>
 
-<line x1="280" y1="195" x2="280" y2="250" stroke="#22c55e"/>
-<rect x="271" y="205" width="18" height="30" fill="#22c55e"/>
+<line x1="153" y1="195" x2="153" y2="250" class="bull"/>
+<rect x="147" y="205" width="12" height="32" class="bull"/>
 
-<line x1="315" y1="160" x2="315" y2="215" stroke="#22c55e"/>
-<rect x="306" y="170" width="18" height="30" fill="#22c55e"/>
+<line x1="175" y1="215" x2="175" y2="270" class="bear"/>
+<rect x="169" y="225" width="12" height="30" class="bear"/>
 
-<line x1="350" y1="185" x2="350" y2="240" stroke="#ef4444"/>
-<rect x="341" y="195" width="18" height="30" fill="#ef4444"/>
+<line x1="197" y1="180" x2="197" y2="235" class="bull"/>
+<rect x="191" y="190" width="12" height="32" class="bull"/>
 
-<line x1="385" y1="140" x2="385" y2="195" stroke="#22c55e"/>
-<rect x="376" y="150" width="18" height="30" fill="#22c55e"/>
+<line x1="219" y1="155" x2="219" y2="210" class="bull"/>
+<rect x="213" y="165" width="12" height="32" class="bull"/>
 
-<line x1="420" y1="110" x2="420" y2="165" stroke="#22c55e"/>
-<rect x="411" y="120" width="18" height="30" fill="#22c55e"/>
+<line x1="241" y1="175" x2="241" y2="225" class="bear"/>
+<rect x="235" y="185" width="12" height="28" class="bear"/>
 
-<line x1="455" y1="135" x2="455" y2="190" stroke="#ef4444"/>
-<rect x="446" y="145" width="18" height="30" fill="#ef4444"/>
+<line x1="263" y1="140" x2="263" y2="195" class="bull"/>
+<rect x="257" y="150" width="12" height="32" class="bull"/>
 
-<line x1="490" y1="100" x2="490" y2="155" stroke="#22c55e"/>
-<rect x="481" y="110" width="18" height="30" fill="#22c55e"/>
+<line x1="285" y1="115" x2="285" y2="170" class="bull"/>
+<rect x="279" y="125" width="12" height="32" class="bull"/>
 
-<line x1="525" y1="75" x2="525" y2="130" stroke="#22c55e"/>
-<rect x="516" y="85" width="18" height="30" fill="#22c55e"/>
+<line x1="307" y1="135" x2="307" y2="185" class="bear"/>
+<rect x="301" y="145" width="12" height="28" class="bear"/>
+
+<line x1="329" y1="100" x2="329" y2="155" class="bull"/>
+<rect x="323" y="110" width="12" height="32" class="bull"/>
+
+<line x1="351" y1="80" x2="351" y2="135" class="bull"/>
+<rect x="345" y="90" width="12" height="32" class="bull"/>
+
+<line x1="373" y1="100" x2="373" y2="150" class="bear"/>
+<rect x="367" y="110" width="12" height="28" class="bear"/>
+
+<line x1="395" y1="70" x2="395" y2="125" class="bull"/>
+<rect x="389" y="80" width="12" height="32" class="bull"/>
 
 </g>
 
-<text x="55" y="375" fill="#22c55e"
-font-size="17">Garis bawah channel</text>
+<text x="50" y="350" fill="#22c55e"
+font-size="16" font-weight="bold">
+CHANNEL BAWAH
+</text>
 
-<text x="500" y="95" fill="#ef4444"
-font-size="17">Garis atas channel</text>
+<text x="515" y="45" fill="#ef4444"
+font-size="16" font-weight="bold">
+CHANNEL ATAS
+</text>
 
 </svg>
 
 <div class="caption">
-Kedua garis memiliki kemiringan yang sama sehingga benar-benar
-sejajar. Candle bergerak di antara kedua batas channel.
+Dua garis mempunyai kemiringan yang sama sehingga sejajar.
+Harga bergerak naik dan membentuk swing di dalam channel.
 </div>
 </div>
 
-<h3>Channel Turun</h3>
+<h3>Cara Menarik Channel</h3>
 
+<div class="step"><span class="step-number">1</span>Cari swing yang jelas.</div>
+<div class="step"><span class="step-number">2</span>Tarik garis mengikuti struktur.</div>
+<div class="step"><span class="step-number">3</span>Buat garis kedua dengan kemiringan yang sama.</div>
+<div class="step"><span class="step-number">4</span>Pastikan kedua garis sejajar.</div>
+
+</div>
+</div>
+
+
+<!-- GARIS -->
+
+<div id="garis" class="page">
+<div class="materi">
+
+<h2>📈 GARIS SAKTI</h2>
+
+<h3>Mulai dari Struktur</h3>
 <p>
-Pada channel bearish, kedua garis sama-sama miring ke bawah.
-Prinsipnya tetap sama: dua garis harus sejajar dan mengikuti
-struktur harga.
+Cari swing yang jelas terlebih dahulu. Dalam contoh metode ini,
+body candle digunakan sebagai salah satu acuan level.
 </p>
 
+<div class="chart">
+<div class="chart-title">📈 Level Body Candle</div>
+
+<svg viewBox="0 0 700 330">
+
+<g class="grid">
+<line x1="20" y1="70" x2="680" y2="70"/>
+<line x1="20" y1="140" x2="680" y2="140"/>
+<line x1="20" y1="210" x2="680" y2="210"/>
+<line x1="20" y1="280" x2="680" y2="280"/>
+</g>
+
+<line x1="20" y1="175" x2="680" y2="175"
+stroke="#facc15"
+stroke-width="4"
+stroke-dasharray="9 6"/>
+
+<text x="35" y="165" fill="#facc15"
+font-size="18" font-weight="bold">
+LEVEL BODY
+</text>
+
+<g stroke-width="3">
+
+<line x1="100" y1="100" x2="100" y2="220" class="bull"/>
+<rect x="88" y="130" width="24" height="65" class="bull"/>
+
+<line x1="160" y1="110" x2="160" y2="230" class="bear"/>
+<rect x="148" y="145" width="24" height="55" class="bear"/>
+
+<line x1="220" y1="80" x2="220" y2="210" class="bull"/>
+<rect x="208" y="110" width="24" height="65" class="bull"/>
+
+<line x1="280" y1="125" x2="280" y2="250" class="bear"/>
+<rect x="268" y="155" width="24" height="60" class="bear"/>
+
+<line x1="340" y1="100" x2="340" y2="220" class="bull"/>
+<rect x="328" y="130" width="24" height="60" class="bull"/>
+
+<line x1="400" y1="65" x2="400" y2="150" class="bull"/>
+<rect x="388" y="80" width="24" height="55" class="bull"/>
+
+</g>
+
+<text x="450" y="145" fill="#22c55e"
+font-size="18" font-weight="bold">
+BREAK
+</text>
+
+<text x="450" y="195" fill="#facc15"
+font-size="17">
+CLOSE DI ATAS
+</text>
+
+</svg>
+
+<div class="caption">
+Contoh level dibuat dari area body candle. Setelah harga menembus
+level, tunggu candle close dan jangan hanya mengandalkan wick.
+</div>
+</div>
+
+<div class="buy">
+<b>Contoh BUY</b>
+<p>
+Harga break level → candle close di atas → turun timeframe →
+cari area → tunggu konfirmasi.
+</p>
+</div>
+
+<div class="sell">
+<b>Contoh SELL</b>
+<p>
+Harga break level → candle close di bawah → turun timeframe →
+cari area → tunggu konfirmasi.
+</p>
+</div>
+
 </div>
 </div>
 
 
-<!-- ================================================= -->
 <!-- ENTRY -->
-<!-- ================================================= -->
 
 <div id="entry" class="page">
 <div class="materi">
 
 <h2>🎯 H4 → M30 → M5 → M1</h2>
 
+<p>
+Gunakan timeframe besar untuk konteks kemudian turun timeframe
+untuk mencari area dan konfirmasi.
+</p>
+
 <div class="flow">
-<div class="flow-item"><b>H4</b>Arah Besar</div>
+<div class="flow-item"><b>H4</b>Arah besar</div>
 <div class="flow-item"><b>M30</b>Struktur</div>
 <div class="flow-item"><b>M5</b>Area</div>
 <div class="flow-item"><b>M1</b>Konfirmasi</div>
@@ -1076,308 +1090,201 @@ struktur harga.
 
 <h3>H4</h3>
 <p>
-Gunakan H4 untuk melihat arah dan struktur yang lebih besar.
-Cari swing mayor, SNR dan channel yang relevan.
+Cari arah besar, swing mayor, SNR dan channel yang penting.
 </p>
 
 <h3>M30</h3>
 <p>
-Turun ke M30 untuk melihat struktur yang lebih dekat dengan
-harga saat ini.
+Perjelas struktur market dan konteks harga.
 </p>
 
 <h3>M5</h3>
 <p>
-Gunakan M5 untuk mencari area seperti SNR atau Supply &
-Demand yang sesuai dengan konteks.
+Cari area Supply, Demand, Support atau Resistance.
 </p>
 
 <h3>M1</h3>
 <p>
-M1 digunakan sebagai konfirmasi entry. Jangan masuk hanya
-karena harga menyentuh area.
+Gunakan sebagai konfirmasi sebelum entry.
 </p>
 
 <div class="chart">
-<div class="chart-title">Alur Analisis</div>
+<div class="chart-title">🎯 Alur Analisis</div>
 
 <svg viewBox="0 0 700 300">
 
-<rect x="25" y="70" width="145" height="150" rx="15"
+<rect x="30" y="70" width="145" height="150" rx="15"
 fill="#17283d" stroke="#334155"/>
+<text x="85" y="115" fill="#facc15" font-size="28">H4</text>
+<text x="60" y="150" fill="white">Arah</text>
+<text x="52" y="180" fill="white">Swing Mayor</text>
 
-<text x="80" y="120" fill="#facc15"
-font-size="30" font-weight="bold">H4</text>
-<text x="55" y="155" fill="white">Arah besar</text>
-<text x="55" y="185" fill="white">Swing mayor</text>
-
-<rect x="190" y="70" width="145" height="150" rx="15"
+<rect x="195" y="70" width="145" height="150" rx="15"
 fill="#17283d" stroke="#334155"/>
+<text x="250" y="115" fill="#facc15" font-size="28">M30</text>
+<text x="220" y="150" fill="white">Struktur</text>
+<text x="220" y="180" fill="white">Konteks</text>
 
-<text x="245" y="120" fill="#facc15"
-font-size="30" font-weight="bold">M30</text>
-<text x="220" y="155" fill="white">Struktur</text>
-<text x="220" y="185" fill="white">Konteks</text>
-
-<rect x="355" y="70" width="145" height="150" rx="15"
+<rect x="360" y="70" width="145" height="150" rx="15"
 fill="#17283d" stroke="#334155"/>
+<text x="415" y="115" fill="#facc15" font-size="28">M5</text>
+<text x="390" y="150" fill="white">Area SND</text>
+<text x="390" y="180" fill="white">SNR</text>
 
-<text x="415" y="120" fill="#facc15"
-font-size="30" font-weight="bold">M5</text>
-<text x="385" y="155" fill="white">Area</text>
-<text x="385" y="185" fill="white">SNR / SND</text>
-
-<rect x="520" y="70" width="145" height="150" rx="15"
+<rect x="525" y="70" width="145" height="150" rx="15"
 fill="#17283d" stroke="#334155"/>
-
-<text x="580" y="120" fill="#facc15"
-font-size="30" font-weight="bold">M1</text>
-<text x="550" y="155" fill="white">Konfirmasi</text>
-<text x="550" y="185" fill="white">Entry</text>
+<text x="580" y="115" fill="#facc15" font-size="28">M1</text>
+<text x="550" y="150" fill="white">Konfirmasi</text>
+<text x="550" y="180" fill="white">Entry</text>
 
 </svg>
 </div>
 
 <div class="warning">
 <b>TIDAK ADA SETUP = TIDAK ENTRY</b>
-<p>
-Tidak ada kewajiban untuk selalu membuka posisi.
-Menunggu adalah bagian dari trading.
-</p>
+<p>Menunggu setup adalah bagian dari disiplin trading.</p>
 </div>
 
 </div>
 </div>
 
 
-<!-- ================================================= -->
 <!-- FIBONACCI -->
-<!-- ================================================= -->
 
 <div id="fibo" class="page">
 <div class="materi">
 
-<h2>📏 FIBONACCI RETRACEMENT</h2>
+<h2>📏 FIBONACCI</h2>
 
-<h3>Fibonacci Dipakai Untuk Apa?</h3>
-
+<h3>Fungsi Fibonacci</h3>
 <p>
-Fibonacci Retracement digunakan untuk mengukur kemungkinan
-area retracement setelah harga membuat sebuah impuls.
-Fibonacci bukan alat untuk memastikan harga pasti berbalik.
+Fibonacci digunakan untuk mengamati kemungkinan area retracement
+setelah harga melakukan impuls.
 </p>
 
-<h3>Bullish — Tarik Low ke High</h3>
-
 <div class="chart">
-<div class="chart-title">Swing Low → Swing High → Retracement</div>
+<div class="chart-title">📏 Fibonacci — Swing Low → Swing High</div>
 
-<svg viewBox="0 0 700 470">
+<svg viewBox="0 0 700 400">
 
-<g stroke="#18283a">
-<line x1="20" y1="80" x2="680" y2="80"/>
-<line x1="20" y1="160" x2="680" y2="160"/>
-<line x1="20" y1="240" x2="680" y2="240"/>
-<line x1="20" y1="320" x2="680" y2="320"/>
-<line x1="20" y1="400" x2="680" y2="400"/>
+<g class="grid">
+<line x1="30" y1="60" x2="670" y2="60"/>
+<line x1="30" y1="120" x2="670" y2="120"/>
+<line x1="30" y1="180" x2="670" y2="180"/>
+<line x1="30" y1="240" x2="670" y2="240"/>
+<line x1="30" y1="300" x2="670" y2="300"/>
 </g>
 
-<!-- candles upward -->
-<g stroke-width="3">
+<!-- IMPULS LOW KE HIGH -->
+<line x1="75" y1="300"
+x2="590" y2="70"
+stroke="#60a5fa"
+stroke-width="4"/>
 
-<line x1="70" y1="350" x2="70" y2="420" stroke="#22c55e"/>
-<rect x="61" y="365" width="18" height="40" fill="#22c55e"/>
+<!-- LEVEL -->
+<line x1="75" y1="245" x2="640" y2="245" class="fibo"/>
+<line x1="75" y1="210" x2="640" y2="210" class="fibo"/>
+<line x1="75" y1="160" x2="640" y2="160" class="fibo"/>
+<line x1="75" y1="120" x2="640" y2="120" class="fibo"/>
 
-<line x1="105" y1="315" x2="105" y2="370" stroke="#22c55e"/>
-<rect x="96" y="325" width="18" height="32" fill="#22c55e"/>
+<text x="565" y="238" fill="#facc15" font-size="16">23.6%</text>
+<text x="565" y="203" fill="#facc15" font-size="16">38.2%</text>
+<text x="565" y="153" fill="#facc15" font-size="16" font-weight="bold">50%</text>
+<text x="565" y="113" fill="#facc15" font-size="16" font-weight="bold">61.8%</text>
 
-<line x1="140" y1="280" x2="140" y2="340" stroke="#22c55e"/>
-<rect x="131" y="292" width="18" height="35" fill="#22c55e"/>
+<!-- CANDLE RAPAT -->
+<g stroke-width="2.5">
 
-<line x1="175" y1="240" x2="175" y2="300" stroke="#22c55e"/>
-<rect x="166" y="250" width="18" height="35" fill="#22c55e"/>
+<line x1="100" y1="275" x2="100" y2="325" class="bull"/>
+<rect x="94" y="285" width="12" height="28" class="bull"/>
 
-<line x1="210" y1="200" x2="210" y2="260" stroke="#22c55e"/>
-<rect x="201" y="210" width="18" height="35" fill="#22c55e"/>
+<line x1="125" y1="245" x2="125" y2="300" class="bull"/>
+<rect x="119" y="255" width="12" height="30" class="bull"/>
 
-<line x1="245" y1="155" x2="245" y2="215" stroke="#22c55e"/>
-<rect x="236" y="165" width="18" height="35" fill="#22c55e"/>
+<line x1="150" y1="220" x2="150" y2="275" class="bull"/>
+<rect x="144" y="230" width="12" height="32" class="bull"/>
 
-<line x1="280" y1="110" x2="280" y2="170" stroke="#22c55e"/>
-<rect x="271" y="120" width="18" height="35" fill="#22c55e"/>
+<line x1="175" y1="190" x2="175" y2="245" class="bull"/>
+<rect x="169" y="200" width="12" height="32" class="bull"/>
 
-<line x1="315" y1="70" x2="315" y2="130" stroke="#22c55e"/>
-<rect x="306" y="80" width="18" height="35" fill="#22c55e"/>
+<line x1="200" y1="165" x2="200" y2="220" class="bull"/>
+<rect x="194" y="175" width="12" height="32" class="bull"/>
 
-<!-- retracement -->
-<line x1="350" y1="85" x2="350" y2="155" stroke="#ef4444"/>
-<rect x="341" y="100" width="18" height="40" fill="#ef4444"/>
+<line x1="225" y1="145" x2="225" y2="200" class="bull"/>
+<rect x="219" y="155" width="12" height="32" class="bull"/>
 
-<line x1="385" y1="125" x2="385" y2="205" stroke="#ef4444"/>
-<rect x="376" y="140" width="18" height="45" fill="#ef4444"/>
+<line x1="250" y1="120" x2="250" y2="175" class="bull"/>
+<rect x="244" y="130" width="12" height="32" class="bull"/>
 
-<line x1="420" y1="175" x2="420" y2="255" stroke="#ef4444"/>
-<rect x="411" y="190" width="18" height="45" fill="#ef4444"/>
+<line x1="275" y1="100" x2="275" y2="150" class="bull"/>
+<rect x="269" y="110" width="12" height="28" class="bull"/>
 
 </g>
 
-<!-- fib levels -->
-<line x1="40" y1="145" x2="650" y2="145"
-stroke="#facc15" stroke-width="2"/>
+<circle cx="75" cy="300" r="7" fill="#22c55e"/>
+<circle cx="590" cy="70" r="7" fill="#ef4444"/>
 
-<line x1="40" y1="195" x2="650" y2="195"
-stroke="#facc15" stroke-width="2"/>
+<text x="35" y="330" fill="#22c55e"
+font-size="17" font-weight="bold">
+SWING LOW
+</text>
 
-<line x1="40" y1="245" x2="650" y2="245"
-stroke="#facc15" stroke-width="2"/>
-
-<line x1="40" y1="300" x2="650" y2="300"
-stroke="#facc15" stroke-width="2"/>
-
-<text x="580" y="140" fill="#facc15">23.6%</text>
-<text x="580" y="190" fill="#facc15">38.2%</text>
-<text x="580" y="240" fill="#facc15">50%</text>
-<text x="580" y="295" fill="#facc15">61.8%</text>
-
-<line x1="55" y1="415" x2="315" y2="75"
-stroke="#60a5fa" stroke-width="4"/>
-
-<text x="45" y="445" fill="#60a5fa"
-font-size="17">Swing Low</text>
-
-<text x="280" y="55" fill="#60a5fa"
-font-size="17">Swing High</text>
+<text x="515" y="55" fill="#ef4444"
+font-size="17" font-weight="bold">
+SWING HIGH
+</text>
 
 </svg>
 
 <div class="caption">
-Pada contoh bullish, Fibonacci ditarik dari Swing Low ke Swing
-High. Setelah impuls naik, harga melakukan retracement dan
-level Fibonacci dapat digunakan sebagai area pengamatan.
+Pada contoh bullish, Fibonacci ditarik dari Swing Low ke Swing High.
+Level retracement dapat digunakan sebagai area pengamatan dan
+sebaiknya dikombinasikan dengan struktur atau SNR.
 </div>
 </div>
-
-<h3>Jangan Gunakan Fibonacci Sendirian</h3>
-
-<p>
-Cari confluence dengan Market Structure, SNR, Supply & Demand
-atau area lain yang mendukung.
-</p>
 
 </div>
 </div>
 
 
-<!-- ================================================= -->
 <!-- RISK -->
-<!-- ================================================= -->
 
 <div id="risk" class="page">
 <div class="materi">
 
-<h2>🎯 ENTRY • STOP LOSS • TAKE PROFIT</h2>
+<h2>🛡️ RISK MANAGEMENT</h2>
 
-<h3>Entry</h3>
-
+<h3>Stop Loss</h3>
 <p>
-Entry adalah harga ketika posisi BUY atau SELL dibuka.
-Entry sebaiknya berdasarkan setup yang sudah direncanakan,
-bukan karena takut ketinggalan.
+Stop Loss digunakan untuk membatasi kerugian apabila harga
+bergerak berlawanan dengan rencana.
 </p>
 
-<div class="chart">
-<div class="chart-title">Contoh BUY + SL + TP</div>
-
-<svg viewBox="0 0 700 420">
-
-<g stroke="#18283a">
-<line x1="20" y1="80" x2="680" y2="80"/>
-<line x1="20" y1="160" x2="680" y2="160"/>
-<line x1="20" y1="240" x2="680" y2="240"/>
-<line x1="20" y1="320" x2="680" y2="320"/>
-</g>
-
-<!-- candles -->
-<g stroke-width="3">
-
-<line x1="80" y1="300" x2="80" y2="360" stroke="#ef4444"/>
-<rect x="71" y="315" width="18" height="30" fill="#ef4444"/>
-
-<line x1="120" y1="270" x2="120" y2="330" stroke="#22c55e"/>
-<rect x="111" y="280" width="18" height="35" fill="#22c55e"/>
-
-<line x1="160" y1="240" x2="160" y2="300" stroke="#22c55e"/>
-<rect x="151" y="250" width="18" height="35" fill="#22c55e"/>
-
-<line x1="200" y1="210" x2="200" y2="270" stroke="#ef4444"/>
-<rect x="191" y="225" width="18" height="30" fill="#ef4444"/>
-
-<line x1="240" y1="230" x2="240" y2="290" stroke="#22c55e"/>
-<rect x="231" y="240" width="18" height="35" fill="#22c55e"/>
-
-<line x1="280" y1="185" x2="280" y2="245" stroke="#22c55e"/>
-<rect x="271" y="195" width="18" height="35" fill="#22c55e"/>
-
-<line x1="320" y1="150" x2="320" y2="210" stroke="#22c55e"/>
-<rect x="311" y="160" width="18" height="35" fill="#22c55e"/>
-
-<line x1="360" y1="125" x2="360" y2="185" stroke="#22c55e"/>
-<rect x="351" y="135" width="18" height="35" fill="#22c55e"/>
-
-</g>
-
-<!-- levels -->
-<line x1="40" y1="210" x2="660" y2="210"
-stroke="#60a5fa" stroke-width="3"/>
-
-<line x1="40" y1="275" x2="660" y2="275"
-stroke="#ef4444" stroke-width="3"
-stroke-dasharray="8 6"/>
-
-<line x1="40" y1="100" x2="660" y2="100"
-stroke="#22c55e" stroke-width="3"
-stroke-dasharray="8 6"/>
-
-<text x="520" y="203" fill="#60a5fa"
-font-size="18" font-weight="bold">ENTRY BUY</text>
-
-<text x="520" y="270" fill="#ef4444"
-font-size="18" font-weight="bold">STOP LOSS</text>
-
-<text x="520" y="95" fill="#22c55e"
-font-size="18" font-weight="bold">TAKE PROFIT</text>
-
-</svg>
-
-<div class="caption">
-Contoh sederhana: posisi BUY dibuka pada level Entry. Jika
-harga bergerak berlawanan sampai SL, posisi ditutup untuk
-membatasi kerugian. Jika harga mencapai TP, target tercapai.
-</div>
+<div class="price-box">
+<div class="example-title">CONTOH</div>
+<p>BUY = 1.1000</p>
+<p>SL = 1.0990</p>
+<p>Risiko = 10 pip</p>
+<p>TP = 1.1020</p>
+<p>Target = 20 pip</p>
 </div>
 
 <h3>Risk Reward</h3>
-
 <p>
-Misalnya risiko dari Entry ke SL adalah 10 pip dan jarak Entry
-ke TP adalah 20 pip. Maka perbandingannya adalah 1 : 2.
+Risiko 10 pip dengan target 20 pip secara sederhana memiliki
+Risk : Reward 1 : 2.
 </p>
 
 <div class="warning">
-<b>SL WAJIB DIRENCANAKAN</b>
-<p>
-Jangan menentukan SL setelah posisi sudah terkena tekanan.
-Rencanakan sebelum entry.
-</p>
+<b>JANGAN ALL IN</b>
+<p>Ukuran posisi harus disesuaikan dengan modal dan risiko.</p>
 </div>
 
 </div>
 </div>
 
 
-<!-- ================================================= -->
 <!-- PSIKOLOGI -->
-<!-- ================================================= -->
 
 <div id="psikologi" class="page">
 <div class="materi">
@@ -1386,39 +1293,33 @@ Rencanakan sebelum entry.
 
 <h3>FOMO</h3>
 <p>
-FOMO adalah rasa takut ketinggalan pergerakan harga sehingga
-trader masuk tanpa setup yang jelas.
+Jangan mengejar harga hanya karena melihat candle bergerak cepat.
 </p>
 
 <h3>Revenge Trading</h3>
 <p>
-Setelah mengalami loss, trader ingin segera membalas kerugian
-dengan entry berikutnya. Ini dapat membuat risiko semakin besar.
+Setelah loss jangan langsung membuka posisi besar untuk membalas kerugian.
 </p>
 
 <h3>Overtrading</h3>
 <p>
-Terlalu sering membuka posisi tanpa setup yang berkualitas.
-Jumlah entry bukan ukuran keberhasilan trader.
+Terlalu banyak entry dapat membuat keputusan menjadi emosional.
 </p>
 
 <h3>Disiplin</h3>
-
 <ul>
 <li>Tunggu setup.</li>
 <li>Ikuti rencana.</li>
-<li>Gunakan risiko yang sudah ditentukan.</li>
-<li>Terima kemungkinan loss.</li>
-<li>Jangan mengejar kerugian.</li>
+<li>Gunakan risiko terukur.</li>
+<li>Terima jika analisis salah.</li>
+<li>Jangan mengejar loss.</li>
 </ul>
 
 </div>
 </div>
 
 
-<!-- ================================================= -->
 <!-- MODAL -->
-<!-- ================================================= -->
 
 <div id="modal" class="page">
 <div class="materi">
@@ -1426,43 +1327,31 @@ Jumlah entry bukan ukuran keberhasilan trader.
 <h2>💰 MANAJEMEN MODAL</h2>
 
 <h3>Kenapa Modal Harus Dijaga?</h3>
-
 <p>
-Trading mempunyai kemungkinan profit dan loss. Manajemen modal
-bertujuan menjaga akun agar beberapa transaksi yang loss tidak
-langsung menghabiskan modal.
+Manajemen modal membantu menjaga akun agar beberapa loss tidak
+langsung menghancurkan modal.
 </p>
 
 <div class="price-box">
-
-<div class="example-title">CONTOH RISIKO</div>
-
+<div class="example-title">CONTOH</div>
 <p>Modal = Rp1.000.000</p>
-<p>Risiko yang direncanakan = 1%</p>
-<p>1% dari Rp1.000.000 = Rp10.000</p>
-
+<p>Risiko 1% = Rp10.000</p>
 <p>
-Artinya risiko maksimal yang direncanakan pada contoh tersebut
-sekitar Rp10.000. Ukuran lot tetap harus dihitung berdasarkan
-instrumen dan jarak Stop Loss.
-</p>
-
-</div>
-
-<div class="warning">
-<b>JANGAN ALL IN</b>
-<p>
-Jangan mempertaruhkan seluruh modal pada satu transaksi.
+Artinya risiko yang direncanakan sekitar Rp10.000 pada transaksi.
+Ukuran lot tetap harus disesuaikan dengan instrumen dan Stop Loss.
 </p>
 </div>
 
+<h3>Hindari Overtrade</h3>
+<p>
+Banyak entry bukan berarti banyak keuntungan. Utamakan kualitas setup.
+</p>
+
 </div>
 </div>
 
 
-<!-- ================================================= -->
 <!-- CHECKLIST -->
-<!-- ================================================= -->
 
 <div id="checklist" class="page">
 <div class="materi">
@@ -1470,28 +1359,24 @@ Jangan mempertaruhkan seluruh modal pada satu transaksi.
 <h2>✅ CHECKLIST SEBELUM ENTRY</h2>
 
 <ul>
-<li>☐ Sudah melihat H4?</li>
-<li>☐ Swing mayor sudah jelas?</li>
-<li>☐ Market Structure sudah dipahami?</li>
-<li>☐ SNR sudah ditandai?</li>
-<li>☐ Supply/Demand relevan?</li>
-<li>☐ Parallel Channel relevan?</li>
-<li>☐ Arah M30 sesuai konteks?</li>
-<li>☐ Area M5 sudah jelas?</li>
-<li>☐ Konfirmasi M1 tersedia?</li>
-<li>☐ Entry sudah direncanakan?</li>
+<li>☐ Sudah melihat timeframe besar?</li>
+<li>☐ Struktur market jelas?</li>
+<li>☐ Sudah menentukan SNR/SND?</li>
+<li>☐ Ada channel jika relevan?</li>
+<li>☐ Arah H4 dan M30 masuk akal?</li>
+<li>☐ Area M5 jelas?</li>
+<li>☐ Ada konfirmasi M1?</li>
 <li>☐ Stop Loss sudah ditentukan?</li>
-<li>☐ Take Profit sudah ditentukan?</li>
-<li>☐ Risk Reward masuk akal?</li>
+<li>☐ Take Profit sudah direncanakan?</li>
+<li>☐ Risiko sesuai rencana?</li>
 <li>☐ Tidak FOMO?</li>
 <li>☐ Tidak revenge trading?</li>
 </ul>
 
 <div class="warning">
-<b>JIKA SETUP BELUM LENGKAP</b>
+<b>JIKA BELUM LENGKAP</b>
 <p>
-Tidak perlu memaksakan entry. Tunggu sampai kondisi sesuai
-dengan rencana.
+Lebih baik menunggu daripada memaksakan entry.
 </p>
 </div>
 
@@ -1509,132 +1394,65 @@ Materi edukasi trading — bukan jaminan keuntungan.
 
 <script>
 
-/*
-========================================================
-SISTEM HALAMAN MEQ MEMBAWA TEPAK
-========================================================
-
-Materi dibuka tanpa pindah halaman.
-Posisi scroll HOME disimpan.
-Ketika kembali ke HOME, posisi scroll
-dikembalikan ke posisi sebelumnya.
-
-Tidak ada tombol kembali di materi.
-*/
-
 let homeScrollPosition = 0;
-let currentPage = null;
 
 function openPage(id){
 
-  /*
-  Simpan posisi menu utama sebelum masuk materi.
-  */
   homeScrollPosition = window.scrollY;
 
-  currentPage = id;
+  document.getElementById("home").style.display="none";
 
-  /*
-  Sembunyikan HOME.
-  */
-  document.getElementById("home").style.display = "none";
-
-  /*
-  Sembunyikan semua materi.
-  */
   document.querySelectorAll(".page").forEach(function(page){
-    page.style.display = "none";
+    page.style.display="none";
   });
 
-  /*
-  Tampilkan materi yang dipilih.
-  */
-  const selected = document.getElementById(id);
+  document.getElementById(id).style.display="block";
 
-  if(selected){
-    selected.style.display = "block";
-  }
+  history.pushState(
+    {page:id},
+    "",
+    "#" + id
+  );
 
-  /*
-  Saat materi terbuka, posisi halaman tidak
-  dipaksa smooth scroll.
-  */
   window.scrollTo(0,0);
 }
 
-
-/*
-========================================================
-KLIK TOMBOL BACK HP
-========================================================
-
-Saat pengguna menekan tombol kembali HP,
-materi ditutup dan HOME muncul lagi.
-
-Posisi HOME dikembalikan seperti sebelum
-materi dibuka.
-========================================================
-*/
-
-window.addEventListener("popstate", function(){
-
-  closePage();
-
-});
-
-
-/*
-========================================================
-FUNGSI KEMBALI KE MENU UTAMA
-========================================================
-
-Tidak ada tombol kembali di halaman materi.
-Fungsi ini dipanggil oleh tombol back browser/HP.
-========================================================
-*/
-
-function closePage(){
+window.addEventListener("popstate",function(){
 
   document.querySelectorAll(".page").forEach(function(page){
-    page.style.display = "none";
+    page.style.display="none";
   });
 
-  document.getElementById("home").style.display = "block";
+  document.getElementById("home").style.display="block";
 
-  currentPage = null;
-
-  /*
-  Kembalikan posisi HOME.
-  */
-  requestAnimationFrame(function(){
+  setTimeout(function(){
 
     window.scrollTo({
       top:homeScrollPosition,
       left:0,
-      behavior:"auto"
+      behavior:"instant"
     });
 
-  });
+  },0);
 
-}
+});
 
+window.addEventListener("load",function(){
 
-/*
-========================================================
-AGAR BACK HP MEMPUNYAI STATE YANG BENAR
-========================================================
-*/
+  if(location.hash){
 
-document.querySelectorAll(".btn").forEach(function(button){
-
-  button.addEventListener("click",function(){
-
-    history.pushState(
-      {page:"materi"},
+    history.replaceState(
+      null,
       "",
-      "#materi"
+      location.pathname + location.search
     );
 
+  }
+
+  document.getElementById("home").style.display="block";
+
+  document.querySelectorAll(".page").forEach(function(page){
+    page.style.display="none";
   });
 
 });
